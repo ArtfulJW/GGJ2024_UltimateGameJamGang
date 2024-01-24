@@ -1,3 +1,14 @@
-[gd_scene format=3 uid="uid://cciyqadskau8h"]
+[gd_scene load_steps=2 format=3 uid="uid://cciyqadskau8h"]
+
+[ext_resource type="PackedScene" uid="uid://f0l81pxaoux6" path="res://Thoughts/thought_object.tscn" id="1_y5jm0"]
 
 [node name="Main" type="Node2D"]
+
+[node name="ThoughtObject" parent="." instance=ExtResource("1_y5jm0")]
+position = Vector2(257, 85)
+
+[node name="ThoughtObject3" parent="." instance=ExtResource("1_y5jm0")]
+position = Vector2(416, 94)
+
+[node name="ThoughtObject2" parent="." instance=ExtResource("1_y5jm0")]
+position = Vector2(298, 172)

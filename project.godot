@@ -15,6 +15,10 @@ run/main_scene="res://main.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GlobalData="*res://global_data.gd"
+
 [display]
 
 window/size/viewport_width=320
@@ -23,7 +27,14 @@ window/size/window_width_override=1280
 window/size/window_height_override=720
 window/stretch/mode="canvas_items"
 
+[layer_names]
+
+2d_physics/layer_1="Player"
+2d_physics/layer_2="Thoughts"
+2d_physics/layer_3="World"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)

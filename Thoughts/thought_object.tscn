@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://f0l81pxaoux6"]
+
+[ext_resource type="Script" path="res://Thoughts/thought_object.gd" id="1_4rwrn"]
+[ext_resource type="Texture2D" uid="uid://ci2g7wgulpew2" path="res://icon.svg" id="1_t7mof"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2xaor"]
+radius = 40.0
+
+[node name="ThoughtObject" type="Area2D"]
+collision_layer = 2
+script = ExtResource("1_4rwrn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(32, -32)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_t7mof")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(32, -32)
+shape = SubResource("CircleShape2D_2xaor")
