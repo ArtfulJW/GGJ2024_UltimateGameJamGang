@@ -10,3 +10,5 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	position.x -= speed * delta * GlobalData.world_speed
+	if position.x < 0:
+		queue_free()
