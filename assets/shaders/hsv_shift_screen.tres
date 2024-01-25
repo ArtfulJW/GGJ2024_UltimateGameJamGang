@@ -29,12 +29,10 @@ default_value = 1.0
 
 [sub_resource type="VisualShaderNodeGlobalExpression" id="VisualShaderNodeGlobalExpression_wed40"]
 size = Vector2(480, 140)
-expression = "// testme!
-uniform sampler2d SCREEN_TEXTURE : hint_screen_texture;"
+expression = "uniform sampler2D SCREEN_TEXTURE : hint_screen_texture;"
 
 [sub_resource type="VisualShaderNodeExpression" id="VisualShaderNodeExpression_flav2"]
-output_port_for_preview = 0
-size = Vector2(460, 400)
+size = Vector2(420, 180)
 expression = "color = texture(SCREEN_TEXTURE, SCREEN_UV).rgb;"
 
 [resource]
@@ -44,6 +42,7 @@ render_mode blend_mix;
 
 // Varyings
 varying vec3 col;
+varying vec3 newcol;
 
 uniform float hue_in : hint_range(0, 1) = 0;
 uniform float saturation : hint_range(0, 2) = 1;
@@ -53,8 +52,7 @@ uniform float value : hint_range(0, 2) = 1;
 // ShiftHSV
 #include \"res://addons/shaderV/rgba/shiftHSV.gdshaderinc\"
 // GlobalExpression:0
-	// testme!
-	uniform sampler2d SCREEN_TEXTURE : hint_screen_texture;
+	uniform sampler2D SCREEN_TEXTURE : hint_screen_texture;
 
 void fragment() {
 	vec3 n_out9p0;
@@ -89,30 +87,31 @@ void fragment() {
 
 
 	col = vec3(0.0);
+	newcol = vec3(0.0);
 }
 "
-graph_offset = Vector2(-915.669, -573.539)
+graph_offset = Vector2(-616.722, -234.007)
 mode = 1
 flags/light_only = false
 varyings/col = "1,4"
+varyings/newcol = "1,4"
 nodes/fragment/2/node = SubResource("VisualShaderNodeCustom_lttau")
 nodes/fragment/2/position = Vector2(40, 180)
 nodes/fragment/5/node = SubResource("VisualShaderNodeFloatParameter_1yks6")
-nodes/fragment/5/position = Vector2(-780, 240)
+nodes/fragment/5/position = Vector2(-520, 180)
 nodes/fragment/6/node = SubResource("VisualShaderNodeFloatParameter_ehcao")
 nodes/fragment/6/position = Vector2(-700, 520)
 nodes/fragment/7/node = SubResource("VisualShaderNodeFloatParameter_8pcjg")
 nodes/fragment/7/position = Vector2(-300, 580)
 nodes/fragment/8/node = SubResource("VisualShaderNodeGlobalExpression_wed40")
-nodes/fragment/8/position = Vector2(-620, -300)
+nodes/fragment/8/position = Vector2(-620, -320)
 nodes/fragment/8/size = Vector2(480, 140)
 nodes/fragment/8/input_ports = ""
 nodes/fragment/8/output_ports = ""
-nodes/fragment/8/expression = "// testme!
-uniform sampler2d SCREEN_TEXTURE : hint_screen_texture;"
+nodes/fragment/8/expression = "uniform sampler2D SCREEN_TEXTURE : hint_screen_texture;"
 nodes/fragment/9/node = SubResource("VisualShaderNodeExpression_flav2")
-nodes/fragment/9/position = Vector2(-1160, -200)
-nodes/fragment/9/size = Vector2(460, 400)
+nodes/fragment/9/position = Vector2(-600, -60)
+nodes/fragment/9/size = Vector2(420, 180)
 nodes/fragment/9/input_ports = ""
 nodes/fragment/9/output_ports = "0,4,color;"
 nodes/fragment/9/expression = "color = texture(SCREEN_TEXTURE, SCREEN_UV).rgb;"

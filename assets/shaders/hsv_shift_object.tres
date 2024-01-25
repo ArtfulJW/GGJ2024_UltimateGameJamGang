@@ -78,7 +78,6 @@ void fragment() {
 	col = vec3(0.0);
 }
 "
-graph_offset = Vector2(-807.692, -304.458)
 mode = 1
 flags/light_only = false
 varyings/col = "1,4"
