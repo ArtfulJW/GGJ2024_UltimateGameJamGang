@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://dkxd3khyh0ysq"]
+
+[ext_resource type="Script" path="res://Player/player.gd" id="1_gd3j7"]
+[ext_resource type="Texture2D" uid="uid://5cd5bqgi2djv" path="res://Player/image.png" id="2_7jls5"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b87ka"]
+radius = 7.0
+height = 28.0
+
+[node name="Player" type="CharacterBody2D"]
+collision_mask = 0
+script = ExtResource("1_gd3j7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(8, -17)
+scale = Vector2(0.83871, 0.838709)
+texture = ExtResource("2_7jls5")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(0, 0, 31.4835, 40.1336)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(7, -15)
+shape = SubResource("CapsuleShape2D_b87ka")
+
+[node name="SlideTimer" type="Timer" parent="."]
+one_shot = true

@@ -1,12 +1,19 @@
-[gd_scene load_steps=5 format=3 uid="uid://cciyqadskau8h"]
+[gd_scene load_steps=6 format=3 uid="uid://cciyqadskau8h"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_grmto"]
 [ext_resource type="PackedScene" uid="uid://dlb28bmmmfoux" path="res://Thoughts/thought_spawner.tscn" id="1_meu4n"]
-[ext_resource type="PackedScene" uid="uid://dkxd3khyh0ysq" path="res://player.tscn" id="2_bktbs"]
+[ext_resource type="Texture2D" uid="uid://b5ptowx3v70i7" path="res://Screens/bg_tmp.png" id="2_8ycnl"]
+[ext_resource type="PackedScene" uid="uid://dkxd3khyh0ysq" path="res://Player/player.tscn" id="2_bktbs"]
 [ext_resource type="PackedScene" uid="uid://dg20pm8j1cfuw" path="res://Screens/hue_shift_shader.tscn" id="2_xgoeb"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_grmto")
+
+[node name="Temp_Background" type="Sprite2D" parent="."]
+modulate = Color(0.686275, 0.686275, 0.686275, 1)
+position = Vector2(168.75, 89.5)
+scale = Vector2(0.515669, 0.51567)
+texture = ExtResource("2_8ycnl")
 
 [node name="HueShiftShader" parent="." instance=ExtResource("2_xgoeb")]
 val = 1.2

@@ -20,7 +20,6 @@ func _process(delta):
 
 
 func _on_body_entered(body):
-	print("collision!")
 	sprite_2d.modulate = Color.AQUA
 	
 	if (!is_collided and body.name == "Player"):
