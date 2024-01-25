@@ -8,4 +8,4 @@
 [node name="ThoughtSpawner" parent="." instance=ExtResource("1_meu4n")]
 
 [node name="Player" parent="." instance=ExtResource("2_bktbs")]
-position = Vector2(23, 152)
+position = Vector2(53, 153)
