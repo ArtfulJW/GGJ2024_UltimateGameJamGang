@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
+	<RootPaths>
+		<ProjectRoot>../../GGJ2024_Thoughts_WwiseProject</ProjectRoot>
+		<SourceFilesRoot>../../GGJ2024_Thoughts_WwiseProject/.cache/Windows</SourceFilesRoot>
+		<SoundBanksRoot>.</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>../../GGJ2024_Thoughts_WwiseProject/GeneratedSoundBanks/Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{B6CBD692-12EC-CDBA-0932-48F63C40C91F}">
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<Plugins>
+				<AudioDevices>
+					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
+				</AudioDevices>
+			</Plugins>
+			<Busses>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+			</Busses>
+		</SoundBank>
+		<SoundBank Id="1542108333" Type="User" Language="SFX" Hash="{68016853-E511-AF92-6E32-F52CE02313EF}">
+			<ShortName>MasterBank</ShortName>
+			<Path>MasterBank.bnk</Path>
+			<Media>
+				<File Id="213557790" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>EFX SD Heads Hit Together 02.wav</ShortName>
+					<CachePath>SFX/EFX SD Heads Hit Together 02_B032A71E.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="3695098761" Name="SFX_Jump"/>
+				<Event Id="38624190" Name="TestSound">
+					<MediaRefs>
+						<MediaRef Id="213557790"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{4F5DAE81-79F0-CB89-F74F-D78C64394B0C}</FileHash>
+</SoundBanksInfo>

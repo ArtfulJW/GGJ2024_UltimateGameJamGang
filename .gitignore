@@ -1,2 +1,5 @@
 # Godot 4+ specific ignores
 .godot/
+
+# Wwise specific ignores
+GGJ2024_Thoughts_WwiseProject/
