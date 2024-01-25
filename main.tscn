@@ -1,7 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://cciyqadskau8h"]
+[gd_scene load_steps=3 format=3 uid="uid://cciyqadskau8h"]
 
 [ext_resource type="PackedScene" uid="uid://dlb28bmmmfoux" path="res://Thoughts/thought_spawner.tscn" id="1_meu4n"]
+[ext_resource type="PackedScene" uid="uid://dkxd3khyh0ysq" path="res://player.tscn" id="2_bktbs"]
 
 [node name="Main" type="Node2D"]
 
 [node name="ThoughtSpawner" parent="." instance=ExtResource("1_meu4n")]
+
+[node name="Player" parent="." instance=ExtResource("2_bktbs")]
+position = Vector2(23, 152)

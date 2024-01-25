@@ -1,7 +1,6 @@
 extends Node
 
-var world_speed = 5
+var world_speed = 1
 
-# there's probably a way to find this automatically
-var screen_size_x = 320 
-var screen_size_y = 180
+var screen_size_x = ProjectSettings.get_setting("display/window/size/viewport_width") 
+var screen_size_y = ProjectSettings.get_setting("display/window/size/viewport_height") 
