@@ -11,19 +11,21 @@ extends CanvasLayer
 		if not (Engine.is_editor_hint() or is_node_ready()):
 			return
 		hue = n_hue
-		shader.set_shader_parameter("hue", hue)
+		shader.set_shader_parameter("hue_in", hue)
 @export_range(0, 2) var sat : float = 1.0:
 	set(n_sat):
 		if not (Engine.is_editor_hint() or is_node_ready()):
 			return
 		sat = n_sat
-		shader.set_shader_parameter("sat", sat)
+		shader.set_shader_parameter("saturation", sat)
 @export_range(0, 2) var val : float = 1.0:
 	set(n_val):
 		if not (Engine.is_editor_hint() or is_node_ready()):
 			return
 		val = n_val
-		shader.set_shader_parameter("val", val)
+		shader.set_shader_parameter("value", val)
 
 func _ready() -> void:
-	pass
+	shader.set_shader_parameter("hue_in", hue)
+	shader.set_shader_parameter("saturation", sat)
+	shader.set_shader_parameter("value", val)

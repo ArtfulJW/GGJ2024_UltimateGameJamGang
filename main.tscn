@@ -1,15 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://cciyqadskau8h"]
+[gd_scene load_steps=5 format=3 uid="uid://bq1prucegybu3"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_grmto"]
 [ext_resource type="PackedScene" uid="uid://dlb28bmmmfoux" path="res://Thoughts/thought_spawner.tscn" id="1_meu4n"]
-[ext_resource type="PackedScene" uid="uid://dkxd3khyh0ysq" path="res://player.tscn" id="2_bktbs"]
+[ext_resource type="PackedScene" path="res://player.tscn" id="2_bktbs"]
 [ext_resource type="PackedScene" uid="uid://dg20pm8j1cfuw" path="res://Screens/hue_shift_shader.tscn" id="2_xgoeb"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_grmto")
 
 [node name="HueShiftShader" parent="." instance=ExtResource("2_xgoeb")]
-val = 1.2
 
 [node name="ThoughtSpawner" parent="." instance=ExtResource("1_meu4n")]
 

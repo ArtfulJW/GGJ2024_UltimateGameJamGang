@@ -1,12 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://dg20pm8j1cfuw"]
 
-[ext_resource type="Shader" path="res://assets/shaders/hue_shift_screen.gdshader" id="1_3eevq"]
 [ext_resource type="Script" path="res://Screens/hue_shift_shader.gd" id="1_kt0x8"]
+[ext_resource type="Shader" uid="uid://cncrhg3r74n51" path="res://assets/shaders/hsv_shift_screen.tres" id="2_l3y47"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_mpmny"]
-shader = ExtResource("1_3eevq")
-shader_parameter/hue = 0.0
-shader_parameter/sat = 1.0
+resource_local_to_scene = true
+shader = ExtResource("2_l3y47")
+shader_parameter/hue_in = 0.0
+shader_parameter/saturation = 1.0
 shader_parameter/value = 1.0
 
 [node name="HueShiftShader" type="CanvasLayer"]
