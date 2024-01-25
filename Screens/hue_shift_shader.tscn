@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dg20pm8j1cfuw"]
+
+[ext_resource type="Shader" path="res://assets/shaders/hue_shift_shader.gdshader" id="1_3eevq"]
+[ext_resource type="Script" path="res://Screens/hue_shift_shader.gd" id="1_kt0x8"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mpmny"]
+shader = ExtResource("1_3eevq")
+shader_parameter/hue = 0.0
+shader_parameter/sat = 1.0
+shader_parameter/value = 1.0
+
+[node name="HueShiftShader" type="CanvasLayer"]
+script = ExtResource("1_kt0x8")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_mpmny")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
