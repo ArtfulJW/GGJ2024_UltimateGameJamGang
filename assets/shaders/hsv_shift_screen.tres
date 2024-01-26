@@ -1,0 +1,118 @@
+[gd_resource type="VisualShader" load_steps=8 format=3 uid="uid://cncrhg3r74n51"]
+
+[ext_resource type="Script" path="res://addons/shaderV/rgba/shiftHSV.gd" id="1_uemom"]
+
+[sub_resource type="VisualShaderNodeCustom" id="VisualShaderNodeCustom_lttau"]
+output_port_for_preview = 0
+default_input_values = [1, 0.0, 2, 1.0, 3, 1.0]
+initialized = true
+script = ExtResource("1_uemom")
+
+[sub_resource type="VisualShaderNodeFloatParameter" id="VisualShaderNodeFloatParameter_1yks6"]
+parameter_name = "hue_in"
+hint = 1
+default_value_enabled = true
+
+[sub_resource type="VisualShaderNodeFloatParameter" id="VisualShaderNodeFloatParameter_ehcao"]
+parameter_name = "saturation"
+hint = 1
+max = 2.0
+default_value_enabled = true
+default_value = 1.0
+
+[sub_resource type="VisualShaderNodeFloatParameter" id="VisualShaderNodeFloatParameter_8pcjg"]
+parameter_name = "value"
+hint = 1
+max = 2.0
+default_value_enabled = true
+default_value = 1.0
+
+[sub_resource type="VisualShaderNodeGlobalExpression" id="VisualShaderNodeGlobalExpression_wed40"]
+size = Vector2(480, 140)
+expression = "uniform sampler2D SCREEN_TEXTURE : hint_screen_texture;"
+
+[sub_resource type="VisualShaderNodeExpression" id="VisualShaderNodeExpression_flav2"]
+size = Vector2(420, 180)
+expression = "color = texture(SCREEN_TEXTURE, SCREEN_UV).rgb;"
+
+[resource]
+code = "shader_type canvas_item;
+render_mode blend_mix;
+
+
+// Varyings
+varying vec3 col;
+varying vec3 newcol;
+
+uniform float hue_in : hint_range(0, 1) = 0;
+uniform float saturation : hint_range(0, 2) = 1;
+uniform float value : hint_range(0, 2) = 1;
+
+
+// ShiftHSV
+#include \"res://addons/shaderV/rgba/shiftHSV.gdshaderinc\"
+// GlobalExpression:0
+	uniform sampler2D SCREEN_TEXTURE : hint_screen_texture;
+
+void fragment() {
+	vec3 n_out9p0;
+// Expression:9
+	n_out9p0 = vec3(0.0, 0.0, 0.0);
+	{
+		n_out9p0 = texture(SCREEN_TEXTURE, SCREEN_UV).rgb;
+	}
+
+
+// FloatParameter:5
+	float n_out5p0 = hue_in;
+
+
+// FloatParameter:6
+	float n_out6p0 = saturation;
+
+
+// FloatParameter:7
+	float n_out7p0 = value;
+
+
+	vec3 n_out2p0;
+// ShiftHSV:2
+	{
+		n_out2p0 = _hsvChangeHSVChangeFunc(n_out9p0, n_out5p0, n_out6p0, n_out7p0);
+	}
+
+
+// Output:0
+	COLOR.rgb = n_out2p0;
+
+
+	col = vec3(0.0);
+	newcol = vec3(0.0);
+}
+"
+graph_offset = Vector2(-616.722, -234.007)
+mode = 1
+flags/light_only = false
+varyings/col = "1,4"
+varyings/newcol = "1,4"
+nodes/fragment/2/node = SubResource("VisualShaderNodeCustom_lttau")
+nodes/fragment/2/position = Vector2(40, 180)
+nodes/fragment/5/node = SubResource("VisualShaderNodeFloatParameter_1yks6")
+nodes/fragment/5/position = Vector2(-520, 180)
+nodes/fragment/6/node = SubResource("VisualShaderNodeFloatParameter_ehcao")
+nodes/fragment/6/position = Vector2(-700, 520)
+nodes/fragment/7/node = SubResource("VisualShaderNodeFloatParameter_8pcjg")
+nodes/fragment/7/position = Vector2(-300, 580)
+nodes/fragment/8/node = SubResource("VisualShaderNodeGlobalExpression_wed40")
+nodes/fragment/8/position = Vector2(-620, -320)
+nodes/fragment/8/size = Vector2(480, 140)
+nodes/fragment/8/input_ports = ""
+nodes/fragment/8/output_ports = ""
+nodes/fragment/8/expression = "uniform sampler2D SCREEN_TEXTURE : hint_screen_texture;"
+nodes/fragment/9/node = SubResource("VisualShaderNodeExpression_flav2")
+nodes/fragment/9/position = Vector2(-600, -60)
+nodes/fragment/9/size = Vector2(420, 180)
+nodes/fragment/9/input_ports = ""
+nodes/fragment/9/output_ports = "0,4,color;"
+nodes/fragment/9/expression = "color = texture(SCREEN_TEXTURE, SCREEN_UV).rgb;"
+nodes/fragment/connections = PackedInt32Array(5, 0, 2, 1, 6, 0, 2, 2, 7, 0, 2, 3, 2, 0, 0, 0, 9, 0, 2, 0)

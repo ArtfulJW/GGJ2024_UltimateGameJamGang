@@ -16,7 +16,6 @@ scale = Vector2(0.515669, 0.51567)
 texture = ExtResource("2_8ycnl")
 
 [node name="HueShiftShader" parent="." instance=ExtResource("2_xgoeb")]
-val = 1.2
 
 [node name="ThoughtSpawner" parent="." instance=ExtResource("1_meu4n")]
 
