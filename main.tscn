@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://cciyqadskau8h"]
+[gd_scene load_steps=8 format=3 uid="uid://cciyqadskau8h"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_grmto"]
 [ext_resource type="PackedScene" uid="uid://dlb28bmmmfoux" path="res://Thoughts/thought_spawner.tscn" id="1_meu4n"]
 [ext_resource type="Texture2D" uid="uid://b5ptowx3v70i7" path="res://Screens/bg_tmp.png" id="2_8ycnl"]
 [ext_resource type="PackedScene" uid="uid://dkxd3khyh0ysq" path="res://Player/player.tscn" id="2_bktbs"]
 [ext_resource type="PackedScene" uid="uid://dg20pm8j1cfuw" path="res://Screens/hue_shift_shader.tscn" id="2_xgoeb"]
+[ext_resource type="PackedScene" uid="uid://bso0kycsf6mfr" path="res://Prompts/prompt_2.tscn" id="6_qm0vu"]
+[ext_resource type="PackedScene" uid="uid://c5mwh3jis0aq8" path="res://Prompts/prompt.tscn" id="6_regpf"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_grmto")
@@ -22,3 +24,9 @@ val = 1.2
 
 [node name="Player" parent="." instance=ExtResource("2_bktbs")]
 position = Vector2(53, 153)
+
+[node name="Prompt_2" parent="." instance=ExtResource("6_qm0vu")]
+position = Vector2(316, -26)
+
+[node name="Prompt" parent="." instance=ExtResource("6_regpf")]
+position = Vector2(228, -13)
