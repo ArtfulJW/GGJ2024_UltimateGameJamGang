@@ -58,7 +58,6 @@ func handle_slide(delta):
 		skew = lerp(skew, skew_dest, delta * X_SPEED)
 		
 func on_thought_passed():
-	print("bruh")
 	x_dest += 16
 	
 func on_collision():
