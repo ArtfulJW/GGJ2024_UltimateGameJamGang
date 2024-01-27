@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://main.gd" id="1_grmto"]
 [ext_resource type="PackedScene" uid="uid://dlb28bmmmfoux" path="res://Thoughts/thought_spawner.tscn" id="1_meu4n"]
-[ext_resource type="Texture2D" uid="uid://b5ptowx3v70i7" path="res://Screens/bg_tmp.png" id="2_8ycnl"]
-[ext_resource type="PackedScene" uid="uid://dkxd3khyh0ysq" path="res://Player/player.tscn" id="2_bktbs"]
+[ext_resource type="PackedScene" uid="uid://dkxd3khyh0ysq" path="res://player.tscn" id="2_bktbs"]
 [ext_resource type="PackedScene" uid="uid://dg20pm8j1cfuw" path="res://Screens/hue_shift_shader.tscn" id="2_xgoeb"]
+[ext_resource type="PackedScene" uid="uid://dk6yr47j6u4lw" path="res://background.tscn" id="5_ismqn"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_grmto")
@@ -20,12 +20,8 @@ texture = ExtResource("2_8ycnl")
 [node name="ThoughtSpawner" parent="." instance=ExtResource("1_meu4n")]
 
 [node name="Player" parent="." instance=ExtResource("2_bktbs")]
-position = Vector2(53, 153)
+position = Vector2(40, 170)
 
-[node name="AkBank" type="AkBank" parent="."]
-bank = {
-"id": 1542108333,
-"name": "MasterBank"
-}
-
-[node name="AkListener2D" type="AkListener2D" parent="."]
+[node name="Background" parent="." instance=ExtResource("5_ismqn")]
+z_index = -1
+texture_filter = 1
