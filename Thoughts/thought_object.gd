@@ -25,7 +25,7 @@ func _process(delta):
 	
 	if not is_passed and not is_collided and position.x < player.position.x:
 		GlobalData.thought_passed_player.emit()
-		GlobalData.world_speed += 0.1
+		GlobalData.world_speed += GlobalData.world_delta
 		is_passed = true
 		
 	if position.x < -32:
@@ -39,5 +39,6 @@ func _on_body_entered(body):
 	
 	if (!is_collided and body.name == "Player"):
 		body.on_collision()
+		GlobalData.world_speed -= GlobalData.world_delta
 		
 	is_collided = true

@@ -47,8 +47,9 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_2xaor"]
-radius = 16.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2d4xn"]
+radius = 12.0
+height = 56.25
 
 [node name="ThoughtObject" type="Area2D"]
 collision_layer = 2
@@ -61,27 +62,28 @@ libraries = {
 
 [node name="Cloud1Animation" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(16, -16)
+position = Vector2(-27, -16)
 sprite_frames = SubResource("SpriteFrames_epfl4")
 animation = &"cloud"
 autoplay = "cloud"
 
 [node name="Cloud2Animation" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(32, -32)
+position = Vector2(-11, -32)
 sprite_frames = SubResource("SpriteFrames_epfl4")
 animation = &"cloud"
 autoplay = "cloud"
 
 [node name="Cloud3Animation" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(48, -48)
+position = Vector2(5, -48)
 sprite_frames = SubResource("SpriteFrames_epfl4")
 animation = &"cloud"
 autoplay = "cloud"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(16, -16)
-shape = SubResource("CircleShape2D_2xaor")
+position = Vector2(-23, -28)
+rotation = 0.71384
+shape = SubResource("CapsuleShape2D_2d4xn")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

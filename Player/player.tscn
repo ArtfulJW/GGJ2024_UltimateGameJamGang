@@ -183,7 +183,7 @@ scale = Vector2(0.875, 0.875)
 sprite_frames = SubResource("SpriteFrames_7ipuq")
 animation = &"running"
 autoplay = "running"
-frame_progress = 0.212466
+frame_progress = 0.445638
 
 [node name="SlideTimer" type="Timer" parent="."]
 one_shot = true
