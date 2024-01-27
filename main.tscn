@@ -21,3 +21,11 @@ texture = ExtResource("2_8ycnl")
 
 [node name="Player" parent="." instance=ExtResource("2_bktbs")]
 position = Vector2(53, 153)
+
+[node name="AkBank" type="AkBank" parent="."]
+bank = {
+"id": 1542108333,
+"name": "MasterBank"
+}
+
+[node name="AkListener2D" type="AkListener2D" parent="."]
