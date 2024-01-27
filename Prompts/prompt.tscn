@@ -11,12 +11,12 @@ shadow_size = 0
 
 [node name="Prompt" type="Node2D"]
 script = ExtResource("1_rnjah")
+label_text = "SHOULD I KICK THE CAT"
 
 [node name="Label" type="Label" parent="."]
-offset_left = -2.0
-offset_top = 27.0
-offset_right = 268.0
-offset_bottom = 89.0
+offset_top = -25.0
+offset_right = 371.0
+offset_bottom = 37.0
 text = "Should I kick the cat?"
 label_settings = SubResource("LabelSettings_6r1ss")
 metadata/_edit_use_anchors_ = true

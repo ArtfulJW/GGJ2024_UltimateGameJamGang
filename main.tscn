@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bq1prucegybu3"]
+[gd_scene load_steps=7 format=3 uid="uid://bq1prucegybu3"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_grmto"]
 [ext_resource type="PackedScene" uid="uid://dlb28bmmmfoux" path="res://Thoughts/thought_spawner.tscn" id="1_meu4n"]
 [ext_resource type="PackedScene" uid="uid://dkxd3khyh0ysq" path="res://player.tscn" id="2_bktbs"]
 [ext_resource type="PackedScene" uid="uid://dg20pm8j1cfuw" path="res://Screens/hue_shift_shader.tscn" id="2_xgoeb"]
 [ext_resource type="PackedScene" uid="uid://dk6yr47j6u4lw" path="res://background.tscn" id="5_ismqn"]
+[ext_resource type="PackedScene" uid="uid://c5mwh3jis0aq8" path="res://Prompts/prompt.tscn" id="7_aekg4"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_grmto")
@@ -19,3 +20,14 @@ position = Vector2(40, 170)
 [node name="Background" parent="." instance=ExtResource("5_ismqn")]
 z_index = -1
 texture_filter = 1
+
+[node name="Prompts" type="Node" parent="."]
+
+[node name="Prompt_1" parent="Prompts" instance=ExtResource("7_aekg4")]
+position = Vector2(291, 34)
+MAX_WIGGLE_SALT = 20.0
+
+[node name="Prompt_2" parent="Prompts" instance=ExtResource("7_aekg4")]
+position = Vector2(342, 103)
+MAX_WIGGLE_SALT = 20.0
+label_text = "SHOULD I PEE IN THE COFFEE"
