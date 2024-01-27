@@ -1,32 +1,21 @@
-[gd_scene load_steps=8 format=3 uid="uid://cciyqadskau8h"]
+[gd_scene load_steps=6 format=3 uid="uid://bq1prucegybu3"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_grmto"]
 [ext_resource type="PackedScene" uid="uid://dlb28bmmmfoux" path="res://Thoughts/thought_spawner.tscn" id="1_meu4n"]
-[ext_resource type="Texture2D" uid="uid://b5ptowx3v70i7" path="res://Screens/bg_tmp.png" id="2_8ycnl"]
-[ext_resource type="PackedScene" uid="uid://dkxd3khyh0ysq" path="res://Player/player.tscn" id="2_bktbs"]
+[ext_resource type="PackedScene" uid="uid://dkxd3khyh0ysq" path="res://player.tscn" id="2_bktbs"]
 [ext_resource type="PackedScene" uid="uid://dg20pm8j1cfuw" path="res://Screens/hue_shift_shader.tscn" id="2_xgoeb"]
-[ext_resource type="PackedScene" uid="uid://bso0kycsf6mfr" path="res://Prompts/prompt_2.tscn" id="6_qm0vu"]
-[ext_resource type="PackedScene" uid="uid://c5mwh3jis0aq8" path="res://Prompts/prompt.tscn" id="6_regpf"]
+[ext_resource type="PackedScene" uid="uid://dk6yr47j6u4lw" path="res://background.tscn" id="5_ismqn"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_grmto")
 
-[node name="Temp_Background" type="Sprite2D" parent="."]
-modulate = Color(0.686275, 0.686275, 0.686275, 1)
-position = Vector2(168.75, 89.5)
-scale = Vector2(0.515669, 0.51567)
-texture = ExtResource("2_8ycnl")
-
 [node name="HueShiftShader" parent="." instance=ExtResource("2_xgoeb")]
-val = 1.2
 
 [node name="ThoughtSpawner" parent="." instance=ExtResource("1_meu4n")]
 
 [node name="Player" parent="." instance=ExtResource("2_bktbs")]
-position = Vector2(53, 153)
+position = Vector2(40, 170)
 
-[node name="Prompt_2" parent="." instance=ExtResource("6_qm0vu")]
-position = Vector2(316, -26)
-
-[node name="Prompt" parent="." instance=ExtResource("6_regpf")]
-position = Vector2(228, -13)
+[node name="Background" parent="." instance=ExtResource("5_ismqn")]
+z_index = -1
+texture_filter = 1
