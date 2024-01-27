@@ -12,7 +12,8 @@ script = ExtResource("1_grmto")
 
 [node name="HueShiftShader" parent="." instance=ExtResource("2_xgoeb")]
 
-[node name="ThoughtSpawner" parent="." instance=ExtResource("1_meu4n")]
+[node name="ThoughtSpawner" parent="." node_paths=PackedStringArray("player") instance=ExtResource("1_meu4n")]
+player = NodePath("../Player")
 
 [node name="Player" parent="." instance=ExtResource("2_bktbs")]
 position = Vector2(40, 170)

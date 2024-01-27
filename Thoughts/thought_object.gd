@@ -3,6 +3,8 @@ extends Area2D
 var sprite_2d
 var speed = 80
 var is_collided = false
+var is_passed = false
+var player
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -14,14 +16,21 @@ func _ready():
 	else:
 		sprite_2d=$Cloud3Animation
 
+func set_player(new_player):
+	player = new_player
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	position.x -= speed * delta * GlobalData.world_speed
-	if position.x < -32:
+	
+	if not is_passed and not is_collided and position.x < player.position.x:
+		GlobalData.thought_passed_player.emit()
 		GlobalData.world_speed += 0.1
+		is_passed = true
+		
+	if position.x < -32:
 		if (!is_collided):
-			GlobalData.thought_passed.emit()
+			GlobalData.thought_despawn.emit()
 		queue_free()
 
 

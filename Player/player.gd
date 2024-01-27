@@ -14,7 +14,7 @@ var skew_dest = 0.0
 
 
 func _ready():
-	GlobalData.thought_passed.connect(on_thought_passed)
+	GlobalData.thought_passed_player.connect(on_thought_passed)
 	x_dest = position.x
 
 func _physics_process(delta):
