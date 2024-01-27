@@ -1,0 +1,26 @@
+[gd_scene load_steps=7 format=3 uid="uid://u0wvoqloi7yy"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_0ocot"]
+[ext_resource type="PackedScene" uid="uid://dg20pm8j1cfuw" path="res://Screens/hue_shift_shader.tscn" id="2_bthg1"]
+[ext_resource type="PackedScene" uid="uid://dlb28bmmmfoux" path="res://Thoughts/thought_spawner.tscn" id="3_yq0ek"]
+[ext_resource type="PackedScene" uid="uid://dkxd3khyh0ysq" path="res://player.tscn" id="4_7ln2r"]
+[ext_resource type="PackedScene" uid="uid://dk6yr47j6u4lw" path="res://background.tscn" id="5_dqfth"]
+[ext_resource type="PackedScene" uid="uid://rpuxytu243dk" path="res://ParallaxEnvironment/ParallaxEnvironment.tscn" id="6_ufw7g"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_0ocot")
+
+[node name="HueShiftShader" parent="." instance=ExtResource("2_bthg1")]
+
+[node name="ThoughtSpawner" parent="." instance=ExtResource("3_yq0ek")]
+
+[node name="Player" parent="." instance=ExtResource("4_7ln2r")]
+position = Vector2(40, 170)
+
+[node name="Background" parent="." instance=ExtResource("5_dqfth")]
+visible = false
+z_index = -1
+texture_filter = 1
+
+[node name="ParallaxEnvironment" parent="." instance=ExtResource("6_ufw7g")]
+position = Vector2(43.1357, 157.584)
