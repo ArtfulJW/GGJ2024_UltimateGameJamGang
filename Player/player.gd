@@ -5,12 +5,13 @@ const X_SPEED = 50
 
 @onready var starting_position = position
 @onready var slide_timer = $SlideTimer
+@onready var animated_sprite_2d = $AnimatedSprite2D
+@onready var collision_shape_2d_slide = $CollisionShape2D_slide
+@onready var collision_shape_2d_upright = $CollisionShape2D_upright
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var is_sliding = false
 var x_dest = 0.0
-var rotation_dest = 0.0
-var skew_dest = 0.0
 
 
 func _ready():
@@ -23,6 +24,9 @@ func _physics_process(delta):
 	handle_jump()
 	handle_slide(delta)
 	
+	if(is_on_simulated_floor() and not is_sliding):
+		animated_sprite_2d.play("running")
+	
 	if(abs(position.x - x_dest) > 0.01):
 		position.x = lerp(position.x,x_dest,delta * X_SPEED)
 	
@@ -34,6 +38,7 @@ func is_on_simulated_floor():
 func handle_gravity(delta):
 	if not is_on_simulated_floor():
 		velocity.y += gravity * delta
+		animated_sprite_2d.play("jumping")
 	else:
 		velocity.y = 0
 
@@ -43,20 +48,17 @@ func handle_jump():
 
 func handle_slide(delta):
 	if Input.is_action_just_pressed("ui_down") and is_on_simulated_floor() and !is_sliding:
-		rotation_dest = -0.87
-		skew_dest = -0.53
 		is_sliding = true
 		slide_timer.start()
+		animated_sprite_2d.play("sliding")
+		collision_shape_2d_upright.disabled = true
+		collision_shape_2d_slide.disabled = false
 		
 	if is_sliding and slide_timer.time_left <= 0:
-		rotation_dest = 0.0
-		skew_dest = 0.0
 		is_sliding = false
+		collision_shape_2d_upright.disabled = false
+		collision_shape_2d_slide.disabled = true
 
-	if(abs(rotation - rotation_dest) > 0.01):
-		rotation = lerp(rotation, rotation_dest, delta * X_SPEED)
-		skew = lerp(skew, skew_dest, delta * X_SPEED)
-		
 func on_thought_passed():
 	x_dest += 16
 	
