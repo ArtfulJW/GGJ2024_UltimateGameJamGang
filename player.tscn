@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://dkxd3khyh0ysq"]
 
-[ext_resource type="Script" path="res://player.gd" id="1_gd3j7"]
+[ext_resource type="Script" path="res://player/player.gd" id="1_gd3j7"]
 [ext_resource type="Texture2D" uid="uid://h6jp5dcj2kwg" path="res://assets/sprites/Sprites/protag_run.png" id="2_44taq"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b87ka"]
