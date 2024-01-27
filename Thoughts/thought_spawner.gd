@@ -5,7 +5,7 @@ extends Node2D
 @export var MIN_SPAWN_TIME: float = 1
 
 var spawn_point = Vector2.ZERO
-var thought_prefab = preload("res://Thoughts/thought_object.tscn")
+var thought_prefab = preload("res://Thoughts/MinorThought/thought_object.tscn")
 var thought_size = 16
 var spawn_time
 

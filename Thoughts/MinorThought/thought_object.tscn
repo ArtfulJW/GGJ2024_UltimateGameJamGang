@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://f0l81pxaoux6"]
 
-[ext_resource type="Script" path="res://Thoughts/thought_object.gd" id="1_4rwrn"]
-[ext_resource type="Texture2D" uid="uid://0ae81j5hhdsk" path="res://assets/sprites/Sprites/Cloud1Anim.png" id="3_qn8pp"]
+[ext_resource type="Script" path="res://Thoughts/MinorThought/thought_object.gd" id="1_dsjn4"]
+[ext_resource type="Texture2D" uid="uid://0ae81j5hhdsk" path="res://assets/sprites/Sprites/Cloud1Anim.png" id="2_sl6pj"]
 
 [sub_resource type="Animation" id="Animation_3mgc0"]
 resource_name = "cloud1"
@@ -12,19 +12,19 @@ _data = {
 }
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t12x8"]
-atlas = ExtResource("3_qn8pp")
+atlas = ExtResource("2_sl6pj")
 region = Rect2(0, 0, 80, 40)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_672vd"]
-atlas = ExtResource("3_qn8pp")
+atlas = ExtResource("2_sl6pj")
 region = Rect2(80, 0, 80, 40)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gjk73"]
-atlas = ExtResource("3_qn8pp")
+atlas = ExtResource("2_sl6pj")
 region = Rect2(160, 0, 80, 40)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gd58f"]
-atlas = ExtResource("3_qn8pp")
+atlas = ExtResource("2_sl6pj")
 region = Rect2(240, 0, 80, 40)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_epfl4"]
@@ -54,7 +54,7 @@ height = 56.25
 [node name="ThoughtObject" type="Area2D"]
 position = Vector2(0, 4)
 collision_layer = 2
-script = ExtResource("1_4rwrn")
+script = ExtResource("1_dsjn4")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

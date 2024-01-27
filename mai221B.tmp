@@ -15,6 +15,7 @@ script = ExtResource("1_grmto")
 
 [node name="ThoughtSpawner" parent="." node_paths=PackedStringArray("player") instance=ExtResource("1_meu4n")]
 player = NodePath("../Player")
+MIN_SPAWN_TIME = null
 
 [node name="Player" parent="." instance=ExtResource("2_bktbs")]
 position = Vector2(73, 169)
