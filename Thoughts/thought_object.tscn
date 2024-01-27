@@ -70,9 +70,23 @@ texture = ExtResource("2_2215e")
 position = Vector2(16, -16)
 shape = SubResource("CircleShape2D_2xaor")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="Cloud1Animation" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(16, -16)
+sprite_frames = SubResource("SpriteFrames_epfl4")
+animation = &"cloud"
+autoplay = "cloud"
+
+[node name="Cloud2Animation" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(32, -32)
+sprite_frames = SubResource("SpriteFrames_epfl4")
+animation = &"cloud"
+autoplay = "cloud"
+
+[node name="Cloud3Animation" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(48, -48)
 sprite_frames = SubResource("SpriteFrames_epfl4")
 animation = &"cloud"
 autoplay = "cloud"
