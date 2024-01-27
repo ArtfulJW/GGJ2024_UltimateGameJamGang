@@ -1,14 +1,64 @@
-[gd_scene load_steps=4 format=3 uid="uid://f0l81pxaoux6"]
+[gd_scene load_steps=12 format=3 uid="uid://f0l81pxaoux6"]
 
 [ext_resource type="Script" path="res://Thoughts/thought_object.gd" id="1_4rwrn"]
 [ext_resource type="Texture2D" uid="uid://c5kgf54pxbc5s" path="res://Thoughts/temp_thought.png" id="2_2215e"]
+[ext_resource type="Texture2D" uid="uid://0ae81j5hhdsk" path="res://assets/sprites/Sprites/Cloud1Anim.png" id="3_qn8pp"]
+
+[sub_resource type="Animation" id="Animation_3mgc0"]
+resource_name = "cloud1"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bgd1q"]
+_data = {
+"cloud1": SubResource("Animation_3mgc0")
+}
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2xaor"]
 radius = 16.0
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_t12x8"]
+atlas = ExtResource("3_qn8pp")
+region = Rect2(0, 0, 80, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_672vd"]
+atlas = ExtResource("3_qn8pp")
+region = Rect2(80, 0, 80, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gjk73"]
+atlas = ExtResource("3_qn8pp")
+region = Rect2(160, 0, 80, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gd58f"]
+atlas = ExtResource("3_qn8pp")
+region = Rect2(240, 0, 80, 40)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_epfl4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t12x8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_672vd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gjk73")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gd58f")
+}],
+"loop": true,
+"name": &"cloud",
+"speed": 5.0
+}]
+
 [node name="ThoughtObject" type="Area2D"]
 collision_layer = 2
 script = ExtResource("1_4rwrn")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_bgd1q")
+}
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0.835294, 0, 0, 1)
@@ -19,5 +69,12 @@ texture = ExtResource("2_2215e")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(16, -16)
 shape = SubResource("CircleShape2D_2xaor")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(16, -16)
+sprite_frames = SubResource("SpriteFrames_epfl4")
+animation = &"cloud"
+autoplay = "cloud"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

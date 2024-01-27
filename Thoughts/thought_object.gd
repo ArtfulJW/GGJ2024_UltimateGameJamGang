@@ -1,6 +1,6 @@
 extends Area2D
 
-@onready var sprite_2d = $Sprite2D
+@onready var sprite_2d = $AnimatedSprite2D
 var speed = 80
 var is_collided = false
 
