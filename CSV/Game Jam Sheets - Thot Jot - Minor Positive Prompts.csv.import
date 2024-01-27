@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://bevbp6fu0aavh"
+
+[deps]
+
+files=["res://CSV/Game Jam Sheets - Thot Jot - Minor Positive Prompts.Prompt Dialogue 1 (Thought).translation", "res://CSV/Game Jam Sheets - Thot Jot - Minor Positive Prompts.Prompt Dialogue 2 (Action).translation", "res://CSV/Game Jam Sheets - Thot Jot - Minor Positive Prompts.Prompt Dialogue 3 (Action).translation", "res://CSV/Game Jam Sheets - Thot Jot - Minor Positive Prompts.Prompt Dialogue 4 (Action).translation", "res://CSV/Game Jam Sheets - Thot Jot - Minor Positive Prompts.etc.translation"]
+
+source_file="res://CSV/Game Jam Sheets - Thot Jot - Minor Positive Prompts.csv"
+dest_files=["res://CSV/Game Jam Sheets - Thot Jot - Minor Positive Prompts.Prompt Dialogue 1 (Thought).translation", "res://CSV/Game Jam Sheets - Thot Jot - Minor Positive Prompts.Prompt Dialogue 2 (Action).translation", "res://CSV/Game Jam Sheets - Thot Jot - Minor Positive Prompts.Prompt Dialogue 3 (Action).translation", "res://CSV/Game Jam Sheets - Thot Jot - Minor Positive Prompts.Prompt Dialogue 4 (Action).translation", "res://CSV/Game Jam Sheets - Thot Jot - Minor Positive Prompts.etc.translation"]
+
+[params]
+
+compress=true
+delimiter=0

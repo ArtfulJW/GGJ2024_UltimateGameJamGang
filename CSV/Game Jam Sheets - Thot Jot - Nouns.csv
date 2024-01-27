@@ -1,0 +1,50 @@
+Prop ID,Noun
+id_prop_cat,cat
+id_prop_dog,dog
+id_prop_dog,co-worker's dog
+id_prop_cat,co-worker's cat
+id_prop_dog,boss' dog
+id_prop_cat,boss' cat
+,rock
+,stapler
+,d***
+,head
+,back
+,stomach
+,arm
+,leg
+,butt
+,finger
+,hand
+,chest
+,foot
+,toe
+,tongue
+,computer
+,laptop
+,printer
+,pencil
+,stack of papers
+,lunch of a coworker
+,chair
+,cubicle
+,sticky notes
+,whiteboard
+,monitor
+,carpet
+,desk
+id_npc,boss
+id_npc,co-worker
+,shoe
+,pants
+,shirt
+,hair
+,window
+,wall
+,ceiling
+,microwave
+,fridge
+,coffee maker
+,water cooler
+,keyboard
+,mouse

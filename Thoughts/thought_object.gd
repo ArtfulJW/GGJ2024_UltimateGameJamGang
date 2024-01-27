@@ -1,12 +1,18 @@
 extends Area2D
 
-@onready var sprite_2d = $Sprite2D
+var sprite_2d
 var speed = 80
 var is_collided = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	var random_value = randi() % 3 + 1
+	if (random_value == 1):
+		sprite_2d=$Cloud1Animation
+	elif random_value == 2:
+		sprite_2d=$Cloud2Animation
+	else:
+		sprite_2d=$Cloud3Animation
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -20,7 +26,6 @@ func _process(delta):
 
 
 func _on_body_entered(body):
-	print("collision!")
 	sprite_2d.modulate = Color.AQUA
 	
 	if (!is_collided and body.name == "Player"):

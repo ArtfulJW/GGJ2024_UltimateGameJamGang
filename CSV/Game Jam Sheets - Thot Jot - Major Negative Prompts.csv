@@ -1,0 +1,4 @@
+Prop ID,Prompt Dialogue 1 (Thought),Prompt Dialogue 2 (Action),Prompt Dialogue 3 (Action),Prompt Dialogue 4 (Action),etc
+,"The {0n} is just sitting there, minding their own business...",You {0v} and {1v} the {0n},"You get a lot of strange stares, and hope you don't lose your job",Your boss calls you into their office... Here we go,
+,You think about leaving work early to go and {0v} a {0n} or two...,"You leave work. On the way out, your boss stops you and asks what you're doing.","You say you're going to {0v} a {0n}. He looks confused and upset, but lets you go early. You die of embarrasment",,
+,"It's a co-worker's birthday today, and during their happy birthday song you think of what would happen if you {0v} the cake","You {0v} the cake. Your co-worker looks apalled. Everyone else looks disappointed. You leave, covered in cake.",,,
