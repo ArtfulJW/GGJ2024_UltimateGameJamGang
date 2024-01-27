@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://djpwxsy31j5ar"]
+
+[ext_resource type="Script" path="res://ParallaxEnvironment/FarPlaneImageLoader.gd" id="1_naofg"]
+
+[node name="ParallaxEnvironment" type="Node2D"]
+position = Vector2(168, 94)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+script = ExtResource("1_naofg")
+_ImagePath = "res://Screens/bg_tmp.png"
