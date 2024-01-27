@@ -1,0 +1,23 @@
+extends Node2D
+
+@export var _LayerSpeed = 0.5
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	
+	$Sprite2D.position.x -= 0.5
+	
+	checkOffScreen()
+	
+	pass
+	
+func checkOffScreen():
+	if ($Sprite2D.position.x <= -600):
+		self.queue_free()
+		print("Destroying self")
+	pass

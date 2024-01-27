@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dg20pm8j1cfuw" path="res://Screens/hue_shift_shader.tscn" id="2_bthg1"]
 [ext_resource type="PackedScene" uid="uid://dlb28bmmmfoux" path="res://Thoughts/thought_spawner.tscn" id="3_yq0ek"]
 [ext_resource type="PackedScene" uid="uid://dkxd3khyh0ysq" path="res://player.tscn" id="4_7ln2r"]
-[ext_resource type="PackedScene" uid="uid://dk6yr47j6u4lw" path="res://background.tscn" id="5_dqfth"]
+[ext_resource type="PackedScene" uid="uid://d25osdj3pc7c" path="res://TestScenes/Jay_Testbackground.tscn" id="6_tiyat"]
 [ext_resource type="PackedScene" uid="uid://rpuxytu243dk" path="res://ParallaxEnvironment/ParallaxEnvironment.tscn" id="6_ufw7g"]
 
 [node name="Main" type="Node2D"]
@@ -17,10 +17,7 @@ script = ExtResource("1_0ocot")
 [node name="Player" parent="." instance=ExtResource("4_7ln2r")]
 position = Vector2(40, 170)
 
-[node name="Background" parent="." instance=ExtResource("5_dqfth")]
-visible = false
-z_index = -1
-texture_filter = 1
-
 [node name="ParallaxEnvironment" parent="." instance=ExtResource("6_ufw7g")]
-position = Vector2(43.1357, 157.584)
+
+[node name="Jay_TestBackground" parent="." instance=ExtResource("6_tiyat")]
+z_index = -4
