@@ -52,6 +52,7 @@ radius = 12.0
 height = 56.25
 
 [node name="ThoughtObject" type="Area2D"]
+position = Vector2(0, 4)
 collision_layer = 2
 script = ExtResource("1_4rwrn")
 
