@@ -1,0 +1,4 @@
+Prop ID,Prompt Dialogue 1 (Thought),Prompt Dialogue 2 (Action),Prompt Dialogue 3 (Action),Prompt Dialogue 4 (Action),etc
+id_npc,You really like your co-worker's new {0n},You compliment your co-worker on their spiffy new {0n},,,
+id_npc,"You see a co-worker struggling to {0v} a {0n}, and want to help them",Your co-worker gladly accepts your help. You {1v} the {0n} and they're very grateful!,,,
+id_cat,"You see a cat, it looks like it wants to be pet","You pet the cat. It enjoys it, proceeding to {0v} your hand",,,

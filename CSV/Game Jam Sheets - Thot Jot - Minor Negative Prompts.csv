@@ -1,0 +1,4 @@
+Prop ID,Prompt Dialogue 1 (Thought),Prompt Dialogue 2 (Action),Prompt Dialogue 3 (Action),Prompt Dialogue 4 (Action),etc
+,I shouldn't stuff that {0n} down my pants,You stuff the {0n} down your pants,,,
+id_prop_cat,I really shouldn't {0v} that cat,You {0v} the cat,,,
+id_prop_stapler,"There's a red stapler here, minding it's own business.",You {0v} the red stapler,"Someone shouts alarmingly, ""What are you doing?!""",,

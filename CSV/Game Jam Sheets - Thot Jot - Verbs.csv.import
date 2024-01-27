@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://be42ps3cfnju8"
+
+[deps]
+
+files=["res://CSV/Game Jam Sheets - Thot Jot - Verbs.Verb.translation"]
+
+source_file="res://CSV/Game Jam Sheets - Thot Jot - Verbs.csv"
+dest_files=["res://CSV/Game Jam Sheets - Thot Jot - Verbs.Verb.translation"]
+
+[params]
+
+compress=true
+delimiter=0

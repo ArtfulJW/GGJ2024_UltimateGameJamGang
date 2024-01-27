@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://cciyqadskau8h"]
+[gd_scene load_steps=6 format=3 uid="uid://bq1prucegybu3"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_grmto"]
 [ext_resource type="PackedScene" uid="uid://dlb28bmmmfoux" path="res://Thoughts/thought_spawner.tscn" id="1_meu4n"]
