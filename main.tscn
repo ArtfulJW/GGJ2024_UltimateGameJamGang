@@ -32,3 +32,12 @@ MAX_WIGGLE_SALT = 20.0
 position = Vector2(342, 103)
 MAX_WIGGLE_SALT = 20.0
 label_text = "SHOULD I PEE IN THE COFFEE"
+
+[node name="AkBank" type="AkBank" parent="."]
+bank = {
+"id": 1542108333,
+"name": "MasterBank"
+}
+load_on = 2
+
+[node name="AkListener2D" type="AkListener2D" parent="."]
