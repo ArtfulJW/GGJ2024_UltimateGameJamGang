@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://main.gd" id="1_grmto"]
 [ext_resource type="PackedScene" uid="uid://dlb28bmmmfoux" path="res://Thoughts/thought_spawner.tscn" id="1_meu4n"]
-[ext_resource type="PackedScene" uid="uid://dkxd3khyh0ysq" path="res://player.tscn" id="2_bktbs"]
+[ext_resource type="PackedScene" uid="uid://dkxd3khyh0ysq" path="res://Player/player.tscn" id="2_bktbs"]
 [ext_resource type="PackedScene" uid="uid://dg20pm8j1cfuw" path="res://Screens/hue_shift_shader.tscn" id="2_xgoeb"]
 [ext_resource type="PackedScene" uid="uid://dk6yr47j6u4lw" path="res://background.tscn" id="5_ismqn"]
 
