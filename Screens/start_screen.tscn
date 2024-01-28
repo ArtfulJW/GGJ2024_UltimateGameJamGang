@@ -1,0 +1,53 @@
+[gd_scene load_steps=3 format=3 uid="uid://djxmqj0tg6f6e"]
+
+[ext_resource type="Script" path="res://Screens/start_screen.gd" id="1_b8xt8"]
+[ext_resource type="Texture2D" uid="uid://du1dih5t310e4" path="res://assets/sprites/Sprites/lineup.png" id="1_bw364"]
+
+[node name="StartScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_b8xt8")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 320.0
+offset_bottom = 184.0
+color = Color(0.00392157, 0.00392157, 0.00392157, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.222
+anchor_right = 1.0
+anchor_bottom = 0.35
+offset_top = 0.0399971
+text = "Evasive Thoughts"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2
+anchor_top = 0.4
+anchor_right = 0.85
+anchor_bottom = 0.639
+offset_bottom = -0.0200119
+texture = ExtResource("1_bw364")
+stretch_mode = 2
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 120.0
+offset_right = 174.0
+offset_bottom = 151.0
+text = "Start"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
