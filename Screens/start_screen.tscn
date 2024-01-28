@@ -1,8 +1,31 @@
-[gd_scene load_steps=4 format=3 uid="uid://djxmqj0tg6f6e"]
+[gd_scene load_steps=8 format=3 uid="uid://djxmqj0tg6f6e"]
 
 [ext_resource type="Script" path="res://Screens/start_screen.gd" id="1_b8xt8"]
 [ext_resource type="Texture2D" uid="uid://du1dih5t310e4" path="res://assets/sprites/Sprites/lineup.png" id="1_bw364"]
 [ext_resource type="Texture2D" uid="uid://c4t662ocyjr4c" path="res://assets/ui/SplashScreens/introtext.png" id="3_xhxov"]
+[ext_resource type="Texture2D" uid="uid://dmc6oxowquxgd" path="res://assets/ui/SplashScreens/credits.png" id="4_8r8dt"]
+[ext_resource type="Texture2D" uid="uid://dwreatm2llhrj" path="res://assets/ui/SplashScreens/Instructions.png" id="4_oifcj"]
+
+[sub_resource type="Animation" id="Animation_7digx"]
+resource_name = "credits"
+length = 16.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1, 12),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -310)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1te3d"]
+_data = {
+"credits": SubResource("Animation_7digx")
+}
 
 [node name="StartScreen_CanvasLayer" type="CanvasLayer"]
 process_mode = 3
@@ -44,6 +67,20 @@ offset_bottom = -0.0200119
 texture = ExtResource("1_bw364")
 stretch_mode = 2
 
+[node name="Credits_button" type="Button" parent="."]
+offset_left = 115.0
+offset_top = 144.0
+offset_right = 178.0
+offset_bottom = 175.0
+text = "Credits"
+
+[node name="Instructions_button" type="Button" parent="."]
+offset_left = 8.0
+offset_top = 144.0
+offset_right = 109.0
+offset_bottom = 175.0
+text = "Instructions"
+
 [node name="intro_beat" type="Control" parent="."]
 visible = false
 layout_mode = 3
@@ -68,11 +105,74 @@ texture = ExtResource("3_xhxov")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="Button" type="Button" parent="."]
-offset_left = 128.0
-offset_top = 120.0
-offset_right = 174.0
-offset_bottom = 151.0
+[node name="Start_button" type="Button" parent="."]
+offset_left = 265.0
+offset_top = 144.0
+offset_right = 311.0
+offset_bottom = 175.0
 text = "Start"
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="credits" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CreditScroll" type="AnimationPlayer" parent="credits"]
+libraries = {
+"": SubResource("AnimationLibrary_1te3d")
+}
+
+[node name="TextureRect" type="TextureRect" parent="credits"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2
+anchor_top = 0.4
+anchor_right = 0.85
+anchor_bottom = 0.639
+offset_left = -64.0
+offset_top = -382.0
+offset_right = 48.0
+offset_bottom = 87.98
+texture = ExtResource("4_8r8dt")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="instructions" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="instructions"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2
+anchor_top = 0.4
+anchor_right = 0.85
+anchor_bottom = 0.639
+offset_left = -64.0
+offset_top = -72.0
+offset_right = 48.0
+offset_bottom = 68.98
+texture = ExtResource("4_oifcj")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Close_button" type="Button" parent="."]
+visible = false
+offset_left = 265.0
+offset_top = 144.0
+offset_right = 311.0
+offset_bottom = 175.0
+text = "Close"
+
+[connection signal="pressed" from="Credits_button" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="Instructions_button" to="." method="_on_instructions_button_pressed"]
+[connection signal="pressed" from="Start_button" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="Close_button" to="." method="_on_close_button_pressed"]
