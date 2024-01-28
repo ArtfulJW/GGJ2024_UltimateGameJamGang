@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://bq1prucegybu3"]
+[gd_scene load_steps=11 format=3 uid="uid://bq1prucegybu3"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_grmto"]
 [ext_resource type="PackedScene" uid="uid://dlb28bmmmfoux" path="res://Thoughts/thought_spawner.tscn" id="1_meu4n"]
 [ext_resource type="PackedScene" uid="uid://dkxd3khyh0ysq" path="res://Player/player.tscn" id="2_bktbs"]
-[ext_resource type="PackedScene" path="res://Screens/start_screen.tscn" id="2_tbxtn"]
+[ext_resource type="PackedScene" uid="uid://djxmqj0tg6f6e" path="res://Screens/start_screen.tscn" id="2_tbxtn"]
 [ext_resource type="PackedScene" uid="uid://dg20pm8j1cfuw" path="res://Screens/hue_shift_shader.tscn" id="2_xgoeb"]
+[ext_resource type="PackedScene" uid="uid://bhk7r6075718d" path="res://Screens/UI/prompt_ui.tscn" id="4_q6134"]
 [ext_resource type="PackedScene" uid="uid://nhxehlu6tfu8" path="res://Thoughts/MajorThought/major_thought.tscn" id="6_37nye"]
 [ext_resource type="PackedScene" uid="uid://c5mwh3jis0aq8" path="res://Prompts/prompt.tscn" id="7_aekg4"]
 [ext_resource type="PackedScene" uid="uid://rpuxytu243dk" path="res://ParallaxEnvironment/ParallaxEnvironment.tscn" id="8_ca2rq"]
@@ -17,6 +18,8 @@ script = ExtResource("1_grmto")
 
 [node name="Player" parent="." instance=ExtResource("2_bktbs")]
 position = Vector2(73, 169)
+
+[node name="PromptUI" parent="." instance=ExtResource("4_q6134")]
 
 [node name="ThoughtSpawner" parent="." node_paths=PackedStringArray("player") instance=ExtResource("1_meu4n")]
 player = NodePath("../Player")
