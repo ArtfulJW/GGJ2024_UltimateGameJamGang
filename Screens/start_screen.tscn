@@ -56,12 +56,12 @@ expand_mode = 1
 stretch_mode = 4
 
 [node name="Credits_button" type="Button" parent="."]
-offset_left = 115.0
+offset_left = 122.0
 offset_top = 144.0
-offset_right = 178.0
+offset_right = 193.0
 offset_bottom = 175.0
 theme = ExtResource("3_ehyt1")
-text = "Credits"
+text = "CREDITS"
 
 [node name="Instructions_button" type="Button" parent="."]
 offset_left = 8.0
@@ -69,7 +69,7 @@ offset_top = 144.0
 offset_right = 109.0
 offset_bottom = 175.0
 theme = ExtResource("3_ehyt1")
-text = "Instructions"
+text = "HOW TO PLAY"
 
 [node name="intro_beat" type="Control" parent="."]
 visible = false
@@ -96,12 +96,12 @@ expand_mode = 1
 stretch_mode = 4
 
 [node name="Start_button" type="Button" parent="."]
-offset_left = 265.0
+offset_left = 259.0
 offset_top = 144.0
-offset_right = 311.0
+offset_right = 315.0
 offset_bottom = 175.0
 theme = ExtResource("3_ehyt1")
-text = "Start"
+text = "START"
 
 [node name="credits" type="Control" parent="."]
 visible = false
@@ -158,11 +158,12 @@ stretch_mode = 4
 
 [node name="Close_button" type="Button" parent="."]
 visible = false
-offset_left = 265.0
+offset_left = 262.0
 offset_top = 144.0
-offset_right = 311.0
+offset_right = 315.0
 offset_bottom = 175.0
-text = "Close"
+theme = ExtResource("3_ehyt1")
+text = "CLOSE"
 
 [connection signal="pressed" from="Credits_button" to="." method="_on_credits_button_pressed"]
 [connection signal="pressed" from="Instructions_button" to="." method="_on_instructions_button_pressed"]

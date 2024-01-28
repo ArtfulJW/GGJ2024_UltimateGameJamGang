@@ -1,7 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://bf846cehlhekd"]
 
 [ext_resource type="Script" path="res://Screens/Progress/prog_screen.gd" id="1_0on0o"]
-[ext_resource type="Texture2D" uid="uid://dort8a4u7wdms" path="res://assets/ui/SplashScreens/progress_placeholder.png" id="1_cmooc"]
 [ext_resource type="Texture2D" uid="uid://c5kiinqds22vc" path="res://assets/ui/ThoughtHolder.png" id="2_eled8"]
 [ext_resource type="Texture2D" uid="uid://ceitbi1anpwlm" path="res://assets/ui/SplashScreens/splashwtext1.png" id="2_ly7k5"]
 [ext_resource type="FontFile" uid="uid://ys3st85dei1t" path="res://assets/fonts/cloak.ttf" id="3_76k3t"]
@@ -10,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://d3mbf62xa1w7k" path="res://assets/ui/SplashScreens/splashwtext4.png" id="7_7e138"]
 [ext_resource type="Texture2D" uid="uid://ycvhq5hb5ewg" path="res://assets/ui/SplashScreens/splashwtext5.png" id="8_ctkdt"]
 [ext_resource type="Texture2D" uid="uid://dbf8f2j3sp0ra" path="res://assets/ui/SplashScreens/badend1.png" id="10_i55ve"]
+[ext_resource type="Theme" uid="uid://br64m25y65jcm" path="res://Screens/button_theme.tres" id="11_nrvge"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_tmidv"]
 line_spacing = -3.845
@@ -39,7 +39,7 @@ _data = {
 [node name="ProgressScreen_CanvasLayer" type="CanvasLayer" node_paths=PackedStringArray("progress")]
 process_mode = 3
 script = ExtResource("1_0on0o")
-progress = [NodePath("Progress_BadResult"), NodePath("Progress_1"), NodePath("Progress_2"), NodePath("Progress_3"), NodePath("Progress_4"), NodePath("Progress_5"), NodePath("Progress_Epilogue")]
+progress = [NodePath("Progress_BadResult"), NodePath("Progress_1"), NodePath("Progress_2"), NodePath("Progress_3"), NodePath("Progress_4"), NodePath("Progress_5"), NodePath("Progress_Epilogue_1")]
 
 [node name="Progress_1" type="Control" parent="."]
 visible = false
@@ -411,7 +411,7 @@ autowrap_mode = 2
 clip_text = true
 metadata/_edit_use_anchors_ = true
 
-[node name="Progress_Epilogue" type="Control" parent="."]
+[node name="Progress_Epilogue_1" type="Control" parent="."]
 visible = false
 layout_mode = 3
 anchors_preset = 15
@@ -420,7 +420,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect" type="TextureRect" parent="Progress_Epilogue"]
+[node name="TextureRect" type="TextureRect" parent="Progress_Epilogue_1"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.2
@@ -431,11 +431,10 @@ offset_left = -72.0
 offset_top = -72.0
 offset_right = 56.0
 offset_bottom = 76.98
-texture = ExtResource("1_cmooc")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="NinePatchRect" type="NinePatchRect" parent="Progress_Epilogue/TextureRect"]
+[node name="NinePatchRect" type="NinePatchRect" parent="Progress_Epilogue_1/TextureRect"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -451,7 +450,7 @@ patch_margin_top = 16
 patch_margin_right = 16
 patch_margin_bottom = 16
 
-[node name="ColorRect" type="ColorRect" parent="Progress_Epilogue/TextureRect/NinePatchRect"]
+[node name="ColorRect" type="ColorRect" parent="Progress_Epilogue_1/TextureRect/NinePatchRect"]
 clip_children = 1
 layout_mode = 1
 anchors_preset = -1
@@ -464,7 +463,7 @@ offset_top = 0.00799996
 offset_right = -0.0360107
 offset_bottom = -0.00800133
 
-[node name="Label" type="Label" parent="Progress_Epilogue/TextureRect/NinePatchRect/ColorRect"]
+[node name="Label" type="Label" parent="Progress_Epilogue_1/TextureRect/NinePatchRect/ColorRect"]
 modulate = Color(0, 0, 0, 1)
 layout_mode = 1
 anchors_preset = -1
@@ -528,12 +527,12 @@ clip_text = true
 metadata/_edit_use_anchors_ = true
 
 [node name="Button" type="Button" parent="."]
-offset_left = 8.0
+offset_left = 226.0
 offset_top = 144.0
-offset_right = 87.0
+offset_right = 311.0
 offset_bottom = 175.0
-text = "Continue
-"
+theme = ExtResource("11_nrvge")
+text = "CONTINUE"
 
 [node name="ResetTimer" type="Timer" parent="."]
 wait_time = 2.0

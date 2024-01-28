@@ -12,7 +12,7 @@ var bad_prompt_array
 var bad_prompt_index = 0
 var is_bad = false
 var splash_index = 0
-var right_side_button_pos = Vector2(232,144)
+var right_side_button_pos = Vector2(226,144)
 var left_side_button_pos = Vector2(8,144)
 
 # Called when the node enters the scene tree for the first time.
