@@ -19,6 +19,7 @@ func _ready():
 	GlobalData.thought_passed_player.connect(on_thought_passed)
 	GlobalData.player_died.connect(handle_player_died)
 	x_dest = position.x
+	Wwise.register_game_obj(self, self.name)
 
 func _physics_process(delta):
 	if is_dead:
@@ -49,6 +50,8 @@ func handle_gravity(delta):
 func handle_jump():
 	if Input.is_action_just_pressed("ui_up") and is_on_simulated_floor() and !is_sliding:
 		velocity.y = JUMP_VELOCITY # * GlobalData.world_speed
+		Wwise.set_2d_position(self, get_global_transform(), 0)
+		Wwise.post_event_id(AK.EVENTS.VOX_JUMP, self)
 
 func handle_slide(delta):
 	if Input.is_action_just_pressed("ui_down") and is_on_simulated_floor() and !is_sliding:

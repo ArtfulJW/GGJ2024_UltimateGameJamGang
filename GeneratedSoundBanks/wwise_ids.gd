@@ -4,14 +4,18 @@ class EVENTS:
 
 	const SFX_CLOUDIMPACT_BAD = 2595354034
 	const TESTSOUND = 38624190
-	const SFX_JUMP = 3695098761
 	const SFX_CLOUDIMPACT_GOOD = 2265112390
+	const SFX_FOOTSTEP = 1069143671
+	const VOX_LAND = 2801095176
+	const VOX_JUMP = 3975608619
 
 	const _dict = {
 		"SFX_CloudImpact_Bad": SFX_CLOUDIMPACT_BAD,
 		"TestSound": TESTSOUND,
-		"SFX_Jump": SFX_JUMP,
-		"SFX_CloudImpact_Good": SFX_CLOUDIMPACT_GOOD
+		"SFX_CloudImpact_Good": SFX_CLOUDIMPACT_GOOD,
+		"SFX_Footstep": SFX_FOOTSTEP,
+		"Vox_Land": VOX_LAND,
+		"Vox_Jump": VOX_JUMP
 	}
 
 class STATES:
