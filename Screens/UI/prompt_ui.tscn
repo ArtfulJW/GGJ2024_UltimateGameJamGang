@@ -1,20 +1,24 @@
-[gd_scene load_steps=4 format=3 uid="uid://bhk7r6075718d"]
+[gd_scene load_steps=5 format=3 uid="uid://bhk7r6075718d"]
 
+[ext_resource type="Script" path="res://Screens/UI/prompt_ui.gd" id="1_1kjmj"]
 [ext_resource type="Texture2D" uid="uid://c5kiinqds22vc" path="res://assets/ui/ThoughtHolder.png" id="1_vm66y"]
-[ext_resource type="FontFile" uid="uid://ci7dbjwfjnvc1" path="res://assets/fonts/slapduck.ttf" id="2_3swpp"]
+[ext_resource type="FontFile" uid="uid://ys3st85dei1t" path="res://assets/fonts/cloak.ttf" id="3_j6ikt"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_slfff"]
 line_spacing = -3.845
-font = ExtResource("2_3swpp")
+font = ExtResource("3_j6ikt")
 font_size = 14
 
 [node name="PromptUI" type="CanvasLayer"]
+script = ExtResource("1_1kjmj")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="NinePatchRect" type="NinePatchRect" parent="Control"]
 layout_mode = 1
@@ -44,8 +48,15 @@ offset_left = 0.0639999
 offset_top = -0.00800014
 offset_right = 0.771988
 offset_bottom = 0.00799942
-text = "SHOULD I PEE IN THE COFFEE?!"
+text = "I've gotta make Shirley laugh... but how?"
 label_settings = SubResource("LabelSettings_slfff")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

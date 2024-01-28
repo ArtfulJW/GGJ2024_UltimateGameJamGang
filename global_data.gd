@@ -12,5 +12,9 @@ var screen_size_x = ProjectSettings.get_setting("display/window/size/viewport_wi
 var screen_size_y = ProjectSettings.get_setting("display/window/size/viewport_height") 
 
 signal thought_passed_player
-signal thought_despawn
+signal thought_collide_good
+signal thought_collide_bad
+signal thought_despawn_good
+signal thought_despawn_bad
+signal restart
 signal player_died

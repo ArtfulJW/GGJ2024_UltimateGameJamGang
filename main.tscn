@@ -19,7 +19,8 @@ script = ExtResource("1_grmto")
 [node name="Player" parent="." instance=ExtResource("2_bktbs")]
 position = Vector2(73, 169)
 
-[node name="PromptUI" parent="." instance=ExtResource("4_q6134")]
+[node name="PromptUI" parent="." node_paths=PackedStringArray("prompt_gen") instance=ExtResource("4_q6134")]
+prompt_gen = NodePath("..")
 
 [node name="ThoughtSpawner" parent="." node_paths=PackedStringArray("player") instance=ExtResource("1_meu4n")]
 player = NodePath("../Player")

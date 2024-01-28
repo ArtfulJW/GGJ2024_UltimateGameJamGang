@@ -56,7 +56,10 @@ func _process(delta):
 		
 	if position.x < -32:
 		if (!is_collided):
-			GlobalData.thought_despawn.emit()
+			if is_good:
+				GlobalData.thought_despawn_good.emit()
+			else:
+				GlobalData.thought_despawn_bad.emit()
 		queue_free()
 
 
@@ -67,10 +70,12 @@ func _on_body_entered(body):
 		collision_shape_2d.disabled = true
 		if not is_good:
 			body.on_collision()
+			GlobalData.thought_collide_bad.emit()
 			Wwise.set_2d_position(self, get_global_transform(), 0)
 			Wwise.post_event_id(AK.EVENTS.SFX_CLOUDIMPACT_BAD, self)
 		else:
 			body.on_thought_passed()
+			GlobalData.thought_collide_good.emit()
 			Wwise.set_2d_position(self, get_global_transform(), 0)
 			Wwise.post_event_id(AK.EVENTS.SFX_CLOUDIMPACT_GOOD, self)
 		
