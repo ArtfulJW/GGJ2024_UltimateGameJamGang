@@ -2,8 +2,11 @@ extends CanvasLayer
 @onready var reset_timer = $ResetTimer
 @export var main : Node2D
 @export var progress : Array[Control]
+@onready var button = $Button
 
 var splash_index = 0
+var right_side_button_pos = Vector2(232,144)
+var left_side_button_pos = Vector2(8,144)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -21,6 +24,7 @@ func _on_button_pressed():
 
 func _on_reset_timer_timeout():
 	splash_index = get_splash_index()
+	set_button_pos()
 	get_tree().paused = true
 	visible = true
 	progress[splash_index].visible = true
@@ -35,3 +39,12 @@ func get_splash_index():
 			return GlobalData.progress
 	else:
 		return 0
+
+func set_button_pos():
+	match splash_index:
+		0,2,4:
+			button.set_position(left_side_button_pos)
+		1,3,5,6:
+			button.set_position(right_side_button_pos)
+			
+		

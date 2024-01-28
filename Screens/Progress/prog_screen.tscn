@@ -537,9 +537,9 @@ clip_text = true
 metadata/_edit_use_anchors_ = true
 
 [node name="Button" type="Button" parent="."]
-offset_left = 232.0
+offset_left = 8.0
 offset_top = 144.0
-offset_right = 311.0
+offset_right = 87.0
 offset_bottom = 175.0
 text = "Continue
 "
