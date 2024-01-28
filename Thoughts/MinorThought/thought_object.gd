@@ -76,11 +76,13 @@ func _on_body_entered(body):
 		if not is_good:
 			body.on_collision()
 			GlobalData.thought_collide_bad.emit()
+			GlobalData.score_bad += 1
 			Wwise.set_2d_position(self, get_global_transform(), 0)
 			Wwise.post_event_id(AK.EVENTS.SFX_CLOUDIMPACT_BAD, self)
 		else:
 			body.on_thought_passed()
 			GlobalData.thought_collide_good.emit()
+			GlobalData.score_good += 1
 			Wwise.set_2d_position(self, get_global_transform(), 0)
 			Wwise.post_event_id(AK.EVENTS.SFX_CLOUDIMPACT_GOOD, self)
 		

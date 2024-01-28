@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://c5tbuqjrshea"]
+
+[ext_resource type="Script" path="res://ParallaxEnvironment/ParallaxEnvironmentAssets/Coworkers.gd" id="1_phhj2"]
+
+[node name="Coworkers" type="Node2D"]
+z_index = -1
+script = ExtResource("1_phhj2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]

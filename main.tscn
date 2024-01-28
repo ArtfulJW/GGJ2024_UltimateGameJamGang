@@ -26,6 +26,7 @@ prompt_gen = NodePath("..")
 player = NodePath("../Player")
 
 [node name="MajorThought" parent="." instance=ExtResource("6_37nye")]
+z_index = 3
 
 [node name="Prompts" type="Node" parent="."]
 
@@ -56,4 +57,4 @@ main = NodePath("..")
 [node name="ParallaxEnvironment" parent="." instance=ExtResource("8_ca2rq")]
 
 [node name="Background" parent="." instance=ExtResource("9_x06no")]
-z_index = -4
+z_index = -5
