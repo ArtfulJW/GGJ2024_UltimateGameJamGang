@@ -2,9 +2,11 @@ extends Area2D
 
 @onready var cloud_animation = $CloudAnimation
 @onready var collision_shape_2d = $CollisionShape2D
-@onready var lightning_bottle = $Lightning_bottle
+#@onready var lightning_bottle = $Lightning_bottle
 
-var speed = 80
+var speed_max 		= 1.5
+var speed 			= 0.50			#Initial speed for players to see it coming
+var speed_accel 	= 0.25/60.0		# gradually increase speed
 var is_collided = false
 var is_passed = false
 var player
@@ -13,6 +15,7 @@ var is_good = randi_range(0,5) == 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pick_visuals()
+	Wwise.register_game_obj(self, self.name)
 	
 
 func set_player(new_player):
@@ -29,11 +32,21 @@ func pick_visuals():
 	
 	if is_good:
 		cloud_animation.modulate = Color.AQUA
-		lightning_bottle.visible = false
+		#lightning_bottle.visible = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	position.x -= speed * delta * GlobalData.world_speed
+	
+	var delta_normal = delta / (1.0/60.0)
+	
+	# Increase speed, but only once I passed a certain point to give player a chance
+	# to see I'm coming towards them
+	# alsp speed up gradually over time to better alert player
+	if position.x <= GlobalData.screen_size_x - (GlobalData.tile_size * 1):
+		speed = min(speed_max, speed + (speed_accel * delta_normal * GlobalData.world_speed))
+	
+	# update position, move left
+	position.x -= speed * delta_normal * GlobalData.world_speed
 	
 	if not is_passed and not is_collided and position.x < player.position.x:
 		is_passed = true
@@ -54,12 +67,17 @@ func _on_body_entered(body):
 		collision_shape_2d.disabled = true
 		if not is_good:
 			body.on_collision()
+			Wwise.set_2d_position(self, get_global_transform(), 0)
+			Wwise.post_event_id(AK.EVENTS.SFX_CLOUDIMPACT_BAD, self)
 		else:
 			body.on_thought_passed()
+			Wwise.set_2d_position(self, get_global_transform(), 0)
+			Wwise.post_event_id(AK.EVENTS.SFX_CLOUDIMPACT_GOOD, self)
 		
 func _on_cloud_animation_animation_looped():
 	if is_collided:
 		cloud_animation.stop()
 		queue_free()
+		
 
 

@@ -8,8 +8,8 @@ _DeskAssetPath = "res://ParallaxEnvironment/ParallaxEnvironmentAssets/Desk.tscn"
 _WindowAssetPath = "res://ParallaxEnvironment/ParallaxEnvironmentAssets/Window.tscn"
 _CityScapeAssetPath = "res://ParallaxEnvironment/ParallaxEnvironmentAssets/CityScape.tscn"
 _ForegroundAssetPath = "res://ParallaxEnvironment/ParallaxEnvironmentAssets/ForegroundAssets/ForegroundAsset.tscn"
-_ForegroundTimerLowerRange = 0.5
-_ForegroundTimerHigherRange = 1.0
+_ForegroundTimerLowerRange = 1.0
+_ForegroundTimerHigherRange = 2.0
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0

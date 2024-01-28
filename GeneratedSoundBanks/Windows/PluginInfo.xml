@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PluginInfo Platform="Windows" BasePlatform="Windows">
 	<PluginLibs>
+		<PluginLib LibName="Wwise Gain" LibId="9109507" Type="Effect" DLL="AkGain" StaticLib="AkGainFX"/>
 		<PluginLib LibName="System" LibId="11403271" Type="AudioDevice"/>
 		<PluginLib LibName="No Output" LibId="11862023" Type="AudioDevice"/>
 	</PluginLibs>
-	<FileHash>{0A13F4BA-B100-584C-1D1C-B9267B7D267A}</FileHash>
+	<FileHash>{422D5B2F-E23A-28FA-0530-95D1B68C95DC}</FileHash>
 </PluginInfo>
