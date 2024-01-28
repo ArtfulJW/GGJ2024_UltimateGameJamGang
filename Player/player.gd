@@ -157,7 +157,8 @@ func handle_slide(delta):
 		collision_shape_2d_upright.disabled = true
 		collision_shape_2d_slide.disabled = false
 		print("sliding")
-		
+		Wwise.set_2d_position(self, get_global_transform(), 0)
+		Wwise.post_event_id(AK.EVENTS.SFX_SLIDE, self)
 
 func _on_slide_timer_timeout() -> void:
 	is_sliding = false

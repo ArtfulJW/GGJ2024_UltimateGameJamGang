@@ -7,6 +7,7 @@ class EVENTS:
 	const SFX_CLOUDIMPACT_GOOD = 2265112390
 	const SFX_FOOTSTEP = 1069143671
 	const VOX_LAND = 2801095176
+	const SFX_SLIDE = 3684443200
 	const VOX_JUMP = 3975608619
 
 	const _dict = {
@@ -15,6 +16,7 @@ class EVENTS:
 		"SFX_CloudImpact_Good": SFX_CLOUDIMPACT_GOOD,
 		"SFX_Footstep": SFX_FOOTSTEP,
 		"Vox_Land": VOX_LAND,
+		"SFX_Slide": SFX_SLIDE,
 		"Vox_Jump": VOX_JUMP
 	}
 

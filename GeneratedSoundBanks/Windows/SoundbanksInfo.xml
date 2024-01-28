@@ -22,7 +22,7 @@
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
 		</SoundBank>
-		<SoundBank Id="1542108333" Type="User" Language="SFX" Hash="{23ED85BE-8E62-2C93-30FD-312D86B988B2}">
+		<SoundBank Id="1542108333" Type="User" Language="SFX" Hash="{53CDA2CA-D141-D1FA-F092-070604B41390}">
 			<ShortName>MasterBank</ShortName>
 			<Path>MasterBank.bnk</Path>
 			<Media>
@@ -37,6 +37,10 @@
 				<File Id="157489733" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_CloudImpactPop_Good_4.wav</ShortName>
 					<CachePath>SFX/SFX_CloudImpactPop_Good_4_B032A71E.wem</CachePath>
+				</File>
+				<File Id="158184493" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_Slide_2.wav</ShortName>
+					<CachePath>SFX/SFX_Slide_2_B032A71E.wem</CachePath>
 				</File>
 				<File Id="204733568" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_CloudImpactPop_Bad_3.wav</ShortName>
@@ -130,6 +134,10 @@
 					<ShortName>SFX_Footstep_3.wav</ShortName>
 					<CachePath>SFX/SFX_Footstep_3_B032A71E.wem</CachePath>
 				</File>
+				<File Id="946797750" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_Slide_1.wav</ShortName>
+					<CachePath>SFX/SFX_Slide_1_B032A71E.wem</CachePath>
+				</File>
 				<File Id="1053541563" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Vox_Land_1.wav</ShortName>
 					<CachePath>SFX/Vox_Land_1_B032A71E.wem</CachePath>
@@ -176,6 +184,15 @@
 						<MediaRef Id="885903244"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3684443200" Name="SFX_Slide">
+					<MediaRefs>
+						<MediaRef Id="158184493"/>
+						<MediaRef Id="685685700"/>
+						<MediaRef Id="745052648"/>
+						<MediaRef Id="824744884"/>
+						<MediaRef Id="946797750"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="38624190" Name="TestSound">
 					<MediaRefs>
 						<MediaRef Id="213557790"/>
@@ -200,5 +217,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{B0F05A15-8337-E3CD-5FA3-6898E24DFBDB}</FileHash>
+	<FileHash>{8D4DC96B-DEB9-D39C-9A33-AED0870D523E}</FileHash>
 </SoundBanksInfo>
