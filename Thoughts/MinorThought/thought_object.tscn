@@ -1,7 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://f0l81pxaoux6"]
+[gd_scene load_steps=29 format=3 uid="uid://f0l81pxaoux6"]
 
 [ext_resource type="Script" path="res://Thoughts/MinorThought/thought_object.gd" id="1_dsjn4"]
 [ext_resource type="Texture2D" uid="uid://0ae81j5hhdsk" path="res://assets/sprites/Sprites/Cloud1Anim.png" id="2_sl6pj"]
+[ext_resource type="Texture2D" uid="uid://caf1c01efen2c" path="res://assets/sprites/Sprites/Cloud2Anim.png" id="3_cr8mc"]
+[ext_resource type="Texture2D" uid="uid://byb4appulrul4" path="res://assets/sprites/Sprites/Cloud3Anim.png" id="4_k5xd8"]
+[ext_resource type="Texture2D" uid="uid://bqttmaf34fyd2" path="res://assets/sprites/Sprites/Cloud1Dissapate-Sheet.png" id="5_6otwg"]
 
 [sub_resource type="Animation" id="Animation_3mgc0"]
 resource_name = "cloud1"
@@ -27,6 +30,66 @@ region = Rect2(160, 0, 80, 40)
 atlas = ExtResource("2_sl6pj")
 region = Rect2(240, 0, 80, 40)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_rog4e"]
+atlas = ExtResource("3_cr8mc")
+region = Rect2(0, 0, 80, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hwlkf"]
+atlas = ExtResource("3_cr8mc")
+region = Rect2(80, 0, 80, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ww1pm"]
+atlas = ExtResource("3_cr8mc")
+region = Rect2(160, 0, 80, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qp5b7"]
+atlas = ExtResource("3_cr8mc")
+region = Rect2(240, 0, 80, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wsslh"]
+atlas = ExtResource("4_k5xd8")
+region = Rect2(0, 0, 80, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cwxex"]
+atlas = ExtResource("4_k5xd8")
+region = Rect2(80, 0, 80, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cpv5y"]
+atlas = ExtResource("4_k5xd8")
+region = Rect2(160, 0, 80, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fvc11"]
+atlas = ExtResource("4_k5xd8")
+region = Rect2(240, 0, 80, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5hm54"]
+atlas = ExtResource("5_6otwg")
+region = Rect2(200, 0, 100, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4q2sr"]
+atlas = ExtResource("5_6otwg")
+region = Rect2(300, 0, 100, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3j0dt"]
+atlas = ExtResource("5_6otwg")
+region = Rect2(400, 0, 100, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4usdo"]
+atlas = ExtResource("5_6otwg")
+region = Rect2(500, 0, 100, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wpjon"]
+atlas = ExtResource("5_6otwg")
+region = Rect2(600, 0, 100, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_scy4f"]
+atlas = ExtResource("5_6otwg")
+region = Rect2(700, 0, 100, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b6juj"]
+atlas = ExtResource("5_6otwg")
+region = Rect2(800, 0, 100, 60)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_epfl4"]
 animations = [{
 "frames": [{
@@ -43,13 +106,72 @@ animations = [{
 "texture": SubResource("AtlasTexture_gd58f")
 }],
 "loop": true,
-"name": &"cloud",
-"speed": 5.0
+"name": &"cloud_1",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rog4e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hwlkf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ww1pm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qp5b7")
+}],
+"loop": true,
+"name": &"cloud_2",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wsslh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cwxex")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cpv5y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fvc11")
+}],
+"loop": true,
+"name": &"cloud_3",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5hm54")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4q2sr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3j0dt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4usdo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wpjon")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_scy4f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b6juj")
+}],
+"loop": true,
+"name": &"pop",
+"speed": 10.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2d4xn"]
-radius = 12.0
-height = 56.25
+[sub_resource type="CircleShape2D" id="CircleShape2D_tm2wa"]
+radius = 15.0
 
 [node name="ThoughtObject" type="Area2D"]
 position = Vector2(0, 4)
@@ -61,30 +183,17 @@ libraries = {
 "": SubResource("AnimationLibrary_bgd1q")
 }
 
-[node name="Cloud1Animation" type="AnimatedSprite2D" parent="."]
+[node name="CloudAnimation" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(-27, -16)
 sprite_frames = SubResource("SpriteFrames_epfl4")
-animation = &"cloud"
-autoplay = "cloud"
-
-[node name="Cloud2Animation" type="AnimatedSprite2D" parent="."]
-texture_filter = 1
-position = Vector2(-11, -32)
-sprite_frames = SubResource("SpriteFrames_epfl4")
-animation = &"cloud"
-autoplay = "cloud"
-
-[node name="Cloud3Animation" type="AnimatedSprite2D" parent="."]
-texture_filter = 1
-position = Vector2(5, -48)
-sprite_frames = SubResource("SpriteFrames_epfl4")
-animation = &"cloud"
-autoplay = "cloud"
+animation = &"pop"
+autoplay = "cloud_1"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-23, -28)
+position = Vector2(-29, -18)
 rotation = 0.71384
-shape = SubResource("CapsuleShape2D_2d4xn")
+shape = SubResource("CircleShape2D_tm2wa")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="animation_finished" from="CloudAnimation" to="." method="_on_cloud_animation_animation_finished"]
