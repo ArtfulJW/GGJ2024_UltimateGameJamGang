@@ -9,6 +9,7 @@ const X_SPEED = 50
 @onready var collision_shape_2d_slide = $CollisionShape2D_slide
 @onready var collision_shape_2d_upright = $CollisionShape2D_upright
 @onready var landing_vfx = $LandingVFX
+@onready var slide_vfx = $slide_vfx
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var is_sliding = false
@@ -61,6 +62,7 @@ func handle_slide(delta):
 		is_sliding = true
 		slide_timer.start()
 		animated_sprite_2d.play("sliding")
+		slide_vfx.play("default")
 		collision_shape_2d_upright.disabled = true
 		collision_shape_2d_slide.disabled = false
 		

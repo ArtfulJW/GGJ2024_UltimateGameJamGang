@@ -1,0 +1,71 @@
+[gd_scene load_steps=10 format=3 uid="uid://w658lhkr5723"]
+
+[ext_resource type="Texture2D" uid="uid://dg5isvy8oklbq" path="res://assets/sprites/Sprites/Sliding_Sheet.png" id="1_impnn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vei7h"]
+atlas = ExtResource("1_impnn")
+region = Rect2(0, 0, 60, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_46krv"]
+atlas = ExtResource("1_impnn")
+region = Rect2(60, 0, 60, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m02ti"]
+atlas = ExtResource("1_impnn")
+region = Rect2(120, 0, 60, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_agfr5"]
+atlas = ExtResource("1_impnn")
+region = Rect2(180, 0, 60, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_38spt"]
+atlas = ExtResource("1_impnn")
+region = Rect2(240, 0, 60, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jv8tr"]
+atlas = ExtResource("1_impnn")
+region = Rect2(300, 0, 60, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o2sgm"]
+atlas = ExtResource("1_impnn")
+region = Rect2(360, 0, 60, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y0ix3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vei7h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_46krv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m02ti")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_agfr5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_38spt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jv8tr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o2sgm")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="slide_vfx" type="AnimatedSprite2D"]
+modulate = Color(1, 1, 1, 0.545098)
+position = Vector2(30, -10)
+sprite_frames = SubResource("SpriteFrames_y0ix3")

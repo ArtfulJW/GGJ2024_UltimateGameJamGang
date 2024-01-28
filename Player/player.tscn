@@ -1,10 +1,11 @@
-[gd_scene load_steps=28 format=3 uid="uid://dkxd3khyh0ysq"]
+[gd_scene load_steps=29 format=3 uid="uid://dkxd3khyh0ysq"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_gd3j7"]
 [ext_resource type="Texture2D" uid="uid://h6jp5dcj2kwg" path="res://assets/sprites/Sprites/protag_run.png" id="2_44taq"]
 [ext_resource type="Texture2D" uid="uid://2uvenhy1l702" path="res://assets/sprites/Sprites/protag_jump.png" id="2_f4ggp"]
 [ext_resource type="Texture2D" uid="uid://bybsa64s5yhnc" path="res://assets/sprites/Sprites/protag_slide.png" id="4_ovdw7"]
 [ext_resource type="PackedScene" uid="uid://etohn4ihu20v" path="res://Player/PlayerEffects/landing_vfx.tscn" id="5_67ngu"]
+[ext_resource type="PackedScene" uid="uid://w658lhkr5723" path="res://Player/PlayerEffects/slide_vfx.tscn" id="5_77f6w"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b87ka"]
 radius = 8.0
@@ -184,10 +185,13 @@ scale = Vector2(0.875, 0.875)
 sprite_frames = SubResource("SpriteFrames_7ipuq")
 animation = &"running"
 autoplay = "running"
-frame_progress = 0.843643
 
 [node name="SlideTimer" type="Timer" parent="."]
 one_shot = true
+
+[node name="slide_vfx" parent="." instance=ExtResource("5_77f6w")]
+position = Vector2(1, -10)
+frame_progress = 0.0
 
 [node name="LandingVFX" parent="." instance=ExtResource("5_67ngu")]
 position = Vector2(9, -9)
