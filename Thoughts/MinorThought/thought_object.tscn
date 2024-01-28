@@ -1,10 +1,12 @@
-[gd_scene load_steps=29 format=3 uid="uid://f0l81pxaoux6"]
+[gd_scene load_steps=31 format=3 uid="uid://f0l81pxaoux6"]
 
 [ext_resource type="Script" path="res://Thoughts/MinorThought/thought_object.gd" id="1_dsjn4"]
 [ext_resource type="Texture2D" uid="uid://0ae81j5hhdsk" path="res://assets/sprites/Sprites/Cloud1Anim.png" id="2_sl6pj"]
 [ext_resource type="Texture2D" uid="uid://caf1c01efen2c" path="res://assets/sprites/Sprites/Cloud2Anim.png" id="3_cr8mc"]
 [ext_resource type="Texture2D" uid="uid://byb4appulrul4" path="res://assets/sprites/Sprites/Cloud3Anim.png" id="4_k5xd8"]
 [ext_resource type="Texture2D" uid="uid://bqttmaf34fyd2" path="res://assets/sprites/Sprites/Cloud1Dissapate-Sheet.png" id="5_6otwg"]
+[ext_resource type="Script" path="res://Thoughts/MinorThought/Lightning_bottle.gd" id="6_nh4x2"]
+[ext_resource type="PackedScene" uid="uid://da6ghubichan4" path="res://Thoughts/MinorThought/lightning_effect.tscn" id="7_l8vgj"]
 
 [sub_resource type="Animation" id="Animation_3mgc0"]
 resource_name = "cloud1"
@@ -193,6 +195,39 @@ autoplay = "cloud_1"
 position = Vector2(-4.54747e-13, -4.54747e-13)
 rotation = 0.71384
 shape = SubResource("CircleShape2D_tm2wa")
+
+[node name="LightningBottle" type="Node2D" parent="." node_paths=PackedStringArray("children")]
+script = ExtResource("6_nh4x2")
+children = [NodePath("Lightning_AnimatedSprite2D"), NodePath("Lightning_AnimatedSprite2D2"), NodePath("Lightning_AnimatedSprite2D3"), NodePath("Lightning_AnimatedSprite2D4"), NodePath("Lightning_AnimatedSprite2D5"), NodePath("Lightning_AnimatedSprite2D6")]
+
+[node name="Lightning_AnimatedSprite2D" parent="LightningBottle" instance=ExtResource("7_l8vgj")]
+frame = 2
+frame_progress = 0.0
+speed_scale = 1.1
+
+[node name="Lightning_AnimatedSprite2D2" parent="LightningBottle" instance=ExtResource("7_l8vgj")]
+position = Vector2(-4, -16)
+frame = 8
+frame_progress = 0.0
+
+[node name="Lightning_AnimatedSprite2D3" parent="LightningBottle" instance=ExtResource("7_l8vgj")]
+position = Vector2(-20, 8)
+frame = 2
+frame_progress = 0.0
+
+[node name="Lightning_AnimatedSprite2D4" parent="LightningBottle" instance=ExtResource("7_l8vgj")]
+position = Vector2(-20, -10)
+
+[node name="Lightning_AnimatedSprite2D5" parent="LightningBottle" instance=ExtResource("7_l8vgj")]
+position = Vector2(22, 9)
+frame = 8
+frame_progress = 0.0
+
+[node name="Lightning_AnimatedSprite2D6" parent="LightningBottle" instance=ExtResource("7_l8vgj")]
+position = Vector2(-4, -2)
+frame = 6
+frame_progress = 0.0
+speed_scale = 0.9
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="animation_finished" from="CloudAnimation" to="." method="_on_cloud_animation_animation_finished"]

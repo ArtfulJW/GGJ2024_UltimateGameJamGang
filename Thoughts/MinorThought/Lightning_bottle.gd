@@ -5,7 +5,7 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	for child in children:
-		child.visible = not randi_range(0,2) == 0
+		child.visible = randi_range(0,3) == 0
 
 
 
