@@ -29,10 +29,12 @@ texture_filter = 1
 [node name="Prompts" type="Node" parent="."]
 
 [node name="Prompt_1" parent="Prompts" instance=ExtResource("7_aekg4")]
+visible = false
 position = Vector2(291, 34)
 MAX_WIGGLE_SALT = 20.0
 
 [node name="Prompt_2" parent="Prompts" instance=ExtResource("7_aekg4")]
+visible = false
 position = Vector2(342, 103)
 MAX_WIGGLE_SALT = 20.0
 label_text = "SHOULD I PEE IN THE COFFEE"
