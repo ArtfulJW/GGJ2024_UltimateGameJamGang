@@ -15,6 +15,7 @@ height = 20.0
 
 [sub_resource type="Animation" id="Animation_catp8"]
 resource_name = "running"
+step = 0.0833333
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ko36g"]
 _data = {
@@ -183,7 +184,8 @@ scale = Vector2(0.875, 0.875)
 sprite_frames = SubResource("SpriteFrames_7ipuq")
 animation = &"running"
 autoplay = "running"
-frame_progress = 0.843643
 
 [node name="SlideTimer" type="Timer" parent="."]
 one_shot = true
+
+[connection signal="frame_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_frame_changed"]

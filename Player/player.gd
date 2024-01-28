@@ -74,3 +74,9 @@ func on_collision():
 
 func handle_player_died():
 	is_dead = true
+
+
+func _on_animated_sprite_2d_frame_changed():
+	if $AnimatedSprite2D.get_frame() in [1, 5] and is_on_simulated_floor():
+		Wwise.set_2d_position(self, get_global_transform(), 0)
+		Wwise.post_event_id(AK.EVENTS.SFX_FOOTSTEP, self)
