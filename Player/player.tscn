@@ -1,9 +1,10 @@
-[gd_scene load_steps=27 format=3 uid="uid://dkxd3khyh0ysq"]
+[gd_scene load_steps=28 format=3 uid="uid://dkxd3khyh0ysq"]
 
-[ext_resource type="Script" path="res://Player/player.gd" id="1_gd3j7"]
+[ext_resource type="Script" path="res://player/player.gd" id="1_gd3j7"]
 [ext_resource type="Texture2D" uid="uid://h6jp5dcj2kwg" path="res://assets/sprites/Sprites/protag_run.png" id="2_44taq"]
 [ext_resource type="Texture2D" uid="uid://2uvenhy1l702" path="res://assets/sprites/Sprites/protag_jump.png" id="2_f4ggp"]
 [ext_resource type="Texture2D" uid="uid://bybsa64s5yhnc" path="res://assets/sprites/Sprites/protag_slide.png" id="4_ovdw7"]
+[ext_resource type="PackedScene" uid="uid://etohn4ihu20v" path="res://Player/PlayerEffects/landing_vfx.tscn" id="5_67ngu"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b87ka"]
 radius = 8.0
@@ -187,3 +188,6 @@ frame_progress = 0.843643
 
 [node name="SlideTimer" type="Timer" parent="."]
 one_shot = true
+
+[node name="LandingVFX" parent="." instance=ExtResource("5_67ngu")]
+position = Vector2(9, -9)

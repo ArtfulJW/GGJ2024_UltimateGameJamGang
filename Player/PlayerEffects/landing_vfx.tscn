@@ -1,0 +1,54 @@
+[gd_scene load_steps=8 format=3 uid="uid://etohn4ihu20v"]
+
+[ext_resource type="Texture2D" uid="uid://fmenpksgkenn" path="res://assets/sprites/Sprites/Landing_Sheet.png" id="1_72o3w"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tkr3x"]
+atlas = ExtResource("1_72o3w")
+region = Rect2(60, 0, 60, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hfpty"]
+atlas = ExtResource("1_72o3w")
+region = Rect2(120, 0, 60, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fmolu"]
+atlas = ExtResource("1_72o3w")
+region = Rect2(180, 0, 60, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_454xd"]
+atlas = ExtResource("1_72o3w")
+region = Rect2(240, 0, 60, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_24rgg"]
+atlas = ExtResource("1_72o3w")
+region = Rect2(300, 0, 60, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_egcgv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tkr3x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hfpty")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fmolu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_454xd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_24rgg")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"default",
+"speed": 20.0
+}]
+
+[node name="LandingVFX" type="AnimatedSprite2D"]
+position = Vector2(30, -10)
+sprite_frames = SubResource("SpriteFrames_egcgv")
+frame = 5
