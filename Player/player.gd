@@ -18,11 +18,11 @@ var is_dead = false
 
 var y_speed		= 0;
 var is_jumping 	= false;
-var jump_time			= 0.15;
-var jump_speed 			= -2.5 #-10000;
-var jump_deceleration 	= 0.1 # 250
-var gravity 			= 0.2 # 500;
-var gravity_max			= 10.0 # 25000;
+var jump_time			= 0.1;
+var jump_speed 			= -2.4 #-10000;
+var jump_deceleration 	= 0.08 # 250
+var gravity 			= 0.12 # 500;
+var gravity_max			= 3.2 # 25000;
 var floor_y				= GlobalData.screen_size_y - GlobalData.tile_size
 
 
