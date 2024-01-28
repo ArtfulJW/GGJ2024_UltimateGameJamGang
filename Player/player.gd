@@ -12,14 +12,18 @@ const X_SPEED = 50
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var is_sliding = false
 var x_dest = 0.0
+var is_dead = false
 
 
 func _ready():
 	GlobalData.thought_passed_player.connect(on_thought_passed)
+	GlobalData.player_died.connect(handle_player_died)
 	x_dest = position.x
 
 func _physics_process(delta):
-	
+	if is_dead:
+		return
+		
 	handle_gravity(delta)
 	handle_jump()
 	handle_slide(delta)
@@ -64,3 +68,6 @@ func on_thought_passed():
 	
 func on_collision():
 	x_dest -= 16
+
+func handle_player_died():
+	is_dead = true
