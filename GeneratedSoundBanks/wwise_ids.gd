@@ -2,12 +2,16 @@ class_name AK
 
 class EVENTS:
 
-	const SFX_JUMP = 3695098761
+	const SFX_CLOUDIMPACT_BAD = 2595354034
 	const TESTSOUND = 38624190
+	const SFX_JUMP = 3695098761
+	const SFX_CLOUDIMPACT_GOOD = 2265112390
 
 	const _dict = {
+		"SFX_CloudImpact_Bad": SFX_CLOUDIMPACT_BAD,
+		"TestSound": TESTSOUND,
 		"SFX_Jump": SFX_JUMP,
-		"TestSound": TESTSOUND
+		"SFX_CloudImpact_Good": SFX_CLOUDIMPACT_GOOD
 	}
 
 class STATES:

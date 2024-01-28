@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{B6CBD692-12EC-CDBA-0932-48F63C40C91F}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{E1067CA8-842E-9FEA-B0E2-FB8516D1D03E}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -22,16 +22,109 @@
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
 		</SoundBank>
-		<SoundBank Id="1542108333" Type="User" Language="SFX" Hash="{68016853-E511-AF92-6E32-F52CE02313EF}">
+		<SoundBank Id="1542108333" Type="User" Language="SFX" Hash="{792B299C-A637-C0F9-A828-801F79CC0A11}">
 			<ShortName>MasterBank</ShortName>
 			<Path>MasterBank.bnk</Path>
 			<Media>
+				<File Id="6154547" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_CloudImpactSpiral_2.wav</ShortName>
+					<CachePath>SFX/SFX_CloudImpactSpiral_2_B032A71E.wem</CachePath>
+				</File>
+				<File Id="157489733" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_CloudImpactPop_Good_4.wav</ShortName>
+					<CachePath>SFX/SFX_CloudImpactPop_Good_4_B032A71E.wem</CachePath>
+				</File>
+				<File Id="204733568" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_CloudImpactPop_Bad_3.wav</ShortName>
+					<CachePath>SFX/SFX_CloudImpactPop_Bad_3_B032A71E.wem</CachePath>
+				</File>
 				<File Id="213557790" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>EFX SD Heads Hit Together 02.wav</ShortName>
-					<CachePath>SFX/EFX SD Heads Hit Together 02_B032A71E.wem</CachePath>
+					<CachePath>SFX/EFX SD Heads Hit Together 02_B67B1F5A.wem</CachePath>
+				</File>
+				<File Id="253599227" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_CloudImpactPop_Good_2.wav</ShortName>
+					<CachePath>SFX/SFX_CloudImpactPop_Good_2_B032A71E.wem</CachePath>
+				</File>
+				<File Id="533122487" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_CloudImpactPop_Puff.wav</ShortName>
+					<CachePath>SFX/SFX_CloudImpactPop_Puff_B032A71E.wem</CachePath>
+				</File>
+				<File Id="571411057" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_CloudImpactPop_Bad_2.wav</ShortName>
+					<CachePath>SFX/SFX_CloudImpactPop_Bad_2_B032A71E.wem</CachePath>
+				</File>
+				<File Id="599632469" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_CloudImpactAir_2.wav</ShortName>
+					<CachePath>SFX/SFX_CloudImpactAir_2_B032A71E.wem</CachePath>
+				</File>
+				<File Id="643647189" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_CloudImpactPop_Bad_1.wav</ShortName>
+					<CachePath>SFX/SFX_CloudImpactPop_Bad_1_B032A71E.wem</CachePath>
+				</File>
+				<File Id="678424116" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_CloudImpactPop_Good_1.wav</ShortName>
+					<CachePath>SFX/SFX_CloudImpactPop_Good_1_B032A71E.wem</CachePath>
+				</File>
+				<File Id="685685700" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_CloudImpactAttack_3.wav</ShortName>
+					<CachePath>SFX/SFX_CloudImpactAttack_3_B032A71E.wem</CachePath>
+				</File>
+				<File Id="716119763" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_CloudImpactPop_Good_3wav.wav</ShortName>
+					<CachePath>SFX/SFX_CloudImpactPop_Good_3wav_B032A71E.wem</CachePath>
+				</File>
+				<File Id="745052648" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_CloudImpactAttack_1.wav</ShortName>
+					<CachePath>SFX/SFX_CloudImpactAttack_1_B032A71E.wem</CachePath>
+				</File>
+				<File Id="780567619" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_CloudImpactSpiral_1.wav</ShortName>
+					<CachePath>SFX/SFX_CloudImpactSpiral_1_B032A71E.wem</CachePath>
+				</File>
+				<File Id="824744884" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_CloudImpactAttack_2.wav</ShortName>
+					<CachePath>SFX/SFX_CloudImpactAttack_2_B032A71E.wem</CachePath>
+				</File>
+				<File Id="853657298" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_CloudImpactAir_1.wav</ShortName>
+					<CachePath>SFX/SFX_CloudImpactAir_1_B032A71E.wem</CachePath>
 				</File>
 			</Media>
+			<Plugins>
+				<Custom>
+					<Plugin Id="903199145" Name="Gain (Custom)" LibName="Wwise Gain" LibId="9109507"/>
+				</Custom>
+			</Plugins>
 			<Events>
+				<Event Id="2595354034" Name="SFX_CloudImpact_Bad">
+					<MediaRefs>
+						<MediaRef Id="6154547"/>
+						<MediaRef Id="204733568"/>
+						<MediaRef Id="571411057"/>
+						<MediaRef Id="599632469"/>
+						<MediaRef Id="643647189"/>
+						<MediaRef Id="685685700"/>
+						<MediaRef Id="745052648"/>
+						<MediaRef Id="780567619"/>
+						<MediaRef Id="824744884"/>
+						<MediaRef Id="853657298"/>
+					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="903199145"/>
+						</Custom>
+					</PluginRefs>
+				</Event>
+				<Event Id="2265112390" Name="SFX_CloudImpact_Good">
+					<MediaRefs>
+						<MediaRef Id="157489733"/>
+						<MediaRef Id="253599227"/>
+						<MediaRef Id="533122487"/>
+						<MediaRef Id="678424116"/>
+						<MediaRef Id="716119763"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3695098761" Name="SFX_Jump"/>
 				<Event Id="38624190" Name="TestSound">
 					<MediaRefs>
@@ -41,5 +134,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{4F5DAE81-79F0-CB89-F74F-D78C64394B0C}</FileHash>
+	<FileHash>{C8E09D51-2CAB-0301-8F00-92F9E51E6BDA}</FileHash>
 </SoundBanksInfo>

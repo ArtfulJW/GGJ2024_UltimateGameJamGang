@@ -13,6 +13,7 @@ var is_good = randi_range(0,5) == 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pick_visuals()
+	Wwise.register_game_obj(self, self.name)
 	
 
 func set_player(new_player):
@@ -54,12 +55,17 @@ func _on_body_entered(body):
 		collision_shape_2d.disabled = true
 		if not is_good:
 			body.on_collision()
+			Wwise.set_2d_position(self, get_global_transform(), 0)
+			Wwise.post_event_id(AK.EVENTS.SFX_CLOUDIMPACT_BAD, self)
 		else:
 			body.on_thought_passed()
+			Wwise.set_2d_position(self, get_global_transform(), 0)
+			Wwise.post_event_id(AK.EVENTS.SFX_CLOUDIMPACT_GOOD, self)
 		
 func _on_cloud_animation_animation_looped():
 	if is_collided:
 		cloud_animation.stop()
 		queue_free()
+		
 
 
