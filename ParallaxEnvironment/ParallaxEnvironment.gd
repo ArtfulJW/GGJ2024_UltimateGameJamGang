@@ -79,6 +79,7 @@ func startTimers():
 	_FirstLayerTimer.start()
 	_SecondLayerTimer.start()
 	_ThirdLayerTimer.start()
+	_CoworkerTimer.start()
 
 func _on_timer_timeout():
 	spawnAsset(_DeskAssetPath,1)
@@ -109,14 +110,14 @@ func StartTimers():
 	_SecondLayerTimer.start(2.5)
 	_ThirdLayerTimer.start(2)
 	_FourthLayerTimer.start(2)
-	_CoworkerTimer.start(3)
+	_CoworkerTimer.start(4)
 	pass
 
 func checkWorldSpeed():
 	_FirstLayerTimer.wait_time = 2 / GlobalData.world_speed
 	_SecondLayerTimer.wait_time = 2.5 / GlobalData.world_speed
 	_ThirdLayerTimer.wait_time = 2 / GlobalData.world_speed
-	_CoworkerTimer.wait_time = 3 / GlobalData.world_speed
+	_CoworkerTimer.wait_time = 4 / GlobalData.world_speed
 	pass
 
 """
@@ -128,7 +129,7 @@ func _on_timer_4_timeout():
 	spawnAsset(_ForegroundAssetPath,4)
 	
 	# Generate random number to vary spawning
-	var _Rand = rng.randf_range(_ForegroundTimerLowerRange,_ForegroundTimerHigherRange)
+	var _Rand = rng.randf_range(3,5)
 	_FourthLayerTimer.wait_time = _Rand
 	
 	pass 
@@ -136,4 +137,9 @@ func _on_timer_4_timeout():
 
 func _on_coworker_timer_timeout():
 	spawnAsset(_CoworkerAssetPath,5)
+	
+		# Generate random number to vary spawning
+	var _Rand = rng.randf_range(_ForegroundTimerLowerRange,_ForegroundTimerHigherRange)
+	_CoworkerTimer.wait_time = _Rand
+	
 	pass # Replace with function body.
