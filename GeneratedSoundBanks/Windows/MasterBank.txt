@@ -16,6 +16,9 @@ State	ID	Name	State Group			Notes
 	748895195	None	MenuOrGame			
 	2607556080	Menu	MenuOrGame			
 
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	2038021397	LoseProximity			\Default Work Unit\LoseProximity	
+
 Modulator Time	ID	Name			Wwise Object Path	Notes
 	82776338	Modulator Time (Custom)				
 
@@ -24,6 +27,7 @@ Effect plug-ins	ID	Name	Type				Notes
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	6154547	SFX_CloudImpactSpiral_2	D:\Users\Aryo Nazaradeh\Misc\Work\Games\2024\GGJ2024\GGJ2024_UltimateGameJamGang\GGJ2024_Thoughts_WwiseProject\.cache\Windows\SFX\SFX_CloudImpactSpiral_2_B032A71E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment\SFX_CloudImpact\SFX_CloudImpactSpiral\SFX_CloudImpactSpiral_2		3822
+	43757270	Music_Game_OhNo_Loop	D:\Users\Aryo Nazaradeh\Misc\Work\Games\2024\GGJ2024\GGJ2024_UltimateGameJamGang\GGJ2024_Thoughts_WwiseProject\.cache\Windows\SFX\Music_Game_OhNo_Loop_B032A71E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\MenuOrGame\Music_Game\Music_Game_Main\Music_Game_OhNo_Loop		118184
 	112081328	Vox_Land_2	D:\Users\Aryo Nazaradeh\Misc\Work\Games\2024\GGJ2024\GGJ2024_UltimateGameJamGang\GGJ2024_Thoughts_WwiseProject\.cache\Windows\SFX\Vox_Land_2_B032A71E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment\PlayerVox\Vox_Land\Vox_Land_2		3553
 	157489733	SFX_CloudImpactPop_Good_4	D:\Users\Aryo Nazaradeh\Misc\Work\Games\2024\GGJ2024\GGJ2024_UltimateGameJamGang\GGJ2024_Thoughts_WwiseProject\.cache\Windows\SFX\SFX_CloudImpactPop_Good_4_B032A71E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment\SFX_CloudImpact\SFX_CloudImpactPop_Good\SFX_CloudImpactPop_Good_4		4231
 	158184493	SFX_Slide_2	D:\Users\Aryo Nazaradeh\Misc\Work\Games\2024\GGJ2024\GGJ2024_UltimateGameJamGang\GGJ2024_Thoughts_WwiseProject\.cache\Windows\SFX\SFX_Slide_2_B032A71E.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerFoley\SFX_Slide\SFX_Slide_2		7896
