@@ -39,7 +39,7 @@ func _process(delta):
 	
 	checkWorldSpeed()
 	
-	print(GlobalData.world_speed)
+	#print(GlobalData.world_speed)
 	
 	pass
 	
@@ -99,14 +99,14 @@ func SetTimerAutoStart(_InputBoolean):
 # Helper function to set start for all timersf
 func StartTimers():
 	_FirstLayerTimer.start(2)
-	_SecondLayerTimer.start(2)
+	_SecondLayerTimer.start(2.5)
 	_ThirdLayerTimer.start(2)
 	_FourthLayerTimer.start(2)
 	pass
 
 func checkWorldSpeed():
 	_FirstLayerTimer.wait_time = 2 / GlobalData.world_speed
-	_SecondLayerTimer.wait_time = 2 / GlobalData.world_speed
+	_SecondLayerTimer.wait_time = 2.5 / GlobalData.world_speed
 	_ThirdLayerTimer.wait_time = 2 / GlobalData.world_speed
 	
 	pass
