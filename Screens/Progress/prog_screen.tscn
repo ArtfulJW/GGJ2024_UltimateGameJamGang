@@ -1,20 +1,27 @@
-[gd_scene load_steps=6 format=3 uid="uid://bf846cehlhekd"]
+[gd_scene load_steps=11 format=3 uid="uid://bf846cehlhekd"]
 
 [ext_resource type="Script" path="res://Screens/Progress/prog_screen.gd" id="1_0on0o"]
 [ext_resource type="Texture2D" uid="uid://dort8a4u7wdms" path="res://assets/ui/SplashScreens/progress_placeholder.png" id="1_cmooc"]
 [ext_resource type="Texture2D" uid="uid://c5kiinqds22vc" path="res://assets/ui/ThoughtHolder.png" id="2_eled8"]
+[ext_resource type="Texture2D" uid="uid://ceitbi1anpwlm" path="res://assets/ui/SplashScreens/splashwtext1.png" id="2_ly7k5"]
 [ext_resource type="FontFile" uid="uid://ys3st85dei1t" path="res://assets/fonts/cloak.ttf" id="3_76k3t"]
+[ext_resource type="Texture2D" uid="uid://bugpa0y6qysvn" path="res://assets/ui/SplashScreens/splashwtext2.png" id="5_n0x6x"]
+[ext_resource type="Texture2D" uid="uid://boka8k5yu7pat" path="res://assets/ui/SplashScreens/splashwtext3.png" id="6_h3k02"]
+[ext_resource type="Texture2D" uid="uid://d3mbf62xa1w7k" path="res://assets/ui/SplashScreens/splashwtext4.png" id="7_7e138"]
+[ext_resource type="Texture2D" uid="uid://ycvhq5hb5ewg" path="res://assets/ui/SplashScreens/splashwtext5.png" id="8_ctkdt"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_tmidv"]
 line_spacing = -3.845
 font = ExtResource("3_76k3t")
 font_size = 8
 
-[node name="ProgressScreen_CanvasLayer" type="CanvasLayer"]
+[node name="ProgressScreen_CanvasLayer" type="CanvasLayer" node_paths=PackedStringArray("progress")]
 process_mode = 3
 script = ExtResource("1_0on0o")
+progress = [NodePath("Progress_BadResult"), NodePath("Progress_1"), NodePath("Progress_2"), NodePath("Progress_3"), NodePath("Progress_4"), NodePath("Progress_5"), NodePath("Progress_Epilogue")]
 
 [node name="Progress_1" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -29,15 +36,16 @@ anchor_left = 0.2
 anchor_top = 0.4
 anchor_right = 0.85
 anchor_bottom = 0.639
-offset_left = -72.0
+offset_left = -64.0
 offset_top = -72.0
-offset_right = 56.0
-offset_bottom = 76.98
-texture = ExtResource("1_cmooc")
+offset_right = 48.0
+offset_bottom = 68.98
+texture = ExtResource("2_ly7k5")
 expand_mode = 1
 stretch_mode = 4
 
 [node name="NinePatchRect" type="NinePatchRect" parent="Progress_1/TextureRect"]
+visible = false
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -78,7 +86,7 @@ offset_left = -69.58
 offset_top = 18.09
 offset_right = 69.42
 offset_bottom = 49.09
-text = " This is a progress screen"
+text = " This is a progress screen 1"
 label_settings = SubResource("LabelSettings_tmidv")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -87,6 +95,7 @@ clip_text = true
 metadata/_edit_use_anchors_ = true
 
 [node name="Progress_2" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -101,15 +110,16 @@ anchor_left = 0.2
 anchor_top = 0.4
 anchor_right = 0.85
 anchor_bottom = 0.639
-offset_left = -72.0
+offset_left = -64.0
 offset_top = -72.0
-offset_right = 56.0
-offset_bottom = 76.98
-texture = ExtResource("1_cmooc")
+offset_right = 48.0
+offset_bottom = 68.98
+texture = ExtResource("5_n0x6x")
 expand_mode = 1
 stretch_mode = 4
 
 [node name="NinePatchRect" type="NinePatchRect" parent="Progress_2/TextureRect"]
+visible = false
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -150,7 +160,7 @@ offset_left = -69.58
 offset_top = 18.09
 offset_right = 69.42
 offset_bottom = 49.09
-text = " This is a progress screen"
+text = " This is a progress screen 2"
 label_settings = SubResource("LabelSettings_tmidv")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -159,6 +169,7 @@ clip_text = true
 metadata/_edit_use_anchors_ = true
 
 [node name="Progress_3" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -173,15 +184,16 @@ anchor_left = 0.2
 anchor_top = 0.4
 anchor_right = 0.85
 anchor_bottom = 0.639
-offset_left = -72.0
+offset_left = -64.0
 offset_top = -72.0
-offset_right = 56.0
-offset_bottom = 76.98
-texture = ExtResource("1_cmooc")
+offset_right = 48.0
+offset_bottom = 68.98
+texture = ExtResource("6_h3k02")
 expand_mode = 1
 stretch_mode = 4
 
 [node name="NinePatchRect" type="NinePatchRect" parent="Progress_3/TextureRect"]
+visible = false
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -222,7 +234,7 @@ offset_left = -69.58
 offset_top = 18.09
 offset_right = 69.42
 offset_bottom = 49.09
-text = " This is a progress screen"
+text = " This is a progress screen 3"
 label_settings = SubResource("LabelSettings_tmidv")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -231,6 +243,7 @@ clip_text = true
 metadata/_edit_use_anchors_ = true
 
 [node name="Progress_4" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -245,15 +258,16 @@ anchor_left = 0.2
 anchor_top = 0.4
 anchor_right = 0.85
 anchor_bottom = 0.639
-offset_left = -72.0
+offset_left = -64.0
 offset_top = -72.0
-offset_right = 56.0
-offset_bottom = 76.98
-texture = ExtResource("1_cmooc")
+offset_right = 48.0
+offset_bottom = 68.98
+texture = ExtResource("7_7e138")
 expand_mode = 1
 stretch_mode = 4
 
 [node name="NinePatchRect" type="NinePatchRect" parent="Progress_4/TextureRect"]
+visible = false
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -294,7 +308,7 @@ offset_left = -69.58
 offset_top = 18.09
 offset_right = 69.42
 offset_bottom = 49.09
-text = " This is a progress screen"
+text = " This is a progress screen 4"
 label_settings = SubResource("LabelSettings_tmidv")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -303,6 +317,7 @@ clip_text = true
 metadata/_edit_use_anchors_ = true
 
 [node name="Progress_5" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -317,15 +332,16 @@ anchor_left = 0.2
 anchor_top = 0.4
 anchor_right = 0.85
 anchor_bottom = 0.639
-offset_left = -72.0
+offset_left = -64.0
 offset_top = -72.0
-offset_right = 56.0
-offset_bottom = 76.98
-texture = ExtResource("1_cmooc")
+offset_right = 48.0
+offset_bottom = 68.98
+texture = ExtResource("8_ctkdt")
 expand_mode = 1
 stretch_mode = 4
 
 [node name="NinePatchRect" type="NinePatchRect" parent="Progress_5/TextureRect"]
+visible = false
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -366,7 +382,7 @@ offset_left = -69.58
 offset_top = 18.09
 offset_right = 69.42
 offset_bottom = 49.09
-text = " This is a progress screen"
+text = " This is a progress screen 5"
 label_settings = SubResource("LabelSettings_tmidv")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -375,6 +391,7 @@ clip_text = true
 metadata/_edit_use_anchors_ = true
 
 [node name="Progress_Epilogue" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -438,7 +455,7 @@ offset_left = -69.58
 offset_top = 18.09
 offset_right = 69.42
 offset_bottom = 49.09
-text = " This is a progress screen"
+text = " This is a progress screen EPILOGUE"
 label_settings = SubResource("LabelSettings_tmidv")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -447,6 +464,7 @@ clip_text = true
 metadata/_edit_use_anchors_ = true
 
 [node name="Progress_BadResult" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -510,7 +528,7 @@ offset_left = -69.58
 offset_top = 18.09
 offset_right = 69.42
 offset_bottom = 49.09
-text = " This is a progress screen"
+text = " This is a progress screen BAD REESULT"
 label_settings = SubResource("LabelSettings_tmidv")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -519,10 +537,10 @@ clip_text = true
 metadata/_edit_use_anchors_ = true
 
 [node name="Button" type="Button" parent="."]
-offset_left = 228.0
-offset_top = 141.0
-offset_right = 307.0
-offset_bottom = 172.0
+offset_left = 232.0
+offset_top = 144.0
+offset_right = 311.0
+offset_bottom = 175.0
 text = "Continue
 "
 

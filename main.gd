@@ -100,14 +100,14 @@ func _input(event):
 		start_screen.visible = true
 	if event.is_action_pressed("ui_cancel"):
 		get_tree().quit()
+	if event.is_action_pressed("cheat"):
+		GlobalData.score_good = 10
+		player.x_dest = -10
 		
 
 func reset():
 	player.x_dest = start_pos.x
 	player.reset()
-	
-	if(GlobalData.score_good >= GlobalData.positive_progress_score_threshold):
-		GlobalData.progress += 1
 	
 	GlobalData.world_speed = GlobalData.world_speed_start
 	GlobalData.score_good = 0
