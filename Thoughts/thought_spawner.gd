@@ -6,7 +6,7 @@ extends Node2D
 
 var spawn_point = Vector2.ZERO
 var thought_prefab = preload("res://Thoughts/MinorThought/thought_object.tscn")
-var thought_size = 16
+var thought_size = GlobalData.tile_size # 16
 var spawn_time
 
 
@@ -28,8 +28,8 @@ func handle_spawn():
 	
 	# Spawn thoughts on the right side of the screen
 	# They will spawn at specific y positons, to either walk under, slide under, or jump over
-	spawn_point.x = GlobalData.screen_size_x + thought_size * 2
-	spawn_point.y = GlobalData.screen_size_y - randi_range(1, 3) * GlobalData.tile_size # - GlobalData.tile_size/2		# From floor to 0-2 tiles above floor
+	spawn_point.x = GlobalData.screen_size_x + thought_size * 1.5
+	spawn_point.y = GlobalData.screen_size_y - randi_range(1, 3) * GlobalData.tile_size - (GlobalData.tile_size/1.5)		# From floor to 0-2 tiles above floor
 	
 	# Creates new thought bubble
 	var new_thought = thought_prefab.instantiate()

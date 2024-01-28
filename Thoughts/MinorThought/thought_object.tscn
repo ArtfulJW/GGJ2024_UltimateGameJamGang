@@ -171,10 +171,9 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tm2wa"]
-radius = 15.0
+radius = 12.7279
 
 [node name="ThoughtObject" type="Area2D"]
-position = Vector2(0, 4)
 collision_layer = 2
 script = ExtResource("1_dsjn4")
 
@@ -185,13 +184,13 @@ libraries = {
 
 [node name="CloudAnimation" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(-27, -16)
+position = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_epfl4")
 animation = &"pop"
 autoplay = "cloud_1"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-29, -18)
+position = Vector2(3.8147e-06, 1.90735e-06)
 rotation = 0.71384
 shape = SubResource("CircleShape2D_tm2wa")
 

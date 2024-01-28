@@ -6,12 +6,11 @@
 [ext_resource type="Texture2D" uid="uid://bybsa64s5yhnc" path="res://assets/sprites/Sprites/protag_slide.png" id="4_ovdw7"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b87ka"]
-radius = 8.0
-height = 34.0
+height = 30.25
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lye1x"]
-radius = 8.0
-height = 20.0
+radius = 9.0
+height = 18.0
 
 [sub_resource type="Animation" id="Animation_catp8"]
 resource_name = "running"
@@ -163,11 +162,11 @@ collision_mask = 0
 script = ExtResource("1_gd3j7")
 
 [node name="CollisionShape2D_upright" type="CollisionShape2D" parent="."]
-position = Vector2(8, -17)
+position = Vector2(0, -17.125)
 shape = SubResource("CapsuleShape2D_b87ka")
 
 [node name="CollisionShape2D_slide" type="CollisionShape2D" parent="."]
-position = Vector2(8, -11)
+position = Vector2(0, -9)
 shape = SubResource("CapsuleShape2D_lye1x")
 disabled = true
 
@@ -178,12 +177,11 @@ libraries = {
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(9, -22)
+position = Vector2(1, -22.125)
 scale = Vector2(0.875, 0.875)
 sprite_frames = SubResource("SpriteFrames_7ipuq")
 animation = &"running"
 autoplay = "running"
-frame_progress = 0.843643
 
 [node name="SlideTimer" type="Timer" parent="."]
 one_shot = true
