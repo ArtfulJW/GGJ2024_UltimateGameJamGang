@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://djxmqj0tg6f6e"]
+[gd_scene load_steps=5 format=3 uid="uid://djxmqj0tg6f6e"]
 
 [ext_resource type="Script" path="res://Screens/start_screen.gd" id="1_b8xt8"]
 [ext_resource type="Texture2D" uid="uid://du1dih5t310e4" path="res://assets/sprites/Sprites/lineup.png" id="1_bw364"]
+[ext_resource type="Script" path="res://Screens/Instructions.gd" id="3_3m0ut"]
+[ext_resource type="Script" path="res://Screens/Credits.gd" id="4_8lv1v"]
 
 [node name="StartScreen_CanvasLayer" type="CanvasLayer"]
 process_mode = 3
@@ -15,10 +17,25 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect" type="ColorRect" parent="Control"]
+[node name="InstructionScreen" type="ColorRect" parent="Control"]
+visible = false
 layout_mode = 0
 offset_right = 320.0
-offset_bottom = 184.0
+offset_bottom = 180.0
+color = Color(0.25098, 0.803922, 0.654902, 1)
+
+[node name="CreditScreen" type="ColorRect" parent="Control"]
+visible = false
+layout_mode = 0
+offset_right = 320.0
+offset_bottom = 180.0
+color = Color(0.803922, 0.713726, 0.941176, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+z_index = -1
+layout_mode = 0
+offset_right = 320.0
+offset_bottom = 180.0
 color = Color(0.00392157, 0.00392157, 0.00392157, 1)
 
 [node name="Label" type="Label" parent="Control"]
@@ -27,7 +44,8 @@ anchors_preset = -1
 anchor_top = 0.222
 anchor_right = 1.0
 anchor_bottom = 0.35
-offset_top = 0.0399971
+offset_top = -14.96
+offset_bottom = -15.0
 text = "Evasive Thoughts"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -39,16 +57,35 @@ anchor_left = 0.2
 anchor_top = 0.4
 anchor_right = 0.85
 anchor_bottom = 0.639
-offset_bottom = -0.0200119
+offset_top = -15.0
+offset_bottom = -15.02
 texture = ExtResource("1_bw364")
 stretch_mode = 2
 
 [node name="Button" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = 128.0
-offset_top = 120.0
-offset_right = 174.0
-offset_bottom = 151.0
+offset_left = 133.0
+offset_top = 88.0
+offset_right = 179.0
+offset_bottom = 119.0
 text = "Start"
 
+[node name="Button2" type="Button" parent="Control"]
+offset_left = 106.0
+offset_top = 120.0
+offset_right = 207.0
+offset_bottom = 151.0
+text = "Instructions"
+script = ExtResource("3_3m0ut")
+
+[node name="Button3" type="Button" parent="Control"]
+offset_left = 106.0
+offset_top = 151.0
+offset_right = 207.0
+offset_bottom = 182.0
+text = "Credit"
+script = ExtResource("4_8lv1v")
+
 [connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
+[connection signal="button_down" from="Control/Button2" to="." method="_on_button_2_button_down"]
+[connection signal="button_down" from="Control/Button3" to="." method="_on_button_3_button_down"]
