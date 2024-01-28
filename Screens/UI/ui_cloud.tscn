@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://bu6aid774ndho"]
+
+[ext_resource type="Texture2D" uid="uid://2f56b68iih0g" path="res://assets/ui/TitleCloud1Anim.png" id="1_15h67"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sucl4"]
+atlas = ExtResource("1_15h67")
+region = Rect2(0, 0, 40, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yxtqr"]
+atlas = ExtResource("1_15h67")
+region = Rect2(40, 0, 40, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7agxf"]
+atlas = ExtResource("1_15h67")
+region = Rect2(80, 0, 40, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nc2kd"]
+atlas = ExtResource("1_15h67")
+region = Rect2(120, 0, 40, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f8f68"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sucl4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yxtqr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7agxf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nc2kd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="UI_cloud" type="AnimatedSprite2D"]
+position = Vector2(20, -10)
+sprite_frames = SubResource("SpriteFrames_f8f68")
+autoplay = "default"
+frame_progress = 0.0239858
