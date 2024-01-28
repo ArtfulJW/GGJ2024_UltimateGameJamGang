@@ -98,13 +98,13 @@ region = Rect2(0, 0, 24, 40)
 atlas = ExtResource("3_dgr8c")
 region = Rect2(24, 0, 24, 40)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8eg0x"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_udyl0"]
 atlas = ExtResource("4_301f5")
-region = Rect2(0, 11, 48, 39)
+region = Rect2(0, 2, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ajp8t"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_srqti"]
 atlas = ExtResource("4_301f5")
-region = Rect2(48, 11, 48, 39)
+region = Rect2(48, 2, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d23hl"]
 atlas = ExtResource("5_e52y7")
@@ -243,10 +243,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_8eg0x")
+"texture": SubResource("AtlasTexture_udyl0")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ajp8t")
+"texture": SubResource("AtlasTexture_srqti")
 }],
 "loop": true,
 "name": &"LoveInterest_Final",
@@ -303,4 +303,4 @@ visible = false
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_x50be")
-animation = &"CynicalGirl_Final"
+animation = &"LoveInterest_Final"
