@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpmgk0guo1o1i"]
+
+[ext_resource type="Script" path="res://ParallaxEnvironment/ParallaxEnvironmentAssets/DeskPrefab.gd" id="1_drv8o"]
+[ext_resource type="Texture2D" uid="uid://b3lew42cu3ppq" path="res://assets/sprites/DeskNotes.png" id="1_t5oth"]
+
+[node name="Desk" type="Node2D"]
+z_index = -1
+script = ExtResource("1_drv8o")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_t5oth")
