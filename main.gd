@@ -38,7 +38,23 @@ func _ready() -> void:
 	## Import CSV and parse data
 	prompts_import_data();
 	
-	print("Test prompt: " + str(prompt_generate_random(e_prompt_type.NEGATIVE_MINOR)))
+	print("Minor Negative prompt: " + str(prompt_generate_random(e_prompt_type.NEGATIVE_MINOR)))
+	print("Minor Negative prompt: " + str(prompt_generate_random(e_prompt_type.NEGATIVE_MINOR)))
+	print("Minor Negative prompt: " + str(prompt_generate_random(e_prompt_type.NEGATIVE_MINOR)))
+	print("Minor Negative prompt: " + str(prompt_generate_random(e_prompt_type.NEGATIVE_MINOR)))
+	print("Minor Negative prompt: " + str(prompt_generate_random(e_prompt_type.NEGATIVE_MINOR)))
+	print("")
+	print("Minor Positive prompt: " + str(prompt_generate_random(e_prompt_type.POSITIVE_MINOR)))
+	print("Minor Positive prompt: " + str(prompt_generate_random(e_prompt_type.POSITIVE_MINOR)))
+	print("Minor Positive prompt: " + str(prompt_generate_random(e_prompt_type.POSITIVE_MINOR)))
+	print("Minor Positive prompt: " + str(prompt_generate_random(e_prompt_type.POSITIVE_MINOR)))
+	print("Minor Positive prompt: " + str(prompt_generate_random(e_prompt_type.POSITIVE_MINOR)))
+	print("")
+	print("Major Negative prompt: " + str(prompt_generate_random(e_prompt_type.NEGATIVE_MAJOR)))
+	print("Major Negative prompt: " + str(prompt_generate_random(e_prompt_type.NEGATIVE_MAJOR)))
+	print("Major Negative prompt: " + str(prompt_generate_random(e_prompt_type.NEGATIVE_MAJOR)))
+	print("Major Negative prompt: " + str(prompt_generate_random(e_prompt_type.NEGATIVE_MAJOR)))
+	print("Major Negative prompt: " + str(prompt_generate_random(e_prompt_type.NEGATIVE_MAJOR)))
 	#print("Total negative minor prompts imported: " + str(prompts_negative_minor_array.size()))
 	#print("Total nouns imported: " + str(prompts_noun_array.size()))
 	
@@ -195,8 +211,8 @@ func prompt_generate_random(_e_prompt_type):
 		var _word_prop_id = _verbs[_v][e_prompt_param.PROP_ID]
 		if _word_prop_id != "": _random_prompt_array[e_prompt_param.PROP_ID].append(_word_prop_id) 
 		
-		print("Nouns: " + str(_nouns))
-		print("Verbs: " + str(_verbs))
+		#print("Nouns: " + str(_nouns))
+		#print("Verbs: " + str(_verbs))
 	
 	# replace code identifiers in prompt with words
 	for _pd in _random_prompt_array.size()-e_prompt_param.DIALOGUE_START:
