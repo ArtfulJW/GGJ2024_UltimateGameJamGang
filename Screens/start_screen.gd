@@ -5,16 +5,13 @@ extends CanvasLayer
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	get_tree().paused = true
-	GlobalData.player_died.connect(handle_player_died)
+	GlobalData.continue_from_progress.connect(handle_restart)
 
 func _on_button_pressed():
 	get_tree().paused = false
 	visible = false
 
-func handle_player_died():
-	reset_timer.start()
-	
-func _on_reset_timer_timeout():
-	get_tree().paused = true
+func handle_restart():
 	visible = true
 	main.reset()
+

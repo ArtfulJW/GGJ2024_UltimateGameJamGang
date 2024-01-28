@@ -6,6 +6,8 @@ var world_delta = 0.025
 
 var score_good = 0
 var score_bad = 0
+var progress = 0
+var positive_progress_score_threshold = 10
 
 var tile_size = 20
 
@@ -21,3 +23,4 @@ signal thought_despawn_good
 signal thought_despawn_bad
 signal restart
 signal player_died
+signal continue_from_progress

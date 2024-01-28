@@ -105,6 +105,10 @@ func _input(event):
 func reset():
 	player.x_dest = start_pos.x
 	player.reset()
+	
+	if(GlobalData.score_good >= GlobalData.positive_progress_score_threshold):
+		GlobalData.progress += 1
+	
 	GlobalData.world_speed = GlobalData.world_speed_start
 	GlobalData.score_good = 0
 	GlobalData.score_bad = 0

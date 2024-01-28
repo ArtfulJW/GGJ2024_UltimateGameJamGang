@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dg20pm8j1cfuw" path="res://Screens/hue_shift_shader.tscn" id="2_xgoeb"]
 [ext_resource type="PackedScene" uid="uid://bhk7r6075718d" path="res://Screens/UI/prompt_ui.tscn" id="4_q6134"]
 [ext_resource type="PackedScene" uid="uid://nhxehlu6tfu8" path="res://Thoughts/MajorThought/major_thought.tscn" id="6_37nye"]
-[ext_resource type="PackedScene" uid="uid://c5mwh3jis0aq8" path="res://Prompts/prompt.tscn" id="7_aekg4"]
+[ext_resource type="PackedScene" uid="uid://bf846cehlhekd" path="res://Screens/Progress/prog_screen.tscn" id="8_8y6r1"]
 [ext_resource type="PackedScene" uid="uid://rpuxytu243dk" path="res://ParallaxEnvironment/ParallaxEnvironment.tscn" id="8_ca2rq"]
 [ext_resource type="PackedScene" uid="uid://d25osdj3pc7c" path="res://TestScenes/Jay_Testbackground.tscn" id="9_x06no"]
 
@@ -28,19 +28,6 @@ player = NodePath("../Player")
 [node name="MajorThought" parent="." instance=ExtResource("6_37nye")]
 z_index = 3
 
-[node name="Prompts" type="Node" parent="."]
-
-[node name="Prompt_1" parent="Prompts" instance=ExtResource("7_aekg4")]
-visible = false
-position = Vector2(291, 34)
-MAX_WIGGLE_SALT = 20.0
-
-[node name="Prompt_2" parent="Prompts" instance=ExtResource("7_aekg4")]
-visible = false
-position = Vector2(342, 103)
-MAX_WIGGLE_SALT = 20.0
-label_text = "SHOULD I PEE IN THE COFFEE"
-
 [node name="AkBank" type="AkBank" parent="."]
 bank = {
 "id": 1542108333,
@@ -52,6 +39,10 @@ load_on = 2
 position = Vector2(168, 104)
 
 [node name="StartScreen_CanvasLayer" parent="." node_paths=PackedStringArray("main") instance=ExtResource("2_tbxtn")]
+main = NodePath("..")
+
+[node name="ProgressScreen_CanvasLayer" parent="." node_paths=PackedStringArray("main") instance=ExtResource("8_8y6r1")]
+visible = false
 main = NodePath("..")
 
 [node name="ParallaxEnvironment" parent="." instance=ExtResource("8_ca2rq")]

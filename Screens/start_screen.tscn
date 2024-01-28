@@ -51,9 +51,4 @@ offset_right = 174.0
 offset_bottom = 151.0
 text = "Start"
 
-[node name="ResetTimer" type="Timer" parent="."]
-wait_time = 2.0
-one_shot = true
-
 [connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
-[connection signal="timeout" from="ResetTimer" to="." method="_on_reset_timer_timeout"]
