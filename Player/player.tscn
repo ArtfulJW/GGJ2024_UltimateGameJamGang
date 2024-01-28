@@ -189,7 +189,6 @@ autoplay = "running"
 [node name="SlideTimer" type="Timer" parent="."]
 one_shot = true
 
-
 [node name="LandingVFX" parent="." instance=ExtResource("5_67ngu")]
 position = Vector2(8, -11)
 
@@ -202,4 +201,3 @@ frame_progress = 1.0
 one_shot = true
 
 [connection signal="frame_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_frame_changed"]
-

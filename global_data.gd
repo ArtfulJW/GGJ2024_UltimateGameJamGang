@@ -4,6 +4,9 @@ var world_speed_start = 2
 var world_speed = world_speed_start
 var world_delta = 0.025
 
+var score_good = 0
+var score_bad = 0
+
 var tile_size = 20
 
 var _StartTime = Time.get_unix_time_from_system()
