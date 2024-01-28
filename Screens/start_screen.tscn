@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://djxmqj0tg6f6e"]
+[gd_scene load_steps=4 format=3 uid="uid://djxmqj0tg6f6e"]
 
 [ext_resource type="Script" path="res://Screens/start_screen.gd" id="1_b8xt8"]
 [ext_resource type="Texture2D" uid="uid://du1dih5t310e4" path="res://assets/sprites/Sprites/lineup.png" id="1_bw364"]
+[ext_resource type="Theme" uid="uid://bvs8tryudr3ve" path="res://assets/default_theme.tres" id="2_s0qec"]
 
 [node name="StartScreen_CanvasLayer" type="CanvasLayer"]
 process_mode = 3
@@ -14,6 +15,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_s0qec")
 
 [node name="ColorRect" type="ColorRect" parent="Control"]
 layout_mode = 0
