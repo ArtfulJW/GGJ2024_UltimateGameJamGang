@@ -22,6 +22,8 @@ wait_time = 2.0
 
 [node name="Timer4" type="Timer" parent="."]
 
+[node name="CoworkerTimer" type="Timer" parent="."]
+
 [node name="FirstLayerSP" type="Node2D" parent="."]
 position = Vector2(436, 137)
 
@@ -34,7 +36,11 @@ position = Vector2(436, 113)
 [node name="FourthLayerSP" type="Node2D" parent="."]
 position = Vector2(436, 183)
 
+[node name="CoworkerSP" type="Node2D" parent="."]
+position = Vector2(436, 141)
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]
 [connection signal="timeout" from="Timer3" to="." method="_on_timer_3_timeout"]
 [connection signal="timeout" from="Timer4" to="." method="_on_timer_4_timeout"]
+[connection signal="timeout" from="CoworkerTimer" to="." method="_on_coworker_timer_timeout"]

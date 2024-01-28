@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://76i74m2nacvt" path="res://assets/sprites/Wall/Cityparallax1.png" id="1_aif8h"]
 
 [node name="CityScape" type="Node2D"]
-z_index = -3
+z_index = -4
 script = ExtResource("1_863jb")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

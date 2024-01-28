@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b3lew42cu3ppq" path="res://assets/sprites/DeskNotes.png" id="1_t5oth"]
 
 [node name="Desk" type="Node2D"]
-z_index = -1
+z_index = -2
 script = ExtResource("1_drv8o")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

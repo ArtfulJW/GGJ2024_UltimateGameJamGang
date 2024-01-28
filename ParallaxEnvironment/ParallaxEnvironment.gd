@@ -7,6 +7,7 @@ extends Node2D
 @export var _WindowAssetPath = ""
 @export var _CityScapeAssetPath = ""
 @export var _ForegroundAssetPath = ""
+@export var _CoworkerAssetPath = "res://ParallaxEnvironment/ParallaxEnvironmentAssets/Coworkers.tscn"
 
 @export var _ForegroundTimerLowerRange = 2.0
 @export var _ForegroundTimerHigherRange = 5.0
@@ -15,11 +16,13 @@ extends Node2D
 @onready var _SecondLayerSpawnPoint = $SecondLayerSP
 @onready var _ThirdLayerSpawnPoint = $ThirdLayerSP
 @onready var _FourthLayerSpawnPoint = $FourthLayerSP
+@onready var _CoworkersSpawnPoint = $CoworkerSP
 
 @onready var _FirstLayerTimer = $Timer
 @onready var _SecondLayerTimer = $Timer2
 @onready var _ThirdLayerTimer = $Timer3
 @onready var _FourthLayerTimer = $Timer4
+@onready var _CoworkerTimer = $CoworkerTimer
 
 var _ElapsedTotalTime = 0
 var rng = RandomNumberGenerator.new()
@@ -65,6 +68,9 @@ func spawnAsset(_AssetPath, _Layer):
 			# Foreground Spawning
 			_SpawnedAsset.position = _FourthLayerSpawnPoint.position
 			pass
+		5: 
+			_SpawnedAsset.position = _CoworkersSpawnPoint.position
+			pass
 	
 	add_child(_SpawnedAsset)
 
@@ -94,6 +100,7 @@ func SetTimerAutoStart(_InputBoolean):
 	_SecondLayerTimer.autostart = _InputBoolean
 	_ThirdLayerTimer.autostart = _InputBoolean
 	_FourthLayerTimer.autostart = _InputBoolean
+	_CoworkerTimer.autostart = _InputBoolean
 	pass
 	
 # Helper function to set start for all timersf
@@ -102,13 +109,14 @@ func StartTimers():
 	_SecondLayerTimer.start(2.5)
 	_ThirdLayerTimer.start(2)
 	_FourthLayerTimer.start(2)
+	_CoworkerTimer.start(3)
 	pass
 
 func checkWorldSpeed():
 	_FirstLayerTimer.wait_time = 2 / GlobalData.world_speed
 	_SecondLayerTimer.wait_time = 2.5 / GlobalData.world_speed
 	_ThirdLayerTimer.wait_time = 2 / GlobalData.world_speed
-	
+	_CoworkerTimer.wait_time = 3 / GlobalData.world_speed
 	pass
 
 """
@@ -124,3 +132,8 @@ func _on_timer_4_timeout():
 	_FourthLayerTimer.wait_time = _Rand
 	
 	pass 
+
+
+func _on_coworker_timer_timeout():
+	spawnAsset(_CoworkerAssetPath,5)
+	pass # Replace with function body.
