@@ -35,7 +35,6 @@ func _on_button_pressed():
 
 
 func _on_animation_player_animation_finished(anim_name):
-	
 	fader.visible = false 
 	visible = false
 	progress[splash_index].visible = false
