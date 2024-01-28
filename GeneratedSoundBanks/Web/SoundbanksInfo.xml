@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
+<SoundBanksInfo Platform="Web" BasePlatform="Web" SchemaVersion="16" SoundBankVersion="150">
 	<RootPaths>
 		<ProjectRoot>../../GGJ2024_Thoughts_WwiseProject</ProjectRoot>
-		<SourceFilesRoot>../../GGJ2024_Thoughts_WwiseProject/.cache/Windows</SourceFilesRoot>
+		<SourceFilesRoot>../../GGJ2024_Thoughts_WwiseProject/.cache/Web</SourceFilesRoot>
 		<SoundBanksRoot>.</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>../../GGJ2024_Thoughts_WwiseProject/GeneratedSoundBanks/Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>../../GGJ2024_Thoughts_WwiseProject/GeneratedSoundBanks/Web</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{A591BEC5-AE5A-81AA-FAD2-419874490207}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{AF19E976-0E30-C4C6-2DC9-FFCC350CAFD0}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -281,5 +281,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{6B6B5BC3-F9A6-2DB0-FA33-9DCC595DEAB7}</FileHash>
+	<FileHash>{5756F4B7-A0E9-D9CC-10FC-ACF1C0C63273}</FileHash>
 </SoundBanksInfo>

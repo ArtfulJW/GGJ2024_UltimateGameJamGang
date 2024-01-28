@@ -58,7 +58,7 @@ func _process(delta):
 		animated_sprite_2d.play("running")
 	
 	var x_pos_diff = x_dest - position.x
-	print(x_pos_diff)
+	#Wwise.set_rtpc_value("LoseProximity", position.x, self)
 	
 	if(abs(x_pos_diff) > 0):
 		# the amount to move. Will favor the smaller of either move speed or distance to point. 

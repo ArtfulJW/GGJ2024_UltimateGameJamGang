@@ -2,24 +2,24 @@ class_name AK
 
 class EVENTS:
 
+	const SFX_FOOTSTEP = 1069143671
 	const VOX_JUMP = 3975608619
-	const SFX_CLOUDIMPACT_GOOD = 2265112390
-	const SFX_CLOUDIMPACT_BAD = 2595354034
-	const VOX_LAND = 2801095176
 	const SFX_SLIDE = 3684443200
 	const MUS_MUSIC = 3436553178
-	const SFX_FOOTSTEP = 1069143671
+	const SFX_CLOUDIMPACT_BAD = 2595354034
 	const TESTSOUND = 38624190
+	const SFX_CLOUDIMPACT_GOOD = 2265112390
+	const VOX_LAND = 2801095176
 
 	const _dict = {
+		"SFX_Footstep": SFX_FOOTSTEP,
 		"Vox_Jump": VOX_JUMP,
-		"SFX_CloudImpact_Good": SFX_CLOUDIMPACT_GOOD,
-		"SFX_CloudImpact_Bad": SFX_CLOUDIMPACT_BAD,
-		"Vox_Land": VOX_LAND,
 		"SFX_Slide": SFX_SLIDE,
 		"Mus_Music": MUS_MUSIC,
-		"SFX_Footstep": SFX_FOOTSTEP,
-		"TestSound": TESTSOUND
+		"SFX_CloudImpact_Bad": SFX_CLOUDIMPACT_BAD,
+		"TestSound": TESTSOUND,
+		"SFX_CloudImpact_Good": SFX_CLOUDIMPACT_GOOD,
+		"Vox_Land": VOX_LAND
 	}
 
 class STATES:
