@@ -1,0 +1,186 @@
+[gd_scene load_steps=12 format=3 uid="uid://djxmqj0tg6f6e"]
+
+[ext_resource type="Script" path="res://Screens/start_screen.gd" id="1_b8xt8"]
+[ext_resource type="Texture2D" uid="uid://blxu2lydcalx6" path="res://assets/ui/SplashScreens/title.png" id="2_5s731"]
+[ext_resource type="Theme" uid="uid://br64m25y65jcm" path="res://Screens/button_theme.tres" id="3_ehyt1"]
+[ext_resource type="Texture2D" uid="uid://c4t662ocyjr4c" path="res://assets/ui/SplashScreens/introtext.png" id="3_xhxov"]
+[ext_resource type="Texture2D" uid="uid://dmc6oxowquxgd" path="res://assets/ui/SplashScreens/credits.png" id="4_8r8dt"]
+[ext_resource type="StyleBox" uid="uid://b1kbpf0ugdb0q" path="res://Screens/button_normal.tres" id="4_nkoj8"]
+[ext_resource type="Texture2D" uid="uid://dwreatm2llhrj" path="res://assets/ui/SplashScreens/Instructions.png" id="4_oifcj"]
+[ext_resource type="StyleBox" uid="uid://dnnlbbxh3jnx6" path="res://Screens/button_hover.tres" id="5_q2vjf"]
+[ext_resource type="StyleBox" uid="uid://btrbpt3cij3fc" path="res://Screens/button_push.tres" id="6_2bs3l"]
+
+[sub_resource type="Animation" id="Animation_7digx"]
+resource_name = "credits"
+length = 16.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1, 12),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -320)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1te3d"]
+_data = {
+"credits": SubResource("Animation_7digx")
+}
+
+[node name="StartScreen_CanvasLayer" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_b8xt8")
+
+[node name="start_menu" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="start_splash" type="TextureRect" parent="start_menu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2
+anchor_top = 0.4
+anchor_right = 0.85
+anchor_bottom = 0.639
+offset_left = -64.0
+offset_top = -72.0
+offset_right = 48.0
+offset_bottom = 68.98
+texture = ExtResource("2_5s731")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Credits_button" type="Button" parent="."]
+offset_left = 8.0
+offset_top = 109.0
+offset_right = 79.0
+offset_bottom = 140.0
+theme = ExtResource("3_ehyt1")
+theme_override_styles/normal = ExtResource("4_nkoj8")
+theme_override_styles/hover = ExtResource("5_q2vjf")
+theme_override_styles/pressed = ExtResource("6_2bs3l")
+text = "CREDITS"
+
+[node name="Instructions_button" type="Button" parent="."]
+offset_left = 8.0
+offset_top = 144.0
+offset_right = 109.0
+offset_bottom = 175.0
+theme = ExtResource("3_ehyt1")
+theme_override_styles/normal = ExtResource("4_nkoj8")
+theme_override_styles/hover = ExtResource("5_q2vjf")
+theme_override_styles/pressed = ExtResource("6_2bs3l")
+text = "HOW TO PLAY"
+
+[node name="intro_beat" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="intro_beat"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2
+anchor_top = 0.4
+anchor_right = 0.85
+anchor_bottom = 0.639
+offset_left = -64.0
+offset_top = -72.0
+offset_right = 48.0
+offset_bottom = 68.98
+texture = ExtResource("3_xhxov")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Start_button" type="Button" parent="."]
+offset_left = 240.0
+offset_top = 129.0
+offset_right = 315.0
+offset_bottom = 175.0
+theme = ExtResource("3_ehyt1")
+theme_override_styles/normal = ExtResource("4_nkoj8")
+theme_override_styles/hover = ExtResource("5_q2vjf")
+theme_override_styles/pressed = ExtResource("6_2bs3l")
+text = "START"
+
+[node name="credits" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CreditScroll" type="AnimationPlayer" parent="credits"]
+libraries = {
+"": SubResource("AnimationLibrary_1te3d")
+}
+
+[node name="TextureRect" type="TextureRect" parent="credits"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2
+anchor_top = 0.4
+anchor_right = 0.85
+anchor_bottom = 0.639
+offset_left = -64.0
+offset_top = -382.0
+offset_right = 48.0
+offset_bottom = 87.98
+texture = ExtResource("4_8r8dt")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="instructions" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="instructions"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2
+anchor_top = 0.4
+anchor_right = 0.85
+anchor_bottom = 0.639
+offset_left = -64.0
+offset_top = -72.0
+offset_right = 48.0
+offset_bottom = 68.98
+texture = ExtResource("4_oifcj")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Close_button" type="Button" parent="."]
+visible = false
+offset_left = 262.0
+offset_top = 144.0
+offset_right = 315.0
+offset_bottom = 175.0
+theme = ExtResource("3_ehyt1")
+theme_override_styles/normal = ExtResource("4_nkoj8")
+theme_override_styles/hover = ExtResource("5_q2vjf")
+theme_override_styles/pressed = ExtResource("6_2bs3l")
+text = "BACK"
+
+[connection signal="pressed" from="Credits_button" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="Instructions_button" to="." method="_on_instructions_button_pressed"]
+[connection signal="pressed" from="Start_button" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="Close_button" to="." method="_on_close_button_pressed"]

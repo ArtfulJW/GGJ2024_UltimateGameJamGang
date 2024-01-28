@@ -1,0 +1,62 @@
+Event	ID	Name			Wwise Object Path	Notes
+	38624190	TestSound			\Default Work Unit\TestSound	
+	1069143671	SFX_Footstep			\Default Work Unit\PlayerFoley\SFX_Footstep	
+	2265112390	SFX_CloudImpact_Good			\Default Work Unit\Environment\SFX_CloudImpact_Good	
+	2595354034	SFX_CloudImpact_Bad			\Default Work Unit\Environment\SFX_CloudImpact_Bad	
+	2801095176	Vox_Land			\Default Work Unit\PlayerVox\Vox_Land	
+	3436553178	Mus_Music			\Default Work Unit\Mus_Music	
+	3684443200	SFX_Slide			\Default Work Unit\PlayerFoley\SFX_Slide	
+	3975608619	Vox_Jump			\Default Work Unit\PlayerVox\Vox_Jump	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	2810605861	MenuOrGame			\Default Work Unit\MenuOrGame	
+
+State	ID	Name	State Group			Notes
+	702482391	Game	MenuOrGame			
+	748895195	None	MenuOrGame			
+	2607556080	Menu	MenuOrGame			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	2038021397	LoseProximity			\Default Work Unit\LoseProximity	
+
+Modulator Time	ID	Name			Wwise Object Path	Notes
+	82776338	Modulator Time (Custom)				
+
+Effect plug-ins	ID	Name	Type				Notes
+	903199145	Gain (Custom)	Wwise Gain			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	6154547	SFX_CloudImpactSpiral_2	D:\Users\Aryo Nazaradeh\Misc\Work\Games\2024\GGJ2024\GGJ2024_UltimateGameJamGang\GGJ2024_Thoughts_WwiseProject\.cache\Windows\SFX\SFX_CloudImpactSpiral_2_B032A71E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment\SFX_CloudImpact\SFX_CloudImpactSpiral\SFX_CloudImpactSpiral_2		3822
+	43757270	Music_Game_OhNo_Loop	D:\Users\Aryo Nazaradeh\Misc\Work\Games\2024\GGJ2024\GGJ2024_UltimateGameJamGang\GGJ2024_Thoughts_WwiseProject\.cache\Windows\SFX\Music_Game_OhNo_Loop_B032A71E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\MenuOrGame\Music_Game\Music_Game_Main\Music_Game_OhNo_Loop		118184
+	112081328	Vox_Land_2	D:\Users\Aryo Nazaradeh\Misc\Work\Games\2024\GGJ2024\GGJ2024_UltimateGameJamGang\GGJ2024_Thoughts_WwiseProject\.cache\Windows\SFX\Vox_Land_2_B032A71E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment\PlayerVox\Vox_Land\Vox_Land_2		3553
+	157489733	SFX_CloudImpactPop_Good_4	D:\Users\Aryo Nazaradeh\Misc\Work\Games\2024\GGJ2024\GGJ2024_UltimateGameJamGang\GGJ2024_Thoughts_WwiseProject\.cache\Windows\SFX\SFX_CloudImpactPop_Good_4_B032A71E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment\SFX_CloudImpact\SFX_CloudImpactPop_Good\SFX_CloudImpactPop_Good_4		4231
+	158184493	SFX_Slide_2	D:\Users\Aryo Nazaradeh\Misc\Work\Games\2024\GGJ2024\GGJ2024_UltimateGameJamGang\GGJ2024_Thoughts_WwiseProject\.cache\Windows\SFX\SFX_Slide_2_B032A71E.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerFoley\SFX_Slide\SFX_Slide_2		7896
+	172904441	Music_Menu_Loop	D:\Users\Aryo Nazaradeh\Misc\Work\Games\2024\GGJ2024\GGJ2024_UltimateGameJamGang\GGJ2024_Thoughts_WwiseProject\.cache\Windows\SFX\Music_Menu_Loop_3B7822A8.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\MenuOrGame\Music_Menu_Loop		87782
+	204733568	SFX_CloudImpactPop_Bad_3	D:\Users\Aryo Nazaradeh\Misc\Work\Games\2024\GGJ2024\GGJ2024_UltimateGameJamGang\GGJ2024_Thoughts_WwiseProject\.cache\Windows\SFX\SFX_CloudImpactPop_Bad_3_B032A71E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment\SFX_CloudImpact\SFX_CloudImpactPop_Bad\SFX_CloudImpactPop_Bad_3		3822
+	213557790	EFX SD Heads Hit Together 02	D:\Users\Aryo Nazaradeh\Misc\Work\Games\2024\GGJ2024\GGJ2024_UltimateGameJamGang\GGJ2024_Thoughts_WwiseProject\.cache\Windows\SFX\EFX SD Heads Hit Together 02_B67B1F5A.wem		\Actor-Mixer Hierarchy\Default Work Unit\EFX SD Heads Hit Together 02		14055
+	253599227	SFX_CloudImpactPop_Good_2	D:\Users\Aryo Nazaradeh\Misc\Work\Games\2024\GGJ2024\GGJ2024_UltimateGameJamGang\GGJ2024_Thoughts_WwiseProject\.cache\Windows\SFX\SFX_CloudImpactPop_Good_2_B032A71E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment\SFX_CloudImpact\SFX_CloudImpactPop_Good\SFX_CloudImpactPop_Good_2		2825
+	353839487	Vox_Land_4	D:\Users\Aryo Nazaradeh\Misc\Work\Games\2024\GGJ2024\GGJ2024_UltimateGameJamGang\GGJ2024_Thoughts_WwiseProject\.cache\Windows\SFX\Vox_Land_4_B032A71E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment\PlayerVox\Vox_Land\Vox_Land_4		3948
+	389134885	Vox_Jump_3	D:\Users\Aryo Nazaradeh\Misc\Work\Games\2024\GGJ2024\GGJ2024_UltimateGameJamGang\GGJ2024_Thoughts_WwiseProject\.cache\Windows\SFX\Vox_Jump_3_B032A71E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment\PlayerVox\Vox_Jump\Vox_Jump_3		4238
+	470868543	Vox_Jump_4	D:\Users\Aryo Nazaradeh\Misc\Work\Games\2024\GGJ2024\GGJ2024_UltimateGameJamGang\GGJ2024_Thoughts_WwiseProject\.cache\Windows\SFX\Vox_Jump_4_B032A71E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment\PlayerVox\Vox_Jump\Vox_Jump_4		4839
+	524630499	Vox_Jump_1	D:\Users\Aryo Nazaradeh\Misc\Work\Games\2024\GGJ2024\GGJ2024_UltimateGameJamGang\GGJ2024_Thoughts_WwiseProject\.cache\Windows\SFX\Vox_Jump_1_B032A71E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment\PlayerVox\Vox_Jump\Vox_Jump_1		2999
+	533122487	SFX_CloudImpactPop_Puff	D:\Users\Aryo Nazaradeh\Misc\Work\Games\2024\GGJ2024\GGJ2024_UltimateGameJamGang\GGJ2024_Thoughts_WwiseProject\.cache\Windows\SFX\SFX_CloudImpactPop_Puff_B032A71E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment\SFX_CloudImpact\SFX_CloudImpactPop_Puff		5900
+	533210020	Vox_Land_3	D:\Users\Aryo Nazaradeh\Misc\Work\Games\2024\GGJ2024\GGJ2024_UltimateGameJamGang\GGJ2024_Thoughts_WwiseProject\.cache\Windows\SFX\Vox_Land_3_B032A71E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment\PlayerVox\Vox_Land\Vox_Land_3		3344
+	571411057	SFX_CloudImpactPop_Bad_2	D:\Users\Aryo Nazaradeh\Misc\Work\Games\2024\GGJ2024\GGJ2024_UltimateGameJamGang\GGJ2024_Thoughts_WwiseProject\.cache\Windows\SFX\SFX_CloudImpactPop_Bad_2_B032A71E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment\SFX_CloudImpact\SFX_CloudImpactPop_Bad\SFX_CloudImpactPop_Bad_2		3513
+	599632469	SFX_CloudImpactAir_2	D:\Users\Aryo Nazaradeh\Misc\Work\Games\2024\GGJ2024\GGJ2024_UltimateGameJamGang\GGJ2024_Thoughts_WwiseProject\.cache\Windows\SFX\SFX_CloudImpactAir_2_B032A71E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment\SFX_CloudImpact\SFX_CloudImpactAir\SFX_CloudImpactAir_2		3110
+	621026562	SFX_Footstep_1	D:\Users\Aryo Nazaradeh\Misc\Work\Games\2024\GGJ2024\GGJ2024_UltimateGameJamGang\GGJ2024_Thoughts_WwiseProject\.cache\Windows\SFX\SFX_Footstep_1_B032A71E.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerFoley\SFX_Footstep\SFX_Footstep_1		1215
+	632686254	Music_Game_Loop	D:\Users\Aryo Nazaradeh\Misc\Work\Games\2024\GGJ2024\GGJ2024_UltimateGameJamGang\GGJ2024_Thoughts_WwiseProject\.cache\Windows\SFX\Music_Game_Loop_3B7822A8.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\MenuOrGame\Music_Game\Music_Game_Loop		509778
+	643647189	SFX_CloudImpactPop_Bad_1	D:\Users\Aryo Nazaradeh\Misc\Work\Games\2024\GGJ2024\GGJ2024_UltimateGameJamGang\GGJ2024_Thoughts_WwiseProject\.cache\Windows\SFX\SFX_CloudImpactPop_Bad_1_B032A71E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment\SFX_CloudImpact\SFX_CloudImpactPop_Bad\SFX_CloudImpactPop_Bad_1		2494
+	678424116	SFX_CloudImpactPop_Good_1	D:\Users\Aryo Nazaradeh\Misc\Work\Games\2024\GGJ2024\GGJ2024_UltimateGameJamGang\GGJ2024_Thoughts_WwiseProject\.cache\Windows\SFX\SFX_CloudImpactPop_Good_1_B032A71E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment\SFX_CloudImpact\SFX_CloudImpactPop_Good\SFX_CloudImpactPop_Good_1		2917
+	685685700	SFX_CloudImpactAttack_3	D:\Users\Aryo Nazaradeh\Misc\Work\Games\2024\GGJ2024\GGJ2024_UltimateGameJamGang\GGJ2024_Thoughts_WwiseProject\.cache\Windows\SFX\SFX_CloudImpactAttack_3_B032A71E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment\SFX_CloudImpact\SFX_CloudImpactAttack\SFX_CloudImpactAttack_3		2211
+	716119763	SFX_CloudImpactPop_Good_3	D:\Users\Aryo Nazaradeh\Misc\Work\Games\2024\GGJ2024\GGJ2024_UltimateGameJamGang\GGJ2024_Thoughts_WwiseProject\.cache\Windows\SFX\SFX_CloudImpactPop_Good_3wav_B032A71E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment\SFX_CloudImpact\SFX_CloudImpactPop_Good\SFX_CloudImpactPop_Good_3		3791
+	745052648	SFX_CloudImpactAttack_1	D:\Users\Aryo Nazaradeh\Misc\Work\Games\2024\GGJ2024\GGJ2024_UltimateGameJamGang\GGJ2024_Thoughts_WwiseProject\.cache\Windows\SFX\SFX_CloudImpactAttack_1_B032A71E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment\SFX_CloudImpact\SFX_CloudImpactAttack\SFX_CloudImpactAttack_1		3526
+	762042419	SFX_Footstep 2	D:\Users\Aryo Nazaradeh\Misc\Work\Games\2024\GGJ2024\GGJ2024_UltimateGameJamGang\GGJ2024_Thoughts_WwiseProject\.cache\Windows\SFX\SFX_Footstep 2_B032A71E.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerFoley\SFX_Footstep\SFX_Footstep 2		1018
+	768456525	Vox_Jump_2	D:\Users\Aryo Nazaradeh\Misc\Work\Games\2024\GGJ2024\GGJ2024_UltimateGameJamGang\GGJ2024_Thoughts_WwiseProject\.cache\Windows\SFX\Vox_Jump_2_B032A71E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment\PlayerVox\Vox_Jump\Vox_Jump_2		2916
+	780567619	SFX_CloudImpactSpiral_1	D:\Users\Aryo Nazaradeh\Misc\Work\Games\2024\GGJ2024\GGJ2024_UltimateGameJamGang\GGJ2024_Thoughts_WwiseProject\.cache\Windows\SFX\SFX_CloudImpactSpiral_1_B032A71E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment\SFX_CloudImpact\SFX_CloudImpactSpiral\SFX_CloudImpactSpiral_1		3747
+	824744884	SFX_CloudImpactAttack_2	D:\Users\Aryo Nazaradeh\Misc\Work\Games\2024\GGJ2024\GGJ2024_UltimateGameJamGang\GGJ2024_Thoughts_WwiseProject\.cache\Windows\SFX\SFX_CloudImpactAttack_2_B032A71E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment\SFX_CloudImpact\SFX_CloudImpactAttack\SFX_CloudImpactAttack_2		2242
+	853657298	SFX_CloudImpactAir_1	D:\Users\Aryo Nazaradeh\Misc\Work\Games\2024\GGJ2024\GGJ2024_UltimateGameJamGang\GGJ2024_Thoughts_WwiseProject\.cache\Windows\SFX\SFX_CloudImpactAir_1_B032A71E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment\SFX_CloudImpact\SFX_CloudImpactAir\SFX_CloudImpactAir_1		3130
+	880208441	Music_Game_Intro	D:\Users\Aryo Nazaradeh\Misc\Work\Games\2024\GGJ2024\GGJ2024_UltimateGameJamGang\GGJ2024_Thoughts_WwiseProject\.cache\Windows\SFX\Music_Game_Intro_B032A71E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\MenuOrGame\Music_Game\Music_Game_Intro		35233
+	885903244	SFX_Footstep_3	D:\Users\Aryo Nazaradeh\Misc\Work\Games\2024\GGJ2024\GGJ2024_UltimateGameJamGang\GGJ2024_Thoughts_WwiseProject\.cache\Windows\SFX\SFX_Footstep_3_B032A71E.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerFoley\SFX_Footstep\SFX_Footstep_3		1029
+	946797750	SFX_Slide_1	D:\Users\Aryo Nazaradeh\Misc\Work\Games\2024\GGJ2024\GGJ2024_UltimateGameJamGang\GGJ2024_Thoughts_WwiseProject\.cache\Windows\SFX\SFX_Slide_1_B032A71E.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerFoley\SFX_Slide\SFX_Slide_1		8159
+	1053541563	Vox_Land_1	D:\Users\Aryo Nazaradeh\Misc\Work\Games\2024\GGJ2024\GGJ2024_UltimateGameJamGang\GGJ2024_Thoughts_WwiseProject\.cache\Windows\SFX\Vox_Land_1_B032A71E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment\PlayerVox\Vox_Land\Vox_Land_1		3946
+

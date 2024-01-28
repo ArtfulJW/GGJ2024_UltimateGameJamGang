@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=3 uid="uid://c272fgcxjf7kk"]
+
+[ext_resource type="Script" path="res://Score_Box.gd" id="1_6yrbi"]
+[ext_resource type="Texture2D" uid="uid://dt5lfjc78c76v" path="res://assets/ui/IconCloudGood.png" id="2_1asqn"]
+[ext_resource type="FontFile" uid="uid://c60b4fxbybpii" path="res://assets/fonts/exam_sans.ttf" id="2_4bxnf"]
+[ext_resource type="Texture2D" uid="uid://c1ehgid5w15x7" path="res://assets/ui/IconCloudBad.png" id="4_rh0n7"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_t2q5i"]
+font = ExtResource("2_4bxnf")
+font_size = 8
+
+[sub_resource type="LabelSettings" id="LabelSettings_dlst7"]
+font = ExtResource("2_4bxnf")
+font_size = 8
+
+[node name="Score_Box" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 320.0
+offset_bottom = 180.0
+script = ExtResource("1_6yrbi")
+
+[node name="Sprite2D_good" type="Sprite2D" parent="."]
+position = Vector2(281, 23)
+texture = ExtResource("2_1asqn")
+
+[node name="Label_good" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -27.0
+offset_top = 15.0
+offset_right = 3.0
+offset_bottom = 38.0
+grow_horizontal = 0
+text = "x 99"
+label_settings = SubResource("LabelSettings_t2q5i")
+
+[node name="Sprite2D_bad" type="Sprite2D" parent="."]
+position = Vector2(281, 39)
+texture = ExtResource("4_rh0n7")
+
+[node name="Label_bad" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -27.0
+offset_top = 33.0
+offset_right = 3.0
+offset_bottom = 56.0
+grow_horizontal = 0
+text = "x 99
+"
+label_settings = SubResource("LabelSettings_dlst7")

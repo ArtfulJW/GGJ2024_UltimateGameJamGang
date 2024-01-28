@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://c5mwh3jis0aq8"]
+
+[ext_resource type="FontFile" uid="uid://01gviyxy8ju3" path="res://assets/FK_Dino.otf" id="1_dppt0"]
+[ext_resource type="Script" path="res://Prompts/prompt.gd" id="1_rnjah"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6r1ss"]
+font = ExtResource("1_dppt0")
+font_size = 32
+font_color = Color(0, 0, 0, 0.572549)
+shadow_size = 0
+
+[node name="Prompt" type="Node2D"]
+script = ExtResource("1_rnjah")
+label_text = "SHOULD I KICK THE CAT"
+
+[node name="Label" type="Label" parent="."]
+offset_top = -25.0
+offset_right = 371.0
+offset_bottom = 37.0
+text = "Should I kick the cat?"
+label_settings = SubResource("LabelSettings_6r1ss")
+metadata/_edit_use_anchors_ = true

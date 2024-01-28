@@ -1,0 +1,34 @@
+[gd_scene load_steps=2 format=3 uid="uid://d25osdj3pc7c"]
+
+[ext_resource type="Texture2D" uid="uid://dyfb2monj7nwl" path="res://assets/sprites/FloorTile.png" id="1_j8div"]
+
+[node name="Background" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 319.0
+offset_bottom = 94.0
+scale = Vector2(1.00388, 1)
+color = Color(0.682353, 0.768627, 0.890196, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_top = 126.0
+offset_right = 320.0
+offset_bottom = 181.0
+color = Color(0.682353, 0.768627, 0.890196, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+z_index = -6
+offset_top = 76.0
+offset_right = 320.0
+offset_bottom = 131.0
+color = Color(0.521569, 0.803922, 0.941176, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+offset_top = 140.0
+offset_right = 320.0
+offset_bottom = 180.0
+texture = ExtResource("1_j8div")
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(0, 113)

@@ -1,0 +1,773 @@
+[gd_scene load_steps=18 format=3 uid="uid://bf846cehlhekd"]
+
+[ext_resource type="Script" path="res://Screens/Progress/prog_screen.gd" id="1_0on0o"]
+[ext_resource type="Texture2D" uid="uid://c5kiinqds22vc" path="res://assets/ui/ThoughtHolder.png" id="2_eled8"]
+[ext_resource type="Texture2D" uid="uid://ceitbi1anpwlm" path="res://assets/ui/SplashScreens/splashwtext1.png" id="2_ly7k5"]
+[ext_resource type="FontFile" uid="uid://ys3st85dei1t" path="res://assets/fonts/cloak.ttf" id="3_76k3t"]
+[ext_resource type="Texture2D" uid="uid://bugpa0y6qysvn" path="res://assets/ui/SplashScreens/splashwtext2.png" id="5_n0x6x"]
+[ext_resource type="Texture2D" uid="uid://boka8k5yu7pat" path="res://assets/ui/SplashScreens/splashwtext3.png" id="6_h3k02"]
+[ext_resource type="Texture2D" uid="uid://d3mbf62xa1w7k" path="res://assets/ui/SplashScreens/splashwtext4.png" id="7_7e138"]
+[ext_resource type="Texture2D" uid="uid://ycvhq5hb5ewg" path="res://assets/ui/SplashScreens/splashwtext5.png" id="8_ctkdt"]
+[ext_resource type="Texture2D" uid="uid://cjkea1hh8nka7" path="res://assets/ui/SplashScreens/epiloguetext.png" id="9_emh32"]
+[ext_resource type="Texture2D" uid="uid://dbf8f2j3sp0ra" path="res://assets/ui/SplashScreens/badend1.png" id="10_i55ve"]
+[ext_resource type="Texture2D" uid="uid://ck6heuwsohx4j" path="res://assets/ui/SplashScreens/epiloguenotext.png" id="10_mufgn"]
+[ext_resource type="Theme" uid="uid://br64m25y65jcm" path="res://Screens/button_theme.tres" id="11_nrvge"]
+[ext_resource type="StyleBox" uid="uid://dnnlbbxh3jnx6" path="res://Screens/button_hover.tres" id="13_5gxpf"]
+[ext_resource type="StyleBox" uid="uid://btrbpt3cij3fc" path="res://Screens/button_push.tres" id="13_ye1xo"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_tmidv"]
+line_spacing = -3.845
+font = ExtResource("3_76k3t")
+font_size = 8
+
+[sub_resource type="Animation" id="Animation_y47rj"]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fader:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7xq1g"]
+_data = {
+"fade_out": SubResource("Animation_y47rj")
+}
+
+[node name="ProgressScreen_CanvasLayer" type="CanvasLayer" node_paths=PackedStringArray("progress")]
+process_mode = 3
+script = ExtResource("1_0on0o")
+progress = [NodePath("Progress_BadResult"), NodePath("Progress_1"), NodePath("Progress_2"), NodePath("Progress_3"), NodePath("Progress_4"), NodePath("Progress_5"), NodePath("Progress_Epilogue_1"), NodePath("Progress_Epilogue_2"), NodePath("Progress_Epilogue_3"), NodePath("Progress_Epilogue_4"), NodePath("Progress_Epilogue_5")]
+
+[node name="Progress_1" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Progress_1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2
+anchor_top = 0.4
+anchor_right = 0.85
+anchor_bottom = 0.639
+offset_left = -64.0
+offset_top = -72.0
+offset_right = 48.0
+offset_bottom = 68.98
+texture = ExtResource("2_ly7k5")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Progress_1/TextureRect"]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -80.0
+offset_top = 16.0
+offset_right = 84.0
+offset_bottom = 48.0
+grow_horizontal = 2
+texture = ExtResource("2_eled8")
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 16
+
+[node name="ColorRect" type="ColorRect" parent="Progress_1/TextureRect/NinePatchRect"]
+clip_children = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.098
+anchor_top = 0.031
+anchor_right = 1.049
+anchor_bottom = 0.969
+offset_left = 0.0720005
+offset_top = 0.00799996
+offset_right = -0.0360107
+offset_bottom = -0.00800133
+
+[node name="Label" type="Label" parent="Progress_1/TextureRect/NinePatchRect/ColorRect"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.535
+anchor_top = -0.603
+anchor_right = 0.535
+anchor_bottom = -0.603
+offset_left = -69.58
+offset_top = 18.09
+offset_right = 69.42
+offset_bottom = 49.09
+text = " This is a progress screen 1"
+label_settings = SubResource("LabelSettings_tmidv")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+clip_text = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Progress_2" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Progress_2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2
+anchor_top = 0.4
+anchor_right = 0.85
+anchor_bottom = 0.639
+offset_left = -64.0
+offset_top = -72.0
+offset_right = 48.0
+offset_bottom = 68.98
+texture = ExtResource("5_n0x6x")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Progress_2/TextureRect"]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -80.0
+offset_top = 16.0
+offset_right = 84.0
+offset_bottom = 48.0
+grow_horizontal = 2
+texture = ExtResource("2_eled8")
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 16
+
+[node name="ColorRect" type="ColorRect" parent="Progress_2/TextureRect/NinePatchRect"]
+clip_children = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.098
+anchor_top = 0.031
+anchor_right = 1.049
+anchor_bottom = 0.969
+offset_left = 0.0720005
+offset_top = 0.00799996
+offset_right = -0.0360107
+offset_bottom = -0.00800133
+
+[node name="Label" type="Label" parent="Progress_2/TextureRect/NinePatchRect/ColorRect"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.535
+anchor_top = -0.603
+anchor_right = 0.535
+anchor_bottom = -0.603
+offset_left = -69.58
+offset_top = 18.09
+offset_right = 69.42
+offset_bottom = 49.09
+text = " This is a progress screen 2"
+label_settings = SubResource("LabelSettings_tmidv")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+clip_text = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Progress_3" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Progress_3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2
+anchor_top = 0.4
+anchor_right = 0.85
+anchor_bottom = 0.639
+offset_left = -64.0
+offset_top = -72.0
+offset_right = 48.0
+offset_bottom = 68.98
+texture = ExtResource("6_h3k02")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Progress_3/TextureRect"]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -80.0
+offset_top = 16.0
+offset_right = 84.0
+offset_bottom = 48.0
+grow_horizontal = 2
+texture = ExtResource("2_eled8")
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 16
+
+[node name="ColorRect" type="ColorRect" parent="Progress_3/TextureRect/NinePatchRect"]
+clip_children = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.098
+anchor_top = 0.031
+anchor_right = 1.049
+anchor_bottom = 0.969
+offset_left = 0.0720005
+offset_top = 0.00799996
+offset_right = -0.0360107
+offset_bottom = -0.00800133
+
+[node name="Label" type="Label" parent="Progress_3/TextureRect/NinePatchRect/ColorRect"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.535
+anchor_top = -0.603
+anchor_right = 0.535
+anchor_bottom = -0.603
+offset_left = -69.58
+offset_top = 18.09
+offset_right = 69.42
+offset_bottom = 49.09
+text = " This is a progress screen 3"
+label_settings = SubResource("LabelSettings_tmidv")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+clip_text = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Progress_4" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Progress_4"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2
+anchor_top = 0.4
+anchor_right = 0.85
+anchor_bottom = 0.639
+offset_left = -64.0
+offset_top = -72.0
+offset_right = 48.0
+offset_bottom = 68.98
+texture = ExtResource("7_7e138")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Progress_4/TextureRect"]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -80.0
+offset_top = 16.0
+offset_right = 84.0
+offset_bottom = 48.0
+grow_horizontal = 2
+texture = ExtResource("2_eled8")
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 16
+
+[node name="ColorRect" type="ColorRect" parent="Progress_4/TextureRect/NinePatchRect"]
+clip_children = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.098
+anchor_top = 0.031
+anchor_right = 1.049
+anchor_bottom = 0.969
+offset_left = 0.0720005
+offset_top = 0.00799996
+offset_right = -0.0360107
+offset_bottom = -0.00800133
+
+[node name="Label" type="Label" parent="Progress_4/TextureRect/NinePatchRect/ColorRect"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.535
+anchor_top = -0.603
+anchor_right = 0.535
+anchor_bottom = -0.603
+offset_left = -69.58
+offset_top = 18.09
+offset_right = 69.42
+offset_bottom = 49.09
+text = " This is a progress screen 4"
+label_settings = SubResource("LabelSettings_tmidv")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+clip_text = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Progress_5" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Progress_5"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2
+anchor_top = 0.4
+anchor_right = 0.85
+anchor_bottom = 0.639
+offset_left = -64.0
+offset_top = -72.0
+offset_right = 48.0
+offset_bottom = 68.98
+texture = ExtResource("8_ctkdt")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Progress_5/TextureRect"]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -80.0
+offset_top = 16.0
+offset_right = 84.0
+offset_bottom = 48.0
+grow_horizontal = 2
+texture = ExtResource("2_eled8")
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 16
+
+[node name="ColorRect" type="ColorRect" parent="Progress_5/TextureRect/NinePatchRect"]
+clip_children = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.098
+anchor_top = 0.031
+anchor_right = 1.049
+anchor_bottom = 0.969
+offset_left = 0.0720005
+offset_top = 0.00799996
+offset_right = -0.0360107
+offset_bottom = -0.00800133
+
+[node name="Label" type="Label" parent="Progress_5/TextureRect/NinePatchRect/ColorRect"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.535
+anchor_top = -0.603
+anchor_right = 0.535
+anchor_bottom = -0.603
+offset_left = -69.58
+offset_top = 18.09
+offset_right = 69.42
+offset_bottom = 49.09
+text = " This is a progress screen 5"
+label_settings = SubResource("LabelSettings_tmidv")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+clip_text = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Progress_Epilogue_1" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Progress_Epilogue_1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2
+anchor_top = 0.4
+anchor_right = 0.85
+anchor_bottom = 0.639
+offset_left = -64.0
+offset_top = -72.0
+offset_right = 48.0
+offset_bottom = 68.98
+texture = ExtResource("9_emh32")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Epilogue_Label" type="Label" parent="Progress_Epilogue_1/TextureRect"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.75
+anchor_right = 0.75
+offset_left = -72.0
+offset_top = 16.0
+offset_right = 72.0
+offset_bottom = 80.0
+text = "Shirley and you go camping in fall. It’s very cold. Shirley shows you her new invention. She slides a pot full of glowing hot coals under your seats. "
+label_settings = SubResource("LabelSettings_tmidv")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+clip_text = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Epilogue_Label2" type="Label" parent="Progress_Epilogue_1/TextureRect"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.8
+anchor_right = 0.8
+offset_left = -56.0
+offset_top = 72.0
+offset_right = 56.0
+offset_bottom = 152.0
+text = "SHIRLEY: This is my new invention. A pot full of coals you put under your chair when it’s cold camping. What to help me think of names?
+SEYMOUR: this is genius.
+SHIRLEY: oh, steamed ham. 
+SEYMOUR: roasted nuts
+SHIRLEY: hot pocket
+SEYMOUR: coals for your holes 
+SHIRLEY: hot pot cold twats 
+SEYMOUR: hot rocks cold cock."
+label_settings = SubResource("LabelSettings_tmidv")
+vertical_alignment = 1
+autowrap_mode = 2
+clip_text = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Progress_Epilogue_2" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Progress_Epilogue_2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.775
+anchor_right = 0.775
+offset_left = -248.0
+offset_right = 72.0
+offset_bottom = 184.0
+texture = ExtResource("9_emh32")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Epilogue_Label" type="Label" parent="Progress_Epilogue_2/TextureRect"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.75
+anchor_right = 0.75
+offset_left = -72.0
+offset_top = 16.0
+offset_right = 72.0
+offset_bottom = 80.0
+text = "Shirley and you get ice cream and then sit on a bench outside Todd’s gym. You take turns doing voice overs for Todd and the women he tries to talk to."
+label_settings = SubResource("LabelSettings_tmidv")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+clip_text = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Epilogue_Label2" type="Label" parent="Progress_Epilogue_2/TextureRect"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.787
+anchor_right = 0.787
+offset_left = -51.84
+offset_top = 72.0
+offset_right = 52.16
+offset_bottom = 152.0
+text = "SHIRLEY: I see we wear the same size of shorts. Wanna trade?
+SEYMOUR: I call them Smartbells, because you know…I’m smart.
+SHIRLEY: If you need to know where a mirror is, I know where all of them are.
+SEYMOUR: I came here to pick up weights and women, and I’m all out of weights."
+label_settings = SubResource("LabelSettings_tmidv")
+vertical_alignment = 1
+autowrap_mode = 2
+clip_text = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Progress_Epilogue_3" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Progress_Epilogue_3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2
+anchor_top = 0.4
+anchor_right = 0.85
+anchor_bottom = 0.639
+offset_left = -64.0
+offset_top = -72.0
+offset_right = 48.0
+offset_bottom = 68.98
+texture = ExtResource("9_emh32")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Epilogue_Label" type="Label" parent="Progress_Epilogue_3/TextureRect"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.75
+anchor_right = 0.75
+offset_left = -72.0
+offset_top = 16.0
+offset_right = 72.0
+offset_bottom = 80.0
+text = "You and Shirley taking skiing lessons on a mountain. Due to a mix up, you each get a different instructor. Devon, Shirley’s instructor is so attractive, you’re even attracted to him. Birtha, your girthy German instructor, yells for you to follow for commands. You and Shirley part ways."
+label_settings = SubResource("LabelSettings_tmidv")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+clip_text = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Epilogue_Label2" type="Label" parent="Progress_Epilogue_3/TextureRect"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.787
+anchor_right = 0.787
+offset_left = -51.84
+offset_top = 72.0
+offset_right = 52.16
+offset_bottom = 152.0
+text = "SHIRLEY: Don’t break a leg
+SEYMOUR: (pointing at Devon) Don’t break my heart.
+SHIRLEY: Don’t break my balls.
+
+You kiss Shirley, and wink.
+
+SEYMOUR: Don’t break character."
+label_settings = SubResource("LabelSettings_tmidv")
+vertical_alignment = 1
+autowrap_mode = 2
+clip_text = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Progress_Epilogue_4" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Progress_Epilogue_4"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2
+anchor_top = 0.4
+anchor_right = 0.85
+anchor_bottom = 0.639
+offset_left = -64.0
+offset_top = -72.0
+offset_right = 48.0
+offset_bottom = 68.98
+texture = ExtResource("9_emh32")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Epilogue_Label" type="Label" parent="Progress_Epilogue_4/TextureRect"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.75
+anchor_right = 0.75
+offset_left = -72.0
+offset_top = 16.0
+offset_right = 72.0
+offset_bottom = 80.0
+text = "You made it Seymour! Everyday, you and Shirley riff on each others jokes and fall deeper in love!
+
+"
+label_settings = SubResource("LabelSettings_tmidv")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+clip_text = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Epilogue_Label2" type="Label" parent="Progress_Epilogue_4/TextureRect"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.762
+anchor_right = 0.762
+offset_left = -51.84
+offset_top = 56.0
+offset_right = 52.16
+offset_bottom = 136.0
+text = "But you don’t know how to switch your brain back.
+Oh no…is this forever?
+
+Try to survive as long as you can!"
+label_settings = SubResource("LabelSettings_tmidv")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+clip_text = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Progress_Epilogue_5" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Progress_Epilogue_5"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2
+anchor_top = 0.4
+anchor_right = 0.85
+anchor_bottom = 0.639
+offset_left = -64.0
+offset_top = -72.0
+offset_right = 48.0
+offset_bottom = 68.98
+texture = ExtResource("10_mufgn")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Progress_BadResult" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Progress_BadResult"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2
+anchor_top = 0.4
+anchor_right = 0.85
+anchor_bottom = 0.639
+offset_left = -64.0
+offset_top = -72.0
+offset_right = 48.0
+offset_bottom = 68.98
+texture = ExtResource("10_i55ve")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Bad_Label" type="Label" parent="Progress_BadResult/TextureRect"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.263125
+anchor_top = -0.651913
+anchor_right = 0.32875
+anchor_bottom = -0.472565
+offset_left = -76.2
+offset_top = 127.952
+offset_right = 62.8
+offset_bottom = 158.952
+text = " This is a progress screen BAD REESULT"
+label_settings = SubResource("LabelSettings_tmidv")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+clip_text = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="."]
+offset_left = 224.0
+offset_top = 144.0
+offset_right = 309.0
+offset_bottom = 175.0
+theme = ExtResource("11_nrvge")
+theme_override_styles/normal = ExtResource("13_ye1xo")
+theme_override_styles/hover = ExtResource("13_5gxpf")
+theme_override_styles/pressed = ExtResource("13_ye1xo")
+text = "CONTINUE"
+
+[node name="ResetTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="Fader" type="ColorRect" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+color = Color(0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_7xq1g")
+}
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="timeout" from="ResetTimer" to="." method="_on_reset_timer_timeout"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
