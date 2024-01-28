@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{EC857EFD-4136-4C3B-B314-437C63950F83}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{0843B081-3D55-35C1-1606-D55C79F98AC8}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -21,6 +21,9 @@
 			<Busses>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
+			<GameParameters>
+				<GameParameter Id="2038021397" Name="LoseProximity"/>
+			</GameParameters>
 			<StateGroups>
 				<StateGroup Id="2810605861" Name="MenuOrGame">
 					<States>
@@ -31,13 +34,17 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1542108333" Type="User" Language="SFX" Hash="{93CC07A6-C7FB-6563-F9D2-AF1CCF8DCB91}">
+		<SoundBank Id="1542108333" Type="User" Language="SFX" Hash="{0BC29495-D19D-46E5-7D0E-AF4A7D718BCF}">
 			<ShortName>MasterBank</ShortName>
 			<Path>MasterBank.bnk</Path>
 			<Media>
 				<File Id="6154547" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_CloudImpactSpiral_2.wav</ShortName>
 					<CachePath>SFX/SFX_CloudImpactSpiral_2_B032A71E.wem</CachePath>
+				</File>
+				<File Id="43757270" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Music_Game_OhNo_Loop.wav</ShortName>
+					<CachePath>SFX/Music_Game_OhNo_Loop_B032A71E.wem</CachePath>
 				</File>
 				<File Id="112081328" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Vox_Land_2.wav</ShortName>
@@ -181,6 +188,7 @@
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="2810605861" Id="702482391"/>
 							<MediaRefs>
+								<MediaRef Id="43757270"/>
 								<MediaRef Id="632686254"/>
 								<MediaRef Id="880208441"/>
 							</MediaRefs>
@@ -259,6 +267,9 @@
 					</MediaRefs>
 				</Event>
 			</Events>
+			<GameParameters>
+				<GameParameter Id="2038021397" Name="LoseProximity"/>
+			</GameParameters>
 			<StateGroups>
 				<StateGroup Id="2810605861" Name="MenuOrGame">
 					<States>
@@ -270,5 +281,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{ABB0A72C-FBD2-7BAB-EC7E-98FE3F8B037F}</FileHash>
+	<FileHash>{90794725-EF61-3891-0D29-53E6BBCC6B67}</FileHash>
 </SoundBanksInfo>
