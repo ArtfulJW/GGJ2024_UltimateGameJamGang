@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://djxmqj0tg6f6e"]
 
 [ext_resource type="Script" path="res://Screens/start_screen.gd" id="1_b8xt8"]
-[ext_resource type="Texture2D" uid="uid://cr220tg5w7ynw" path="res://assets/ui/SplashScreens/GGJ2024SPLASHEDITQUICJK1.png" id="2_3pmmo"]
+[ext_resource type="Texture2D" uid="uid://blxu2lydcalx6" path="res://assets/ui/SplashScreens/title.png" id="2_5s731"]
 [ext_resource type="Theme" uid="uid://br64m25y65jcm" path="res://Screens/button_theme.tres" id="3_ehyt1"]
 [ext_resource type="Texture2D" uid="uid://c4t662ocyjr4c" path="res://assets/ui/SplashScreens/introtext.png" id="3_xhxov"]
 [ext_resource type="Texture2D" uid="uid://dmc6oxowquxgd" path="res://assets/ui/SplashScreens/credits.png" id="4_8r8dt"]
@@ -54,15 +54,15 @@ offset_left = -64.0
 offset_top = -72.0
 offset_right = 48.0
 offset_bottom = 68.98
-texture = ExtResource("2_3pmmo")
+texture = ExtResource("2_5s731")
 expand_mode = 1
 stretch_mode = 4
 
 [node name="Credits_button" type="Button" parent="."]
-offset_left = 122.0
-offset_top = 144.0
-offset_right = 193.0
-offset_bottom = 175.0
+offset_left = 8.0
+offset_top = 109.0
+offset_right = 79.0
+offset_bottom = 140.0
 theme = ExtResource("3_ehyt1")
 theme_override_styles/normal = ExtResource("4_nkoj8")
 theme_override_styles/hover = ExtResource("5_q2vjf")
@@ -105,8 +105,8 @@ expand_mode = 1
 stretch_mode = 4
 
 [node name="Start_button" type="Button" parent="."]
-offset_left = 259.0
-offset_top = 144.0
+offset_left = 240.0
+offset_top = 129.0
 offset_right = 315.0
 offset_bottom = 175.0
 theme = ExtResource("3_ehyt1")
@@ -178,7 +178,7 @@ theme = ExtResource("3_ehyt1")
 theme_override_styles/normal = ExtResource("4_nkoj8")
 theme_override_styles/hover = ExtResource("5_q2vjf")
 theme_override_styles/pressed = ExtResource("6_2bs3l")
-text = "CLOSE"
+text = "BACK"
 
 [connection signal="pressed" from="Credits_button" to="." method="_on_credits_button_pressed"]
 [connection signal="pressed" from="Instructions_button" to="." method="_on_instructions_button_pressed"]
