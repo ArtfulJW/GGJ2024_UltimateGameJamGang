@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{E1067CA8-842E-9FEA-B0E2-FB8516D1D03E}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{EC857EFD-4136-4C3B-B314-437C63950F83}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -21,8 +21,17 @@
 			<Busses>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
+			<StateGroups>
+				<StateGroup Id="2810605861" Name="MenuOrGame">
+					<States>
+						<State Id="702482391" Name="Game"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="2607556080" Name="Menu"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1542108333" Type="User" Language="SFX" Hash="{53CDA2CA-D141-D1FA-F092-070604B41390}">
+		<SoundBank Id="1542108333" Type="User" Language="SFX" Hash="{93CC07A6-C7FB-6563-F9D2-AF1CCF8DCB91}">
 			<ShortName>MasterBank</ShortName>
 			<Path>MasterBank.bnk</Path>
 			<Media>
@@ -41,6 +50,10 @@
 				<File Id="158184493" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_Slide_2.wav</ShortName>
 					<CachePath>SFX/SFX_Slide_2_B032A71E.wem</CachePath>
+				</File>
+				<File Id="172904441" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Music_Menu_Loop.wav</ShortName>
+					<CachePath>SFX/Music_Menu_Loop_3B7822A8.wem</CachePath>
 				</File>
 				<File Id="204733568" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_CloudImpactPop_Bad_3.wav</ShortName>
@@ -90,6 +103,10 @@
 					<ShortName>SFX_Footstep_1.wav</ShortName>
 					<CachePath>SFX/SFX_Footstep_1_B032A71E.wem</CachePath>
 				</File>
+				<File Id="632686254" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Music_Game_Loop.wav</ShortName>
+					<CachePath>SFX/Music_Game_Loop_3B7822A8.wem</CachePath>
+				</File>
 				<File Id="643647189" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_CloudImpactPop_Bad_1.wav</ShortName>
 					<CachePath>SFX/SFX_CloudImpactPop_Bad_1_B032A71E.wem</CachePath>
@@ -130,6 +147,10 @@
 					<ShortName>SFX_CloudImpactAir_1.wav</ShortName>
 					<CachePath>SFX/SFX_CloudImpactAir_1_B032A71E.wem</CachePath>
 				</File>
+				<File Id="880208441" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Music_Game_Intro.wav</ShortName>
+					<CachePath>SFX/Music_Game_Intro_B032A71E.wem</CachePath>
+				</File>
 				<File Id="885903244" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_Footstep_3.wav</ShortName>
 					<CachePath>SFX/SFX_Footstep_3_B032A71E.wem</CachePath>
@@ -149,6 +170,29 @@
 				</Custom>
 			</Plugins>
 			<Events>
+				<Event Id="3436553178" Name="Mus_Music">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="2810605861" Id="748895195" Default="true"/>
+							<MediaRefs>
+								<MediaRef Id="172904441"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="2810605861" Id="702482391"/>
+							<MediaRefs>
+								<MediaRef Id="632686254"/>
+								<MediaRef Id="880208441"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="2810605861" Id="2607556080"/>
+							<MediaRefs>
+								<MediaRef Id="172904441"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
 				<Event Id="2595354034" Name="SFX_CloudImpact_Bad">
 					<MediaRefs>
 						<MediaRef Id="6154547"/>
@@ -215,7 +259,16 @@
 					</MediaRefs>
 				</Event>
 			</Events>
+			<StateGroups>
+				<StateGroup Id="2810605861" Name="MenuOrGame">
+					<States>
+						<State Id="702482391" Name="Game"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="2607556080" Name="Menu"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{8D4DC96B-DEB9-D39C-9A33-AED0870D523E}</FileHash>
+	<FileHash>{ABB0A72C-FBD2-7BAB-EC7E-98FE3F8B037F}</FileHash>
 </SoundBanksInfo>

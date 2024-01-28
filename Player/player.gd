@@ -106,7 +106,8 @@ func handle_gravity(delta):
 		
 		elif should_trigger_landing_fx:
 			landing_vfx.play("default")
-			# todo - Aryo put landing sound here
+			Wwise.set_2d_position(self, get_global_transform(), 0)
+			Wwise.post_event_id(AK.EVENTS.VOX_LAND, self)
 			should_trigger_landing_fx = false
 
 func handle_jump(delta):
