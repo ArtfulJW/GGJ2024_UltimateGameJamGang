@@ -10,7 +10,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	
-	$Sprite2D.position.x -= 0.125
+	$Sprite2D.position.x -= _LayerSpeed * GlobalData.world_speed
 	
 	checkOffScreen()
 	

@@ -18,13 +18,13 @@ wait_time = 4.0
 wait_time = 2.0
 
 [node name="FirstLayerSP" type="Node2D" parent="."]
-position = Vector2(388, 137)
+position = Vector2(436, 137)
 
 [node name="SecondLayerSP" type="Node2D" parent="."]
-position = Vector2(388, 113)
+position = Vector2(436, 113)
 
 [node name="ThirdLayerSP" type="Node2D" parent="."]
-position = Vector2(388, 113)
+position = Vector2(436, 113)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]

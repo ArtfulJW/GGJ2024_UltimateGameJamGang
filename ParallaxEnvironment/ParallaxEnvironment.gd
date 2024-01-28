@@ -30,7 +30,9 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	
+	checkWorldSpeed()
 	
+	print(GlobalData.world_speed)
 	
 	pass
 	
@@ -83,7 +85,13 @@ func SetTimerAutoStart(_InputBoolean):
 	
 	# Helper function to set start for all timersf
 func StartTimers():
-	_FirstLayerTimer.start()
-	_SecondLayerTimer.start()
-	_ThirdLayerTimer.start()
+	_FirstLayerTimer.start(2)
+	_SecondLayerTimer.start(4.5)
+	_ThirdLayerTimer.start(2)
 
+func checkWorldSpeed():
+	_FirstLayerTimer.wait_time = 2 / GlobalData.world_speed
+	_SecondLayerTimer.wait_time = 4 / GlobalData.world_speed
+	_ThirdLayerTimer.wait_time = 2 / GlobalData.world_speed
+	
+	pass
