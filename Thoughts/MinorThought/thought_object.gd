@@ -16,6 +16,8 @@ var is_good = randi_range(0,5) == 0
 func _ready():
 	pick_visuals()
 	Wwise.register_game_obj(self, self.name)
+	
+	GlobalData.restart.connect(_on_game_restart)
 
 
 func set_player(new_player):
@@ -62,7 +64,10 @@ func _process(delta):
 				GlobalData.thought_despawn_bad.emit()
 		queue_free()
 
-
+func _on_game_restart():
+	queue_free();
+	pass
+	
 func _on_body_entered(body):
 	if (!is_collided and body.name == "Player"):
 		is_collided = true
@@ -81,7 +86,12 @@ func _on_body_entered(body):
 			Wwise.set_2d_position(self, get_global_transform(), 0)
 			Wwise.post_event_id(AK.EVENTS.SFX_CLOUDIMPACT_GOOD, self)
 		
-func _on_cloud_animation_animation_looped():
+#func _on_cloud_animation_animation_looped():
+	#if is_collided:
+		#cloud_animation.stop()
+		#queue_free()
+		
+func _on_cloud_animation_animation_finished():
 	if is_collided:
 		cloud_animation.stop()
 		queue_free()

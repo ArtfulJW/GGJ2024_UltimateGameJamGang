@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 #const JUMP_VELOCITY = -400.0
-const X_SPEED = 0.05 # 3 #50
+#const X_SPEED = 0.05 # 3 #50
 
 @onready var starting_position = position
 @onready var slide_timer = $SlideTimer
@@ -96,7 +96,7 @@ func handle_gravity(delta):
 			else:
 				y_speed = min(gravity_max, y_speed + (gravity * delta * GlobalData.world_speed))
 
-			print("applying gravity")
+			#print("applying gravity")
 		
 			# "floor" to floor
 			if is_on_simulated_floor():
@@ -163,6 +163,18 @@ func on_collision():
 func handle_player_died():
 	is_dead = true
 
+func reset():
+	is_dead = false;
+	position = starting_position
+	is_sliding = false
+	is_jumping = false;
+	y_speed = 0;
+	jump_timer.stop()
+	slide_timer.stop()
+	x_dest = starting_position.x
+	should_trigger_landing_fx = false;
+	
+	pass
 
 func _on_animated_sprite_2d_frame_changed():
 	if $AnimatedSprite2D.get_frame() in [1, 5] and is_on_simulated_floor():

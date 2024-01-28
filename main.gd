@@ -104,7 +104,7 @@ func _input(event):
 
 func reset():
 	player.x_dest = start_pos.x
-	player.is_dead = false
+	player.reset()
 	GlobalData.world_speed = GlobalData.world_speed_start
 	GlobalData.restart.emit()
 	
