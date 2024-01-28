@@ -11,6 +11,10 @@ var prompts_positive_minor_array: 	Array = []
 var prompts_noun_array: 			Array = []
 var prompts_verb_array: 			Array = []
 
+# Prompts that get collected and shown at the end of the run
+var prompts_negative_collected:		Array = []
+var prompts_positive_collected:		Array = []
+
 enum e_prompt_param {
 	PROP_ID,			# ID for the prop, if any. "" if empty, an an Array of prop ID's if it has a prop or more
 	DIALOGUE_START,		# Starting index of the prompt. # of dialogues can be 1 or many. To get total prompt entries, get size of the prompt array subtracting this value
@@ -39,25 +43,54 @@ func _ready() -> void:
 	## Import CSV and parse data
 	prompts_import_data();
 	
-	print("Minor Negative prompt: " + str(prompt_generate_random(e_prompt_type.NEGATIVE_MINOR)))
-	print("Minor Negative prompt: " + str(prompt_generate_random(e_prompt_type.NEGATIVE_MINOR)))
-	print("Minor Negative prompt: " + str(prompt_generate_random(e_prompt_type.NEGATIVE_MINOR)))
-	print("Minor Negative prompt: " + str(prompt_generate_random(e_prompt_type.NEGATIVE_MINOR)))
-	print("Minor Negative prompt: " + str(prompt_generate_random(e_prompt_type.NEGATIVE_MINOR)))
-	print("")
-	print("Minor Positive prompt: " + str(prompt_generate_random(e_prompt_type.POSITIVE_MINOR)))
-	print("Minor Positive prompt: " + str(prompt_generate_random(e_prompt_type.POSITIVE_MINOR)))
-	print("Minor Positive prompt: " + str(prompt_generate_random(e_prompt_type.POSITIVE_MINOR)))
-	print("Minor Positive prompt: " + str(prompt_generate_random(e_prompt_type.POSITIVE_MINOR)))
-	print("Minor Positive prompt: " + str(prompt_generate_random(e_prompt_type.POSITIVE_MINOR)))
-	print("")
-	print("Major Negative prompt: " + str(prompt_generate_random(e_prompt_type.NEGATIVE_MAJOR)))
-	print("Major Negative prompt: " + str(prompt_generate_random(e_prompt_type.NEGATIVE_MAJOR)))
-	print("Major Negative prompt: " + str(prompt_generate_random(e_prompt_type.NEGATIVE_MAJOR)))
-	print("Major Negative prompt: " + str(prompt_generate_random(e_prompt_type.NEGATIVE_MAJOR)))
-	print("Major Negative prompt: " + str(prompt_generate_random(e_prompt_type.NEGATIVE_MAJOR)))
-	#print("Total negative minor prompts imported: " + str(prompts_negative_minor_array.size()))
-	#print("Total nouns imported: " + str(prompts_noun_array.size()))
+	
+	
+	## --------------- Debug test generate prompt
+	
+	# Generate Prompt
+	var _prompt = prompt_generate_random(e_prompt_type.NEGATIVE_MINOR)
+	print(_prompt)
+	
+	# Display all dialogue boxes for prompt. 
+	for _d in _prompt.size() - e_prompt_param.DIALOGUE_START:
+		
+		# Get each piece of dialogue in the prompt
+		var _dialogue_id = e_prompt_param.DIALOGUE_START + _d
+		
+		# Do something with the dialogue
+		print(_prompt[_dialogue_id])
+	
+	# Spawn all the props
+	for _p in _prompt[e_prompt_param.PROP_ID].size():
+		# There may be multiple props
+		var _prop = _prompt[e_prompt_param.PROP_ID][_p];
+		
+		# Spawn props, do something
+		if _prop != "":
+			print("spawning prop: " + str(_prop))
+	
+	## -----------------------------------------------
+	
+	
+	
+	
+	#print("Minor Negative prompt: " + str(prompt_generate_random(e_prompt_type.NEGATIVE_MINOR)))
+	#print("Minor Negative prompt: " + str(prompt_generate_random(e_prompt_type.NEGATIVE_MINOR)))
+	#print("Minor Negative prompt: " + str(prompt_generate_random(e_prompt_type.NEGATIVE_MINOR)))
+	#print("Minor Negative prompt: " + str(prompt_generate_random(e_prompt_type.NEGATIVE_MINOR)))
+	#print("Minor Negative prompt: " + str(prompt_generate_random(e_prompt_type.NEGATIVE_MINOR)))
+	#print("")
+	#print("Minor Positive prompt: " + str(prompt_generate_random(e_prompt_type.POSITIVE_MINOR)))
+	#print("Minor Positive prompt: " + str(prompt_generate_random(e_prompt_type.POSITIVE_MINOR)))
+	#print("Minor Positive prompt: " + str(prompt_generate_random(e_prompt_type.POSITIVE_MINOR)))
+	#print("Minor Positive prompt: " + str(prompt_generate_random(e_prompt_type.POSITIVE_MINOR)))
+	#print("Minor Positive prompt: " + str(prompt_generate_random(e_prompt_type.POSITIVE_MINOR)))
+	#print("")
+	#print("Major Negative prompt: " + str(prompt_generate_random(e_prompt_type.NEGATIVE_MAJOR)))
+	#print("Major Negative prompt: " + str(prompt_generate_random(e_prompt_type.NEGATIVE_MAJOR)))
+	#print("Major Negative prompt: " + str(prompt_generate_random(e_prompt_type.NEGATIVE_MAJOR)))
+	#print("Major Negative prompt: " + str(prompt_generate_random(e_prompt_type.NEGATIVE_MAJOR)))
+	#print("Major Negative prompt: " + str(prompt_generate_random(e_prompt_type.NEGATIVE_MAJOR)))
 	
 	
 
@@ -131,9 +164,6 @@ func prompts_import_data():
 	_file_verbs.close()
 	#prompts_verb_array.pop_back(); #remove last empty array get_csv_line() has created 
 	prompts_verb_array.pop_front() # remove first array (_headers) from the _csv, put into separate data
-	
-
-
 
 func prompt_generate_random(_e_prompt_type):
 	
@@ -245,3 +275,16 @@ func prompt_generate_random(_e_prompt_type):
 	
 	return _random_prompt_array
 	
+func prompt_collect(_prompt_array, _e_prompt_type):
+	
+	# Puts the prompt into their respective collection for later use
+	# _prompt_array is the information generated from the randomly generated prompt function
+	
+	match _e_prompt_type:
+		e_prompt_type.NEGATIVE_MINOR:
+			prompts_negative_collected.append(_prompt_array.duplicate())
+		e_prompt_type.POSITIVE_MINOR:
+			prompts_positive_collected.append(_prompt_array.duplicate())
+	
+	
+	pass
