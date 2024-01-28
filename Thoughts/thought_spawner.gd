@@ -25,17 +25,20 @@ func _process(delta):
 		handle_spawn()
 
 func handle_spawn():
-	spawn_point.x = GlobalData.screen_size_x + thought_size
-	spawn_point.y = randf_range(GlobalData.screen_size_y / 2 + thought_size, GlobalData.screen_size_y)
+	
+	# Spawn thoughts on the right side of the screen
+	# They will spawn at specific y positons, to either walk under, slide under, or jump over
+	spawn_point.x = GlobalData.screen_size_x + thought_size * 2
+	spawn_point.y = GlobalData.screen_size_y - randi_range(1, 3) * GlobalData.tile_size # - GlobalData.tile_size/2		# From floor to 0-2 tiles above floor
+	
+	# Creates new thought bubble
 	var new_thought = thought_prefab.instantiate()
 	new_thought.set_player(player)
 	new_thought.position = spawn_point
 	add_child(new_thought)
 	
-	if(spawn_timer.wait_time >= MIN_SPAWN_TIME):
-		spawn_timer.wait_time = spawn_time / GlobalData.world_speed
+	# Set spawn time for more thoughts based on world speed
+	spawn_timer.wait_time = max(MIN_SPAWN_TIME, spawn_time / GlobalData.world_speed)
 	
-	if(spawn_timer.wait_time < MIN_SPAWN_TIME):
-		spawn_timer.wait_time = MIN_SPAWN_TIME
-		
+	# restart timer for next thought bubble
 	spawn_timer.start()

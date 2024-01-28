@@ -3,6 +3,8 @@ extends Node
 var world_speed = 1
 var world_delta = 0.1
 
+var tile_size = 20
+
 var screen_size_x = ProjectSettings.get_setting("display/window/size/viewport_width") 
 var screen_size_y = ProjectSettings.get_setting("display/window/size/viewport_height") 
 

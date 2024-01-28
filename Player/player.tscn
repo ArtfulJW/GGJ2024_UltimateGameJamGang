@@ -187,3 +187,6 @@ frame_progress = 0.843643
 
 [node name="SlideTimer" type="Timer" parent="."]
 one_shot = true
+
+[node name="JumpTimer" type="Timer" parent="."]
+one_shot = true
