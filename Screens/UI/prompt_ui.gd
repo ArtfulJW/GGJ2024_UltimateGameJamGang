@@ -24,6 +24,7 @@ func update_text_result():
 	update_text(2)
 	
 func update_text(i):
-	label.text = prompt_array[i]
+	if(prompt_array):
+		label.text = prompt_array[i]
 
 	
