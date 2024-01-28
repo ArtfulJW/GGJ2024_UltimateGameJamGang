@@ -34,7 +34,8 @@ func handle_spawn():
 	
 	if(spawn_timer.wait_time >= MIN_SPAWN_TIME):
 		spawn_timer.wait_time = spawn_time / GlobalData.world_speed
-	else:
+	
+	if(spawn_timer.wait_time < MIN_SPAWN_TIME):
 		spawn_timer.wait_time = MIN_SPAWN_TIME
 		
 	spawn_timer.start()

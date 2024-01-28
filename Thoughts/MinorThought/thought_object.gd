@@ -39,6 +39,6 @@ func _on_body_entered(body):
 	
 	if (!is_collided and body.name == "Player"):
 		body.on_collision()
-		GlobalData.world_speed -= GlobalData.world_delta
+		# GlobalData.world_speed -= GlobalData.world_delta
 		
 	is_collided = true
