@@ -21,6 +21,7 @@ func _on_start_button_pressed():
 	
 	get_tree().paused = false
 	visible = false
+	Wwise.set_state_id(AK.STATES.MENUORGAME.GROUP, AK.STATES.MENUORGAME.STATE.GAME)
 
 func handle_restart():
 	visible = true

@@ -49,3 +49,21 @@ main = NodePath("..")
 
 [node name="Background" parent="." instance=ExtResource("9_x06no")]
 z_index = -5
+
+[node name="Music" type="AkEvent2D" parent="."]
+event = {
+"id": 3436553178,
+"name": "Mus_Music"
+}
+trigger_on = 2
+
+[node name="MenuMusic" type="AkState" parent="."]
+state_group = {
+"id": 2810605861,
+"name": "MenuOrGame"
+}
+state_value = {
+"id": 2607556080,
+"name": "Menu"
+}
+trigger_on = 2
