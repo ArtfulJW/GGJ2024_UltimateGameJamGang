@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bf846cehlhekd"]
+[gd_scene load_steps=14 format=3 uid="uid://bf846cehlhekd"]
 
 [ext_resource type="Script" path="res://Screens/Progress/prog_screen.gd" id="1_0on0o"]
 [ext_resource type="Texture2D" uid="uid://dort8a4u7wdms" path="res://assets/ui/SplashScreens/progress_placeholder.png" id="1_cmooc"]
@@ -9,11 +9,32 @@
 [ext_resource type="Texture2D" uid="uid://boka8k5yu7pat" path="res://assets/ui/SplashScreens/splashwtext3.png" id="6_h3k02"]
 [ext_resource type="Texture2D" uid="uid://d3mbf62xa1w7k" path="res://assets/ui/SplashScreens/splashwtext4.png" id="7_7e138"]
 [ext_resource type="Texture2D" uid="uid://ycvhq5hb5ewg" path="res://assets/ui/SplashScreens/splashwtext5.png" id="8_ctkdt"]
+[ext_resource type="Texture2D" uid="uid://dbf8f2j3sp0ra" path="res://assets/ui/SplashScreens/badend1.png" id="10_i55ve"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_tmidv"]
 line_spacing = -3.845
 font = ExtResource("3_76k3t")
 font_size = 8
+
+[sub_resource type="Animation" id="Animation_y47rj"]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fader:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7xq1g"]
+_data = {
+"fade_out": SubResource("Animation_y47rj")
+}
 
 [node name="ProgressScreen_CanvasLayer" type="CanvasLayer" node_paths=PackedStringArray("progress")]
 process_mode = 3
@@ -464,7 +485,6 @@ clip_text = true
 metadata/_edit_use_anchors_ = true
 
 [node name="Progress_BadResult" type="Control" parent="."]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -479,55 +499,26 @@ anchor_left = 0.2
 anchor_top = 0.4
 anchor_right = 0.85
 anchor_bottom = 0.639
-offset_left = -72.0
+offset_left = -64.0
 offset_top = -72.0
-offset_right = 56.0
-offset_bottom = 76.98
-texture = ExtResource("1_cmooc")
+offset_right = 48.0
+offset_bottom = 68.98
+texture = ExtResource("10_i55ve")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="NinePatchRect" type="NinePatchRect" parent="Progress_BadResult/TextureRect"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -80.0
-offset_top = 16.0
-offset_right = 84.0
-offset_bottom = 48.0
-grow_horizontal = 2
-texture = ExtResource("2_eled8")
-patch_margin_left = 16
-patch_margin_top = 16
-patch_margin_right = 16
-patch_margin_bottom = 16
-
-[node name="ColorRect" type="ColorRect" parent="Progress_BadResult/TextureRect/NinePatchRect"]
-clip_children = 1
-layout_mode = 1
-anchors_preset = -1
-anchor_left = -0.098
-anchor_top = 0.031
-anchor_right = 1.049
-anchor_bottom = 0.969
-offset_left = 0.0720005
-offset_top = 0.00799996
-offset_right = -0.0360107
-offset_bottom = -0.00800133
-
-[node name="Label" type="Label" parent="Progress_BadResult/TextureRect/NinePatchRect/ColorRect"]
+[node name="Label" type="Label" parent="Progress_BadResult/TextureRect"]
 modulate = Color(0, 0, 0, 1)
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.535
-anchor_top = -0.603
-anchor_right = 0.535
-anchor_bottom = -0.603
-offset_left = -69.58
-offset_top = 18.09
-offset_right = 69.42
-offset_bottom = 49.09
+anchor_left = 0.263125
+anchor_top = -0.651913
+anchor_right = 0.32875
+anchor_bottom = -0.472565
+offset_left = -76.2
+offset_top = 127.952
+offset_right = 62.8
+offset_bottom = 158.952
 text = " This is a progress screen BAD REESULT"
 label_settings = SubResource("LabelSettings_tmidv")
 horizontal_alignment = 1
@@ -548,5 +539,21 @@ text = "Continue
 wait_time = 2.0
 one_shot = true
 
+[node name="Fader" type="ColorRect" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+color = Color(0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_7xq1g")
+}
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="timeout" from="ResetTimer" to="." method="_on_reset_timer_timeout"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

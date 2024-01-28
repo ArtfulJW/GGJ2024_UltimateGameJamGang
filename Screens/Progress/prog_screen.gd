@@ -3,7 +3,14 @@ extends CanvasLayer
 @export var main : Node2D
 @export var progress : Array[Control]
 @onready var button = $Button
+@onready var label = $Progress_BadResult/TextureRect/Label
+@onready var animation_player = $AnimationPlayer
+@onready var fader = $Fader
 
+
+var bad_prompt_array
+var bad_prompt_index = 0
+var is_bad = false
 var splash_index = 0
 var right_side_button_pos = Vector2(232,144)
 var left_side_button_pos = Vector2(8,144)
@@ -16,11 +23,33 @@ func handle_player_died():
 	reset_timer.start()
 
 func _on_button_pressed():
+	if is_bad:
+		handle_is_bad()
+	
+	if is_bad:
+		return
+	
+	fader.visible = true
+	animation_player.play("fade_out")
+	
+
+
+func _on_animation_player_animation_finished(anim_name):
+	
+	fader.visible = false 
 	visible = false
 	progress[splash_index].visible = false
+	fader.color.a = 0
 	get_tree().paused = false 
 	# GlobalData.continue_from_progress.emit() 
 	main.reset()
+
+func handle_is_bad():
+	bad_prompt_index += 1
+	if bad_prompt_index < bad_prompt_array.size():
+		update_text()
+	else:
+		is_bad = false
 
 func _on_reset_timer_timeout():
 	splash_index = get_splash_index()
@@ -38,7 +67,14 @@ func get_splash_index():
 		else:
 			return GlobalData.progress
 	else:
+		bad_prompt_array = main.prompt_generate_random(main.e_prompt_type.NEGATIVE_MAJOR)
+		bad_prompt_index = 1
+		is_bad = true
+		update_text()
 		return 0
+
+func update_text():
+	label.text = bad_prompt_array[bad_prompt_index]
 
 func set_button_pos():
 	match splash_index:
