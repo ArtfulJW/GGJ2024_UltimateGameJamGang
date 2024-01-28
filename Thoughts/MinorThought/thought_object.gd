@@ -2,7 +2,7 @@ extends Area2D
 
 @onready var cloud_animation = $CloudAnimation
 @onready var collision_shape_2d = $CollisionShape2D
-@onready var lightning_bottle = $Lightning_bottle
+#@onready var lightning_bottle = $Lightning_bottle
 
 var speed_max 		= 1.5
 var speed 			= 0.50			#Initial speed for players to see it coming
@@ -32,7 +32,7 @@ func pick_visuals():
 	
 	if is_good:
 		cloud_animation.modulate = Color.AQUA
-		lightning_bottle.visible = false
+		#lightning_bottle.visible = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
