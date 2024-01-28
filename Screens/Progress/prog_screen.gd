@@ -3,7 +3,7 @@ extends CanvasLayer
 @export var main : Node2D
 @export var progress : Array[Control]
 @onready var button = $Button
-@onready var label = $Progress_BadResult/TextureRect/Label
+@onready var bad_label = $Progress_BadResult/TextureRect/Bad_Label
 @onready var animation_player = $AnimationPlayer
 @onready var fader = $Fader
 
@@ -73,13 +73,13 @@ func get_splash_index():
 		return 0
 
 func update_text():
-	label.text = bad_prompt_array[bad_prompt_index]
+	bad_label.text = bad_prompt_array[bad_prompt_index]
 
 func set_button_pos():
 	match splash_index:
-		0,2,4:
+		0,2,4,6,7,8,9:
 			button.set_position(left_side_button_pos)
-		1,3,5,6:
+		1,3,5,10:
 			button.set_position(right_side_button_pos)
 			
 		

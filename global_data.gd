@@ -7,8 +7,8 @@ var world_delta = 0.025
 var score_good = 0
 var score_bad = 0
 var progress = 0
-var max_progress = 6
-var positive_progress_score_threshold = 1
+var max_progress = 10
+var positive_progress_score_threshold = 5
 
 var tile_size = 20
 

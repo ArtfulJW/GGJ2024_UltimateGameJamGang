@@ -101,7 +101,7 @@ func _input(event):
 	if event.is_action_pressed("ui_cancel"):
 		get_tree().quit()
 	if event.is_action_pressed("cheat"):
-		#GlobalData.score_good = 10
+		GlobalData.score_good = 10
 		player.x_dest = -10
 		
 
