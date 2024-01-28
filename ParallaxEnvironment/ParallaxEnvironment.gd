@@ -39,7 +39,7 @@ func _process(delta):
 	
 	checkWorldSpeed()
 	
-	print(GlobalData.world_speed)
+	#print(GlobalData.world_speed)
 	
 	pass
 	
