@@ -41,14 +41,14 @@ func is_on_simulated_floor():
 
 func handle_gravity(delta):
 	if not is_on_simulated_floor():
-		velocity.y += gravity * delta
+		velocity.y += gravity * delta # * GlobalData.world_speed
 		animated_sprite_2d.play("jumping")
 	else:
 		velocity.y = 0
 
 func handle_jump():
 	if Input.is_action_just_pressed("ui_up") and is_on_simulated_floor() and !is_sliding:
-		velocity.y = JUMP_VELOCITY
+		velocity.y = JUMP_VELOCITY # * GlobalData.world_speed
 
 func handle_slide(delta):
 	if Input.is_action_just_pressed("ui_down") and is_on_simulated_floor() and !is_sliding:
