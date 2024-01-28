@@ -7,6 +7,9 @@ script = ExtResource("1_ohmnn")
 _DeskAssetPath = "res://ParallaxEnvironment/ParallaxEnvironmentAssets/Desk.tscn"
 _WindowAssetPath = "res://ParallaxEnvironment/ParallaxEnvironmentAssets/Window.tscn"
 _CityScapeAssetPath = "res://ParallaxEnvironment/ParallaxEnvironmentAssets/CityScape.tscn"
+_ForegroundAssetPath = "res://ParallaxEnvironment/ParallaxEnvironmentAssets/ForegroundAssets/ForegroundAsset.tscn"
+_ForegroundTimerLowerRange = 0.5
+_ForegroundTimerHigherRange = 1.0
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
@@ -17,6 +20,8 @@ wait_time = 4.0
 [node name="Timer3" type="Timer" parent="."]
 wait_time = 2.0
 
+[node name="Timer4" type="Timer" parent="."]
+
 [node name="FirstLayerSP" type="Node2D" parent="."]
 position = Vector2(436, 137)
 
@@ -26,6 +31,10 @@ position = Vector2(436, 113)
 [node name="ThirdLayerSP" type="Node2D" parent="."]
 position = Vector2(436, 113)
 
+[node name="FourthLayerSP" type="Node2D" parent="."]
+position = Vector2(436, 183)
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]
 [connection signal="timeout" from="Timer3" to="." method="_on_timer_3_timeout"]
+[connection signal="timeout" from="Timer4" to="." method="_on_timer_4_timeout"]
