@@ -12,11 +12,6 @@
 [node name="Main" type="Node2D"]
 script = ExtResource("1_grmto")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="StartScreen" parent="CanvasLayer" instance=ExtResource("2_tbxtn")]
-visible = false
-
 [node name="HueShiftShader" parent="." instance=ExtResource("2_xgoeb")]
 
 [node name="ThoughtSpawner" parent="." node_paths=PackedStringArray("player") instance=ExtResource("1_meu4n")]
@@ -50,3 +45,6 @@ bank = {
 load_on = 2
 
 [node name="AkListener2D" type="AkListener2D" parent="."]
+
+[node name="StartScreen_CanvasLayer" parent="." node_paths=PackedStringArray("main") instance=ExtResource("2_tbxtn")]
+main = NodePath("..")

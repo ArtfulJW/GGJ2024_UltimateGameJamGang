@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var player = $Player
 @onready var start_pos = player.position
+@onready var start_screen = $StartScreen_CanvasLayer
 
 # The arrays which will hold all the prompts and other data
 var prompts_negative_minor_array: 	Array = []
@@ -21,6 +22,7 @@ func _ready() -> void:
 func _input(event):
 	if event.is_action_pressed("game_reset"):
 		reset()
+		start_screen.visible = true
 	if event.is_action_pressed("ui_cancel"):
 		get_tree().quit()
 		
@@ -28,6 +30,7 @@ func _input(event):
 func reset():
 	player.x_dest = start_pos.x
 	GlobalData.world_speed = 1
+	
 
 func prompts_import_data():
 	

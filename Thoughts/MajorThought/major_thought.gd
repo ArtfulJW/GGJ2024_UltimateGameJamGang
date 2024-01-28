@@ -14,3 +14,7 @@ func _ready():
 func _process(delta):
 	position.x += sin(x_wiggle) * x_range * delta
 	x_wiggle += wiggle_salt * delta
+
+
+func _on_body_entered(body):
+	GlobalData.player_died.emit()
