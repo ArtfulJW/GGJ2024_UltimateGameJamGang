@@ -1,17 +1,3 @@
 [remap]
 
-importer="csv_translation"
-type="Translation"
-uid="uid://cnvrfxsu2mpcu"
-
-[deps]
-
-files=["res://CSV/Game Jam Sheets - Thot Jot - Nouns.Noun.translation"]
-
-source_file="res://CSV/Game Jam Sheets - Thot Jot - Nouns.csv"
-dest_files=["res://CSV/Game Jam Sheets - Thot Jot - Nouns.Noun.translation"]
-
-[params]
-
-compress=true
-delimiter=0
+importer="keep"
