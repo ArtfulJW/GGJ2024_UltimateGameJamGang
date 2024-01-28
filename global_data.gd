@@ -1,7 +1,10 @@
 extends Node
 
-var world_speed = 1
-var world_delta = 0.1
+var world_speed_start = 2
+var world_speed = world_speed_start
+var world_delta = 0.025
+
+var tile_size = 20
 
 var _StartTime = Time.get_unix_time_from_system()
 

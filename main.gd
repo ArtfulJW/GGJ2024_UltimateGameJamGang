@@ -105,7 +105,7 @@ func _input(event):
 func reset():
 	player.x_dest = start_pos.x
 	player.is_dead = false
-	GlobalData.world_speed = 1
+	GlobalData.world_speed = GlobalData.world_speed_start
 	
 
 func prompts_import_data():
