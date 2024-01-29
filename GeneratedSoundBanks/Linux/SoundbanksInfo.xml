@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Linux" BasePlatform="Linux" SchemaVersion="16" SoundBankVersion="150">
+	<RootPaths>
+		<ProjectRoot>../../GGJ2024_Thoughts_WwiseProject</ProjectRoot>
+		<SourceFilesRoot>../../GGJ2024_Thoughts_WwiseProject/.cache/Linux</SourceFilesRoot>
+		<SoundBanksRoot>.</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>../../GGJ2024_Thoughts_WwiseProject/GeneratedSoundBanks/Linux</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{BBA17868-9626-80A7-2A80-D046E6E84C24}">
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<Plugins>
+				<AudioDevices>
+					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
+				</AudioDevices>
+			</Plugins>
+			<Busses>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+			</Busses>
+			<GameParameters>
+				<GameParameter Id="2038021397" Name="LoseProximity"/>
+			</GameParameters>
+			<StateGroups>
+				<StateGroup Id="2810605861" Name="MenuOrGame">
+					<States>
+						<State Id="702482391" Name="Game"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="2607556080" Name="Menu"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
+		</SoundBank>
+		<SoundBank Id="1542108333" Type="User" Language="SFX" Hash="{BCADB88A-C4BA-C930-218F-564700BA7BB1}">
+			<ShortName>MasterBank</ShortName>
+			<Path>MasterBank.bnk</Path>
+			<Media>
+				<File Id="6154547" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_CloudImpactSpiral_2.wav</ShortName>
+					<CachePath>SFX/SFX_CloudImpactSpiral_2_B032A71E.wem</CachePath>
+				</File>
+				<File Id="43757270" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Music_Game_OhNo_Loop.wav</ShortName>
+					<CachePath>SFX/Music_Game_OhNo_Loop_3B7822A8.wem</CachePath>
+				</File>
+				<File Id="112081328" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Vox_Land_2.wav</ShortName>
+					<CachePath>SFX/Vox_Land_2_B032A71E.wem</CachePath>
+				</File>
+				<File Id="157489733" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_CloudImpactPop_Good_4.wav</ShortName>
+					<CachePath>SFX/SFX_CloudImpactPop_Good_4_B032A71E.wem</CachePath>
+				</File>
+				<File Id="158184493" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_Slide_2.wav</ShortName>
+					<CachePath>SFX/SFX_Slide_2_B032A71E.wem</CachePath>
+				</File>
+				<File Id="172904441" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Music_Menu_Loop.wav</ShortName>
+					<CachePath>SFX/Music_Menu_Loop_3B7822A8.wem</CachePath>
+				</File>
+				<File Id="204733568" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_CloudImpactPop_Bad_3.wav</ShortName>
+					<CachePath>SFX/SFX_CloudImpactPop_Bad_3_B032A71E.wem</CachePath>
+				</File>
+				<File Id="213557790" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>EFX SD Heads Hit Together 02.wav</ShortName>
+					<CachePath>SFX/EFX SD Heads Hit Together 02_B67B1F5A.wem</CachePath>
+				</File>
+				<File Id="253599227" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_CloudImpactPop_Good_2.wav</ShortName>
+					<CachePath>SFX/SFX_CloudImpactPop_Good_2_B032A71E.wem</CachePath>
+				</File>
+				<File Id="353839487" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Vox_Land_4.wav</ShortName>
+					<CachePath>SFX/Vox_Land_4_B032A71E.wem</CachePath>
+				</File>
+				<File Id="389134885" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Vox_Jump_3.wav</ShortName>
+					<CachePath>SFX/Vox_Jump_3_B032A71E.wem</CachePath>
+				</File>
+				<File Id="470868543" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Vox_Jump_4.wav</ShortName>
+					<CachePath>SFX/Vox_Jump_4_B032A71E.wem</CachePath>
+				</File>
+				<File Id="509843138" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_Footstep_2.wav</ShortName>
+					<CachePath>SFX/SFX_Footstep_2_B032A71E.wem</CachePath>
+				</File>
+				<File Id="524630499" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Vox_Jump_1.wav</ShortName>
+					<CachePath>SFX/Vox_Jump_1_B032A71E.wem</CachePath>
+				</File>
+				<File Id="533122487" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_CloudImpactPop_Puff.wav</ShortName>
+					<CachePath>SFX/SFX_CloudImpactPop_Puff_B032A71E.wem</CachePath>
+				</File>
+				<File Id="533210020" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Vox_Land_3.wav</ShortName>
+					<CachePath>SFX/Vox_Land_3_B032A71E.wem</CachePath>
+				</File>
+				<File Id="571411057" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_CloudImpactPop_Bad_2.wav</ShortName>
+					<CachePath>SFX/SFX_CloudImpactPop_Bad_2_B032A71E.wem</CachePath>
+				</File>
+				<File Id="599632469" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_CloudImpactAir_2.wav</ShortName>
+					<CachePath>SFX/SFX_CloudImpactAir_2_B032A71E.wem</CachePath>
+				</File>
+				<File Id="621026562" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_Footstep_1.wav</ShortName>
+					<CachePath>SFX/SFX_Footstep_1_B032A71E.wem</CachePath>
+				</File>
+				<File Id="632686254" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Music_Game_Loop.wav</ShortName>
+					<CachePath>SFX/Music_Game_Loop_3B7822A8.wem</CachePath>
+				</File>
+				<File Id="643647189" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_CloudImpactPop_Bad_1.wav</ShortName>
+					<CachePath>SFX/SFX_CloudImpactPop_Bad_1_B032A71E.wem</CachePath>
+				</File>
+				<File Id="678424116" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_CloudImpactPop_Good_1.wav</ShortName>
+					<CachePath>SFX/SFX_CloudImpactPop_Good_1_B032A71E.wem</CachePath>
+				</File>
+				<File Id="685685700" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_CloudImpactAttack_3.wav</ShortName>
+					<CachePath>SFX/SFX_CloudImpactAttack_3_B032A71E.wem</CachePath>
+				</File>
+				<File Id="716119763" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_CloudImpactPop_Good_3wav.wav</ShortName>
+					<CachePath>SFX/SFX_CloudImpactPop_Good_3wav_B032A71E.wem</CachePath>
+				</File>
+				<File Id="745052648" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_CloudImpactAttack_1.wav</ShortName>
+					<CachePath>SFX/SFX_CloudImpactAttack_1_B032A71E.wem</CachePath>
+				</File>
+				<File Id="768456525" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Vox_Jump_2.wav</ShortName>
+					<CachePath>SFX/Vox_Jump_2_B032A71E.wem</CachePath>
+				</File>
+				<File Id="780567619" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_CloudImpactSpiral_1.wav</ShortName>
+					<CachePath>SFX/SFX_CloudImpactSpiral_1_B032A71E.wem</CachePath>
+				</File>
+				<File Id="824744884" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_CloudImpactAttack_2.wav</ShortName>
+					<CachePath>SFX/SFX_CloudImpactAttack_2_B032A71E.wem</CachePath>
+				</File>
+				<File Id="853657298" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_CloudImpactAir_1.wav</ShortName>
+					<CachePath>SFX/SFX_CloudImpactAir_1_B032A71E.wem</CachePath>
+				</File>
+				<File Id="880208441" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Music_Game_Intro.wav</ShortName>
+					<CachePath>SFX/Music_Game_Intro_B032A71E.wem</CachePath>
+				</File>
+				<File Id="885903244" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_Footstep_3.wav</ShortName>
+					<CachePath>SFX/SFX_Footstep_3_B032A71E.wem</CachePath>
+				</File>
+				<File Id="946797750" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_Slide_1.wav</ShortName>
+					<CachePath>SFX/SFX_Slide_1_B032A71E.wem</CachePath>
+				</File>
+				<File Id="1053541563" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Vox_Land_1.wav</ShortName>
+					<CachePath>SFX/Vox_Land_1_B032A71E.wem</CachePath>
+				</File>
+			</Media>
+			<Plugins>
+				<Custom>
+					<Plugin Id="903199145" Name="Gain (Custom)" LibName="Wwise Gain" LibId="9109507"/>
+				</Custom>
+			</Plugins>
+			<Events>
+				<Event Id="3436553178" Name="Mus_Music">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="2810605861" Id="748895195" Default="true"/>
+							<MediaRefs>
+								<MediaRef Id="172904441"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="2810605861" Id="702482391"/>
+							<MediaRefs>
+								<MediaRef Id="43757270"/>
+								<MediaRef Id="632686254"/>
+								<MediaRef Id="880208441"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="2810605861" Id="2607556080"/>
+							<MediaRefs>
+								<MediaRef Id="172904441"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="2595354034" Name="SFX_CloudImpact_Bad">
+					<MediaRefs>
+						<MediaRef Id="6154547"/>
+						<MediaRef Id="204733568"/>
+						<MediaRef Id="571411057"/>
+						<MediaRef Id="599632469"/>
+						<MediaRef Id="643647189"/>
+						<MediaRef Id="685685700"/>
+						<MediaRef Id="745052648"/>
+						<MediaRef Id="780567619"/>
+						<MediaRef Id="824744884"/>
+						<MediaRef Id="853657298"/>
+					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="903199145"/>
+						</Custom>
+					</PluginRefs>
+				</Event>
+				<Event Id="2265112390" Name="SFX_CloudImpact_Good">
+					<MediaRefs>
+						<MediaRef Id="157489733"/>
+						<MediaRef Id="253599227"/>
+						<MediaRef Id="533122487"/>
+						<MediaRef Id="678424116"/>
+						<MediaRef Id="716119763"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1069143671" Name="SFX_Footstep">
+					<MediaRefs>
+						<MediaRef Id="509843138"/>
+						<MediaRef Id="621026562"/>
+						<MediaRef Id="885903244"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3684443200" Name="SFX_Slide">
+					<MediaRefs>
+						<MediaRef Id="158184493"/>
+						<MediaRef Id="685685700"/>
+						<MediaRef Id="745052648"/>
+						<MediaRef Id="824744884"/>
+						<MediaRef Id="946797750"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="38624190" Name="TestSound">
+					<MediaRefs>
+						<MediaRef Id="213557790"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3975608619" Name="Vox_Jump">
+					<MediaRefs>
+						<MediaRef Id="389134885"/>
+						<MediaRef Id="470868543"/>
+						<MediaRef Id="524630499"/>
+						<MediaRef Id="768456525"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2801095176" Name="Vox_Land">
+					<MediaRefs>
+						<MediaRef Id="112081328"/>
+						<MediaRef Id="353839487"/>
+						<MediaRef Id="533210020"/>
+						<MediaRef Id="1053541563"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+			<GameParameters>
+				<GameParameter Id="2038021397" Name="LoseProximity"/>
+			</GameParameters>
+			<StateGroups>
+				<StateGroup Id="2810605861" Name="MenuOrGame">
+					<States>
+						<State Id="702482391" Name="Game"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="2607556080" Name="Menu"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{932E9F59-C19E-0398-0C32-C45D8497DC34}</FileHash>
+</SoundBanksInfo>
