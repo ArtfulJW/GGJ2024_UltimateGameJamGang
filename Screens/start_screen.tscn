@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://djxmqj0tg6f6e"]
+[gd_scene load_steps=24 format=3 uid="uid://djxmqj0tg6f6e"]
 
 [ext_resource type="Script" path="res://Screens/start_screen.gd" id="1_b8xt8"]
 [ext_resource type="Texture2D" uid="uid://blxu2lydcalx6" path="res://assets/ui/SplashScreens/title.png" id="2_5s731"]
@@ -8,7 +8,28 @@
 [ext_resource type="StyleBox" uid="uid://b1kbpf0ugdb0q" path="res://Screens/button_normal.tres" id="4_nkoj8"]
 [ext_resource type="Texture2D" uid="uid://dwreatm2llhrj" path="res://assets/ui/SplashScreens/Instructions.png" id="4_oifcj"]
 [ext_resource type="StyleBox" uid="uid://dnnlbbxh3jnx6" path="res://Screens/button_hover.tres" id="5_q2vjf"]
+[ext_resource type="Texture2D" uid="uid://c7fy40twcykpi" path="res://assets/ui/buttons/titleinstructions.png" id="5_yp6jo"]
 [ext_resource type="StyleBox" uid="uid://btrbpt3cij3fc" path="res://Screens/button_push.tres" id="6_2bs3l"]
+[ext_resource type="Texture2D" uid="uid://kqocnt063ui4" path="res://assets/ui/buttons/play.png" id="7_78cga"]
+[ext_resource type="Texture2D" uid="uid://br6jvs2fasiv5" path="res://assets/ui/buttons/creditstitle.png" id="7_ojabb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pgbwv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ao514"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cwim3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w32ou"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4ijas"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qa37a"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rnrab"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_62nss"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k0g1n"]
 
 [sub_resource type="Animation" id="Animation_7digx"]
 resource_name = "credits"
@@ -59,26 +80,28 @@ expand_mode = 1
 stretch_mode = 4
 
 [node name="Credits_button" type="Button" parent="."]
-offset_left = 8.0
-offset_top = 109.0
-offset_right = 79.0
-offset_bottom = 140.0
+offset_left = 3.0
+offset_top = 126.0
+offset_right = 103.0
+offset_bottom = 157.0
 theme = ExtResource("3_ehyt1")
-theme_override_styles/normal = ExtResource("4_nkoj8")
-theme_override_styles/hover = ExtResource("5_q2vjf")
-theme_override_styles/pressed = ExtResource("6_2bs3l")
-text = "CREDITS"
+theme_override_colors/icon_hover_color = Color(0.745098, 0.745098, 0.745098, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_pgbwv")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ao514")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_cwim3")
+icon = ExtResource("7_ojabb")
 
 [node name="Instructions_button" type="Button" parent="."]
-offset_left = 8.0
-offset_top = 144.0
-offset_right = 109.0
-offset_bottom = 175.0
+offset_left = 3.0
+offset_top = 152.0
+offset_right = 180.0
+offset_bottom = 183.0
 theme = ExtResource("3_ehyt1")
-theme_override_styles/normal = ExtResource("4_nkoj8")
-theme_override_styles/hover = ExtResource("5_q2vjf")
-theme_override_styles/pressed = ExtResource("6_2bs3l")
-text = "HOW TO PLAY"
+theme_override_colors/icon_hover_color = Color(0.745098, 0.745098, 0.745098, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_w32ou")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_4ijas")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_qa37a")
+icon = ExtResource("5_yp6jo")
 
 [node name="intro_beat" type="Control" parent="."]
 visible = false
@@ -105,15 +128,16 @@ expand_mode = 1
 stretch_mode = 4
 
 [node name="Start_button" type="Button" parent="."]
-offset_left = 240.0
-offset_top = 129.0
-offset_right = 315.0
-offset_bottom = 175.0
+offset_left = 246.0
+offset_top = 153.0
+offset_right = 317.0
+offset_bottom = 180.0
 theme = ExtResource("3_ehyt1")
-theme_override_styles/normal = ExtResource("4_nkoj8")
-theme_override_styles/hover = ExtResource("5_q2vjf")
-theme_override_styles/pressed = ExtResource("6_2bs3l")
-text = "START"
+theme_override_colors/icon_hover_color = Color(0.745098, 0.745098, 0.745098, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rnrab")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_62nss")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_k0g1n")
+icon = ExtResource("7_78cga")
 
 [node name="credits" type="Control" parent="."]
 visible = false
