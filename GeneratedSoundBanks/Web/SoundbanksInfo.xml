@@ -34,7 +34,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1542108333" Type="User" Language="SFX" Hash="{CFA774C1-8D1A-9587-3AFE-00F0F5B88E05}">
+		<SoundBank Id="1542108333" Type="User" Language="SFX" Hash="{BCADB88A-C4BA-C930-218F-564700BA7BB1}">
 			<ShortName>MasterBank</ShortName>
 			<Path>MasterBank.bnk</Path>
 			<Media>
@@ -86,6 +86,10 @@
 					<ShortName>Vox_Jump_4.wav</ShortName>
 					<CachePath>SFX/Vox_Jump_4_B032A71E.wem</CachePath>
 				</File>
+				<File Id="509843138" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_Footstep_2.wav</ShortName>
+					<CachePath>SFX/SFX_Footstep_2_B032A71E.wem</CachePath>
+				</File>
 				<File Id="524630499" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Vox_Jump_1.wav</ShortName>
 					<CachePath>SFX/Vox_Jump_1_B032A71E.wem</CachePath>
@@ -133,10 +137,6 @@
 				<File Id="745052648" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_CloudImpactAttack_1.wav</ShortName>
 					<CachePath>SFX/SFX_CloudImpactAttack_1_B032A71E.wem</CachePath>
-				</File>
-				<File Id="762042419" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>SFX_Footstep 2.wav</ShortName>
-					<CachePath>SFX/SFX_Footstep 2_B032A71E.wem</CachePath>
 				</File>
 				<File Id="768456525" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Vox_Jump_2.wav</ShortName>
@@ -231,8 +231,8 @@
 				</Event>
 				<Event Id="1069143671" Name="SFX_Footstep">
 					<MediaRefs>
+						<MediaRef Id="509843138"/>
 						<MediaRef Id="621026562"/>
-						<MediaRef Id="762042419"/>
 						<MediaRef Id="885903244"/>
 					</MediaRefs>
 				</Event>
@@ -281,5 +281,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{5756F4B7-A0E9-D9CC-10FC-ACF1C0C63273}</FileHash>
+	<FileHash>{8C359B63-4FE4-3531-149F-55C38B965C4D}</FileHash>
 </SoundBanksInfo>
