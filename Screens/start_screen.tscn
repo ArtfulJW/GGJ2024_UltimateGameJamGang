@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://djxmqj0tg6f6e"]
+[gd_scene load_steps=27 format=3 uid="uid://djxmqj0tg6f6e"]
 
 [ext_resource type="Script" path="res://Screens/start_screen.gd" id="1_b8xt8"]
 [ext_resource type="Texture2D" uid="uid://blxu2lydcalx6" path="res://assets/ui/SplashScreens/title.png" id="2_5s731"]
@@ -19,17 +19,23 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cwim3"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ikqwi"]
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w32ou"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4ijas"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qa37a"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cpbdj"]
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rnrab"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_62nss"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k0g1n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_705ad"]
 
 [sub_resource type="Animation" id="Animation_7digx"]
 resource_name = "credits"
@@ -86,9 +92,11 @@ offset_right = 103.0
 offset_bottom = 157.0
 theme = ExtResource("3_ehyt1")
 theme_override_colors/icon_hover_color = Color(0.745098, 0.745098, 0.745098, 1)
+theme_override_colors/icon_focus_color = Color(0.745098, 0.745098, 0.745098, 1)
 theme_override_styles/normal = SubResource("StyleBoxEmpty_pgbwv")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_ao514")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_cwim3")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ikqwi")
 icon = ExtResource("7_ojabb")
 
 [node name="Instructions_button" type="Button" parent="."]
@@ -98,9 +106,11 @@ offset_right = 180.0
 offset_bottom = 183.0
 theme = ExtResource("3_ehyt1")
 theme_override_colors/icon_hover_color = Color(0.745098, 0.745098, 0.745098, 1)
+theme_override_colors/icon_focus_color = Color(0.745098, 0.745098, 0.745098, 1)
 theme_override_styles/normal = SubResource("StyleBoxEmpty_w32ou")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_4ijas")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_qa37a")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_cpbdj")
 icon = ExtResource("5_yp6jo")
 
 [node name="intro_beat" type="Control" parent="."]
@@ -134,9 +144,11 @@ offset_right = 317.0
 offset_bottom = 180.0
 theme = ExtResource("3_ehyt1")
 theme_override_colors/icon_hover_color = Color(0.745098, 0.745098, 0.745098, 1)
+theme_override_colors/icon_focus_color = Color(0.745098, 0.745098, 0.745098, 1)
 theme_override_styles/normal = SubResource("StyleBoxEmpty_rnrab")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_62nss")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_k0g1n")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_705ad")
 icon = ExtResource("7_78cga")
 
 [node name="credits" type="Control" parent="."]
@@ -202,6 +214,7 @@ theme = ExtResource("3_ehyt1")
 theme_override_styles/normal = ExtResource("4_nkoj8")
 theme_override_styles/hover = ExtResource("5_q2vjf")
 theme_override_styles/pressed = ExtResource("6_2bs3l")
+theme_override_styles/focus = ExtResource("5_q2vjf")
 text = "BACK"
 
 [connection signal="pressed" from="Credits_button" to="." method="_on_credits_button_pressed"]

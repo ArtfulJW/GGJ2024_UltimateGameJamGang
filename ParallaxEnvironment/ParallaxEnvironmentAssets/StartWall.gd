@@ -19,5 +19,5 @@ func _process(delta):
 func checkOffScreen():
 	if ($Sprite2D.position.x <= -600):
 		self.queue_free()
-		print("Destroying self")
+		#print("Destroying self")
 	pass

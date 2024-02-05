@@ -94,12 +94,12 @@ func _ready() -> void:
 	
 	
 
-#func _input(event):
+func _input(event):
+	if event.is_action_pressed("ui_cancel"):
+		get_tree().quit()
 	#if event.is_action_pressed("game_reset"):
 		#reset()
 		#start_screen.visible = true
-	#if event.is_action_pressed("ui_cancel"):
-		#get_tree().quit()
 	#if event.is_action_pressed("cheat"):
 		#GlobalData.score_good = 10
 		#player.x_dest = -10

@@ -747,6 +747,7 @@ theme = ExtResource("11_nrvge")
 theme_override_styles/normal = ExtResource("13_ye1xo")
 theme_override_styles/hover = ExtResource("13_5gxpf")
 theme_override_styles/pressed = ExtResource("13_ye1xo")
+theme_override_styles/focus = ExtResource("13_5gxpf")
 text = "CONTINUE"
 
 [node name="ResetTimer" type="Timer" parent="."]

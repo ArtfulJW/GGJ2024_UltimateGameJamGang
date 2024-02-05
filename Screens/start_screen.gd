@@ -28,6 +28,7 @@ func handle_restart():
 	main.reset()
 
 func _on_credits_button_pressed():
+	credit_scroll.stop()
 	credit_scroll.play("credits")
 	credits.visible = true
 	instructions.visible = false 

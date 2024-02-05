@@ -38,12 +38,12 @@ func assignRandomTexture(_ElapsedTime):
 	else:
 		_Sprite2D.texture = load(AssetPaths[_Rand])
 		
-	print("_Rand:" + str(_Rand))
-	print("_ElapsedTime:" + str(_ElapsedTime))
+	#print("_Rand:" + str(_Rand))
+	#print("_ElapsedTime:" + str(_ElapsedTime))
 	pass
 
 func checkOffScreen():
 	if ($Sprite2D.position.x <= -600):
 		self.queue_free()
-		print("Destroying self")
+		#print("Destroying self")
 	pass
