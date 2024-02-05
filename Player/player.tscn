@@ -118,9 +118,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_6va2s")
 }],
-"loop": true,
+"loop": false,
 "name": &"jumping",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -180,10 +180,10 @@ libraries = {
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(1, -22.125)
-scale = Vector2(0.875, 0.875)
+position = Vector2(1, -22)
+scale = Vector2(0.88, 0.88)
 sprite_frames = SubResource("SpriteFrames_7ipuq")
-animation = &"running"
+animation = &"jumping"
 autoplay = "running"
 
 [node name="SlideTimer" type="Timer" parent="."]

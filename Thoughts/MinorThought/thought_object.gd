@@ -86,11 +86,6 @@ func _on_body_entered(body):
 			Wwise.set_2d_position(self, get_global_transform(), 0)
 			Wwise.post_event_id(AK.EVENTS.SFX_CLOUDIMPACT_GOOD, self)
 		
-#func _on_cloud_animation_animation_looped():
-	#if is_collided:
-		#cloud_animation.stop()
-		#queue_free()
-		
 func _on_cloud_animation_animation_finished():
 	if is_collided:
 		cloud_animation.stop()

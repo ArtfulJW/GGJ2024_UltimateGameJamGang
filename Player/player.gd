@@ -121,6 +121,7 @@ func handle_jump(delta):
 		#velocity.y = jump_speed * delta * GlobalData.world_speed
 		y_speed = jump_speed # * delta * GlobalData.world_speed
 		animated_sprite_2d.play("jumping")
+		landing_vfx.stop()
 		
 		Wwise.set_2d_position(self, get_global_transform(), 0)
 		Wwise.post_event_id(AK.EVENTS.VOX_JUMP, self)
@@ -128,13 +129,14 @@ func handle_jump(delta):
 		# if I jump while sliding, end the slide early. 
 		if is_sliding:
 			slide_timer.start(0.01)
-		print("jump")
+			slide_vfx.stop()
+		#print("jump")
 		
 
 func _on_jump_timer_timeout() -> void:
 	is_jumping = false;
 	should_trigger_landing_fx = true
-	print("jump clear")
+	#print("jump clear")
 	pass
 
 
@@ -146,7 +148,7 @@ func handle_slide(delta):
 		slide_vfx.play("default")
 		collision_shape_2d_upright.disabled = true
 		collision_shape_2d_slide.disabled = false
-		print("sliding")
+		#print("sliding")
 		Wwise.set_2d_position(self, get_global_transform(), 0)
 		Wwise.post_event_id(AK.EVENTS.SFX_SLIDE, self)
 
@@ -154,11 +156,12 @@ func _on_slide_timer_timeout() -> void:
 	is_sliding = false
 	collision_shape_2d_upright.disabled = false
 	collision_shape_2d_slide.disabled = true
-	print("slide clear")
+	#print("slide clear")
 	pass
 
 func on_thought_passed():
 	x_dest = min(x_max, x_dest + GlobalData.tile_size)
+	animated_sprite_2d.speed_scale = GlobalData.world_speed / GlobalData.world_speed_start
 	
 func on_collision():
 	x_dest = max(0, x_dest - GlobalData.tile_size * 3) 
@@ -171,6 +174,7 @@ func reset():
 	position = starting_position
 	is_sliding = false
 	is_jumping = false;
+	animated_sprite_2d.speed_scale = 1
 	y_speed = 0;
 	jump_timer.stop()
 	slide_timer.stop()
