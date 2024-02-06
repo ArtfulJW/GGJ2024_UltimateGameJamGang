@@ -110,6 +110,7 @@ func reset():
 	player.reset()
 	
 	GlobalData.world_speed = GlobalData.world_speed_start
+	GlobalData.prompt_array_storage.clear()
 	GlobalData.score_good = 0
 	GlobalData.score_bad = 0
 	GlobalData.restart.emit()

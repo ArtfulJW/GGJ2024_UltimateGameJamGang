@@ -29,6 +29,10 @@ window/size/window_height_override=720
 window/stretch/mode="canvas_items"
 window/layer_3="World"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/Wwise/plugin.cfg")
+
 [input]
 
 game_reset={

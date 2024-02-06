@@ -12,12 +12,16 @@ func _ready():
 	GlobalData.thought_collide_bad.connect(update_text_result)
 	GlobalData.restart.connect(reset_text)
 	start_text = label.text
+	GlobalData.prompt_array_storage.append(start_text)
+	GlobalData.prompt_array_storage.append("\n")
 	
 func _on_timer_timeout():
 	animation_player.play("shrink_textbox")
 
 func reset_text():
 	label.text = start_text
+	GlobalData.prompt_array_storage.append(start_text)
+	GlobalData.prompt_array_storage.append("\n")
 	
 func update_text_prompt():
 	prompt_array = prompt_gen.prompt_generate_random(prompt_gen.e_prompt_type.NEGATIVE_MINOR)
@@ -25,12 +29,16 @@ func update_text_prompt():
 
 func update_text_result():
 	update_text(2)
+	if(prompt_array):
+		GlobalData.prompt_array_storage.append(prompt_array[1])
+		GlobalData.prompt_array_storage.append(prompt_array[2])
+		GlobalData.prompt_array_storage.append("\n")
+		prompt_array = null
+		
 	
 func update_text(i):
 	if(prompt_array):
 		label.text = prompt_array[i]
-
-	
 
 
 func _on_animation_player_animation_finished(anim_name):

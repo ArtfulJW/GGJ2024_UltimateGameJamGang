@@ -6,6 +6,7 @@ extends CanvasLayer
 @onready var bad_label = $Progress_BadResult/TextureRect/Bad_Label
 @onready var animation_player = $AnimationPlayer
 @onready var fader = $Fader
+@onready var recap_screen_element = $RecapScreenElement
 
 
 var bad_prompt_array
@@ -25,10 +26,16 @@ func handle_player_died():
 func _on_button_pressed():
 	if is_bad:
 		handle_is_bad()
+		return
 	
 	if is_bad:
 		return
 	
+	if recap_screen_element.visible == false:
+		recap_screen_element.update_progress_textbox()
+		recap_screen_element.visible = true
+		return
+		
 	fader.visible = true
 	animation_player.play("fade_out")
 	
@@ -38,6 +45,7 @@ func _on_animation_player_animation_finished(anim_name):
 	fader.visible = false 
 	visible = false
 	progress[splash_index].visible = false
+	recap_screen_element.visible = false
 	fader.color.a = 0
 	get_tree().paused = false 
 	# GlobalData.continue_from_progress.emit() 
