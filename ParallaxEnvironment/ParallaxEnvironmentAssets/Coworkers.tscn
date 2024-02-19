@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://c5tbuqjrshea"]
+[gd_scene load_steps=40 format=3 uid="uid://c5tbuqjrshea"]
 
 [ext_resource type="Script" path="res://ParallaxEnvironment/ParallaxEnvironmentAssets/Coworkers.gd" id="1_phhj2"]
 [ext_resource type="Texture2D" uid="uid://bvggp1nyq35vi" path="res://ParallaxEnvironment/ParallaxCoworkers/boss_FINAL.png" id="2_jpr32"]
@@ -73,22 +73,6 @@ region = Rect2(525, 0, 35, 55)
 [sub_resource type="AtlasTexture" id="AtlasTexture_b02p6"]
 atlas = ExtResource("2_jpr32")
 region = Rect2(560, 0, 35, 55)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fyw4v"]
-atlas = ExtResource("3_dgr8c")
-region = Rect2(0, 0, 25, 40)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vkmr2"]
-atlas = ExtResource("3_dgr8c")
-region = Rect2(25, 0, 25, 40)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7tdwp"]
-atlas = ExtResource("3_dgr8c")
-region = Rect2(0, 0, 25, 40)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ng6dd"]
-atlas = ExtResource("3_dgr8c")
-region = Rect2(25, 0, 25, 40)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q4jt1"]
 atlas = ExtResource("3_dgr8c")
@@ -207,22 +191,10 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_b02p6")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fyw4v")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_vkmr2")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7tdwp")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ng6dd")
 }],
 "loop": true,
 "name": &"Boss_Final",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -291,16 +263,19 @@ animations = [{
 }],
 "loop": true,
 "name": &"RizzMan_Final",
-"speed": 5.0
+"speed": 8.0
 }]
 
 [node name="Coworkers" type="Node2D"]
-z_index = -1
+z_index = 1
 script = ExtResource("1_phhj2")
+_LayerSpeed = 0.65
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 visible = false
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_x50be")
-animation = &"LoveInterest_Final"
+animation = &"RizzMan_Final"
+frame = 4
+frame_progress = 0.823342

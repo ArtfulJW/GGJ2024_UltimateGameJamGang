@@ -8,8 +8,8 @@ _DeskAssetPath = "res://ParallaxEnvironment/ParallaxEnvironmentAssets/Desk.tscn"
 _WindowAssetPath = "res://ParallaxEnvironment/ParallaxEnvironmentAssets/Window.tscn"
 _CityScapeAssetPath = "res://ParallaxEnvironment/ParallaxEnvironmentAssets/CityScape.tscn"
 _ForegroundAssetPath = "res://ParallaxEnvironment/ParallaxEnvironmentAssets/ForegroundAssets/ForegroundAsset.tscn"
-_ForegroundTimerLowerRange = 1.0
-_ForegroundTimerHigherRange = 2.0
+_ForegroundTimerLowerRange = 4.0
+_ForegroundTimerHigherRange = 10.0
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
@@ -37,7 +37,7 @@ position = Vector2(436, 113)
 position = Vector2(436, 183)
 
 [node name="CoworkerSP" type="Node2D" parent="."]
-position = Vector2(436, 141)
+position = Vector2(436, 147)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]

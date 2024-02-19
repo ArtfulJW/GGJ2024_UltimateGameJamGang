@@ -3,6 +3,7 @@ extends Node2D
 var AssetPaths = ["res://assets/sprites/Sprites/MuscleDaddy.png","res://assets/sprites/Sprites/LeanRizzer.png","res://assets/sprites/Sprites/CynicalGirl.png"]
 var rng = RandomNumberGenerator.new()
 
+
 @export var _LayerSpeed = 0.6
 @onready var _Sprite2D = $Sprite2D
 @onready var _AnimatedSprite2D = $AnimatedSprite2D
@@ -34,6 +35,14 @@ func checkOffScreen():
 func assignRandomTexture():
 	
 	var _Rand = rng.randi_range(1,4)
+	
+	if GlobalData.lastCoworkerIndex == _Rand:
+		_Rand += 1
+		if _Rand > 4:
+			_Rand = 1
+	
+	GlobalData.lastCoworkerIndex = _Rand
+	_AnimatedSprite2D.stop()
 	
 	match _Rand:
 		1:
