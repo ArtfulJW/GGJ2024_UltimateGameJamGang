@@ -5,6 +5,7 @@ extends Node2D
 
 @export var _DeskAssetPath = ""
 @export var _WindowAssetPath = ""
+@export var _windowSpawnSpeed = 2.8
 @export var _CityScapeAssetPath = ""
 @export var _ForegroundAssetPath = ""
 @export var _CoworkerAssetPath = "res://ParallaxEnvironment/ParallaxEnvironmentAssets/Coworkers.tscn"
@@ -107,7 +108,7 @@ func SetTimerAutoStart(_InputBoolean):
 # Helper function to set start for all timersf
 func StartTimers():
 	_FirstLayerTimer.start(2)
-	_SecondLayerTimer.start(2.5)
+	_SecondLayerTimer.start(_windowSpawnSpeed)
 	_ThirdLayerTimer.start(2)
 	_FourthLayerTimer.start(2)
 	_CoworkerTimer.start(4)
@@ -115,7 +116,7 @@ func StartTimers():
 
 func checkWorldSpeed():
 	_FirstLayerTimer.wait_time = 2 / GlobalData.world_speed
-	_SecondLayerTimer.wait_time = 2.5 / GlobalData.world_speed
+	_SecondLayerTimer.wait_time = _windowSpawnSpeed / GlobalData.world_speed
 	_ThirdLayerTimer.wait_time = 2 / GlobalData.world_speed
 	_CoworkerTimer.wait_time = 4 / GlobalData.world_speed
 	pass

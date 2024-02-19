@@ -1,6 +1,6 @@
 extends Node2D
 
-var AssetPaths = ["res://assets/sprites/Wall/Certificates.png", "res://assets/sprites/Wall/Notices.png", "res://assets/sprites/Wall/Paintings.png","res://assets/sprites/Wall/Whiteboard.png","res://assets/sprites/Wall/Windowframe.png"]
+var AssetPaths = ["res://assets/sprites/Wall/Certificates.png", "res://assets/sprites/Wall/Notices.png", "res://assets/sprites/Wall/Paintings.png","res://assets/sprites/Wall/Whiteboard.png","res://assets/sprites/Wall/Windowframe.png","res://assets/sprites/Wall/Windowframe.png","res://assets/sprites/Wall/Windowframe.png"]
 
 @export var _LayerSpeed = 0.25
 @onready var _Sprite2D = $Sprite2D
@@ -21,7 +21,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	
-	$Sprite2D.position.x -= _LayerSpeed * GlobalData.world_speed
+	$Sprite2D.position.x -= _LayerSpeed * GlobalData.world_speed  * delta * GlobalData.parallax_scaler
 	
 	checkOffScreen()
 	

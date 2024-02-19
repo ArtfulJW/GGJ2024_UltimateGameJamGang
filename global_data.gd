@@ -1,5 +1,8 @@
 extends Node
 
+
+const parallax_scaler = 115
+
 var world_speed_start = 2
 var world_speed = world_speed_start
 var world_delta = 0.025
