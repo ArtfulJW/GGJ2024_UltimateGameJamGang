@@ -20,6 +20,7 @@ var left_side_button_pos = Vector2(8,144)
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	GlobalData.player_died.connect(handle_player_died)
+	fader.on_fade_out_complete.connect(_on_fade_out_finished)
 
 func handle_player_died():
 	reset_timer.start()
@@ -37,19 +38,14 @@ func _on_button_pressed():
 		recap_screen_element.visible = true
 		return
 		
-	fader.visible = true
-	animation_player.play("fade_out")
-	
+	fader.start_fade_out()
 
 
-func _on_animation_player_animation_finished(anim_name):
-	fader.visible = false 
-	visible = false
+func _on_fade_out_finished():
 	progress[splash_index].visible = false
 	recap_screen_element.visible = false
-	fader.color.a = 0
+	visible = false
 	get_tree().paused = false 
-	# GlobalData.continue_from_progress.emit() 
 	main.reset()
 
 func handle_is_bad():
