@@ -12,8 +12,6 @@ func _ready():
 	GlobalData.thought_collide_bad.connect(update_text_result)
 	GlobalData.restart.connect(reset_text)
 	start_text = label.text
-	GlobalData.prompt_array_storage.append(start_text)
-	GlobalData.prompt_array_storage.append("\n")
 	
 func _on_timer_timeout():
 	animation_player.play("shrink_textbox")

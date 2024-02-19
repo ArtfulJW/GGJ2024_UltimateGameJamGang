@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bq1prucegybu3"]
+[gd_scene load_steps=12 format=3 uid="uid://bq1prucegybu3"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_grmto"]
 [ext_resource type="PackedScene" uid="uid://dlb28bmmmfoux" path="res://Thoughts/thought_spawner.tscn" id="1_meu4n"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bf846cehlhekd" path="res://Screens/Progress/prog_screen.tscn" id="8_8y6r1"]
 [ext_resource type="PackedScene" uid="uid://rpuxytu243dk" path="res://ParallaxEnvironment/ParallaxEnvironment.tscn" id="8_ca2rq"]
 [ext_resource type="PackedScene" uid="uid://d25osdj3pc7c" path="res://TestScenes/Jay_Testbackground.tscn" id="9_x06no"]
+[ext_resource type="PackedScene" uid="uid://dk8jxsbfb3ikx" path="res://Prompts/prompt_generator.tscn" id="11_wtwo2"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_grmto")
@@ -20,7 +21,7 @@ script = ExtResource("1_grmto")
 position = Vector2(73, 169)
 
 [node name="PromptUI" parent="." node_paths=PackedStringArray("prompt_gen") instance=ExtResource("4_q6134")]
-prompt_gen = NodePath("..")
+prompt_gen = NodePath("../PromptGenerator")
 
 [node name="ThoughtSpawner" parent="." node_paths=PackedStringArray("player") instance=ExtResource("1_meu4n")]
 player = NodePath("../Player")
@@ -41,14 +42,17 @@ position = Vector2(168, 104)
 [node name="StartScreen_CanvasLayer" parent="." node_paths=PackedStringArray("main") instance=ExtResource("2_tbxtn")]
 main = NodePath("..")
 
-[node name="ProgressScreen_CanvasLayer" parent="." node_paths=PackedStringArray("main") instance=ExtResource("8_8y6r1")]
+[node name="ProgressScreen_CanvasLayer" parent="." node_paths=PackedStringArray("main", "prompt_gen") instance=ExtResource("8_8y6r1")]
 visible = false
 main = NodePath("..")
+prompt_gen = NodePath("../PromptGenerator")
 
 [node name="ParallaxEnvironment" parent="." instance=ExtResource("8_ca2rq")]
 
 [node name="Background" parent="." instance=ExtResource("9_x06no")]
 z_index = -5
+
+[node name="PromptGenerator" parent="." instance=ExtResource("11_wtwo2")]
 
 [node name="Music" type="AkEvent2D" parent="."]
 event = {

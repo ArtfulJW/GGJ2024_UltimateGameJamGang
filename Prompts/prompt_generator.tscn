@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dk8jxsbfb3ikx"]
+
+[ext_resource type="Script" path="res://Prompts/PromptGenerator.gd" id="1_cmwc1"]
+
+[node name="PromptGenerator" type="Node2D"]
+script = ExtResource("1_cmwc1")

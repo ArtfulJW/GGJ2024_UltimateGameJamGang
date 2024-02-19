@@ -1,6 +1,7 @@
 extends CanvasLayer
 @onready var reset_timer = $ResetTimer
 @export var main : Node2D
+@export var prompt_gen : Node2D
 @export var progress : Array[Control]
 @onready var button = $Button
 @onready var bad_label = $Progress_BadResult/TextureRect/Bad_Label
@@ -74,7 +75,7 @@ func get_splash_index():
 		else:
 			return GlobalData.progress
 	else:
-		bad_prompt_array = main.prompt_generate_random(main.e_prompt_type.NEGATIVE_MAJOR)
+		bad_prompt_array = prompt_gen.prompt_generate_random(prompt_gen.e_prompt_type.NEGATIVE_MAJOR)
 		bad_prompt_index = 1
 		is_bad = true
 		update_text()

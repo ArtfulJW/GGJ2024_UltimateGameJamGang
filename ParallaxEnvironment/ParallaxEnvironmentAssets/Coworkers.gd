@@ -36,6 +36,7 @@ func assignRandomTexture():
 	
 	var _Rand = rng.randi_range(1,4)
 	
+	# hack to ensure two of the same coworkers never spawn one after the other
 	if GlobalData.lastCoworkerIndex == _Rand:
 		_Rand += 1
 		if _Rand > 4:
