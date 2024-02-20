@@ -11,7 +11,7 @@ resource_name = "grow_textbox"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Control/NinePatchRect:size")
+tracks/0/path = NodePath("Prompt_Box/Control/NinePatchRect:size")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -23,7 +23,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Control/NinePatchRect:position")
+tracks/1/path = NodePath("Prompt_Box/Control/NinePatchRect:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -35,7 +35,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("clouds_right:position")
+tracks/2/path = NodePath("Prompt_Box/clouds_right:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -47,7 +47,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("clouds_left:position")
+tracks/3/path = NodePath("Prompt_Box/clouds_left:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -62,7 +62,7 @@ resource_name = "shrink_textbox"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Control/NinePatchRect:size")
+tracks/0/path = NodePath("Prompt_Box/Control/NinePatchRect:size")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -74,7 +74,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Control/NinePatchRect:position")
+tracks/1/path = NodePath("Prompt_Box/Control/NinePatchRect:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -86,7 +86,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("clouds_right:position")
+tracks/2/path = NodePath("Prompt_Box/clouds_right:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -98,7 +98,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("clouds_left:position")
+tracks/3/path = NodePath("Prompt_Box/clouds_left:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -122,12 +122,16 @@ font_size = 8
 [node name="PromptUI" type="CanvasLayer"]
 script = ExtResource("1_1kjmj")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="Prompt_Box" type="Node2D" parent="."]
+visible = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Prompt_Box"]
+root_node = NodePath("../..")
 libraries = {
 "": SubResource("AnimationLibrary_366im")
 }
 
-[node name="Control" type="Control" parent="."]
+[node name="Control" type="Control" parent="Prompt_Box"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -135,14 +139,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="NinePatchRect" type="NinePatchRect" parent="Control"]
+[node name="NinePatchRect" type="NinePatchRect" parent="Prompt_Box/Control"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -80.0
+offset_left = -16.0
 offset_top = 16.0
-offset_right = 84.0
+offset_right = 16.0
 offset_bottom = 48.0
 grow_horizontal = 2
 texture = ExtResource("1_vm66y")
@@ -151,7 +155,7 @@ patch_margin_top = 16
 patch_margin_right = 16
 patch_margin_bottom = 16
 
-[node name="ColorRect" type="ColorRect" parent="Control/NinePatchRect"]
+[node name="ColorRect" type="ColorRect" parent="Prompt_Box/Control/NinePatchRect"]
 clip_children = 1
 layout_mode = 1
 anchors_preset = -1
@@ -164,7 +168,7 @@ offset_top = 0.00799996
 offset_right = -0.0360107
 offset_bottom = -0.00800133
 
-[node name="Label" type="Label" parent="Control/NinePatchRect/ColorRect"]
+[node name="Label" type="Label" parent="Prompt_Box/Control/NinePatchRect/ColorRect"]
 modulate = Color(0, 0, 0, 1)
 layout_mode = 1
 anchors_preset = -1
@@ -184,31 +188,31 @@ autowrap_mode = 2
 clip_text = true
 metadata/_edit_use_anchors_ = true
 
-[node name="clouds_right" type="Node2D" parent="."]
-position = Vector2(252, 28)
+[node name="clouds_right" type="Node2D" parent="Prompt_Box"]
+position = Vector2(173, 28)
 
-[node name="UI_cloud" parent="clouds_right" instance=ExtResource("4_0ix5x")]
+[node name="UI_cloud" parent="Prompt_Box/clouds_right" instance=ExtResource("4_0ix5x")]
 position = Vector2(-1, -9)
 
-[node name="UI_cloud2" parent="clouds_right" instance=ExtResource("4_0ix5x")]
+[node name="UI_cloud2" parent="Prompt_Box/clouds_right" instance=ExtResource("4_0ix5x")]
 position = Vector2(-3, 15)
 
-[node name="UI_cloud3" parent="clouds_right" instance=ExtResource("4_0ix5x")]
+[node name="UI_cloud3" parent="Prompt_Box/clouds_right" instance=ExtResource("4_0ix5x")]
 position = Vector2(1, 2)
 flip_h = true
 
-[node name="clouds_left" type="Node2D" parent="."]
-position = Vector2(75, 28)
+[node name="clouds_left" type="Node2D" parent="Prompt_Box"]
+position = Vector2(154, 28)
 
-[node name="UI_cloud" parent="clouds_left" instance=ExtResource("4_0ix5x")]
+[node name="UI_cloud" parent="Prompt_Box/clouds_left" instance=ExtResource("4_0ix5x")]
 position = Vector2(2, -9)
 flip_h = true
 
-[node name="UI_cloud2" parent="clouds_left" instance=ExtResource("4_0ix5x")]
+[node name="UI_cloud2" parent="Prompt_Box/clouds_left" instance=ExtResource("4_0ix5x")]
 position = Vector2(0, 15)
 flip_h = true
 
-[node name="UI_cloud3" parent="clouds_left" instance=ExtResource("4_0ix5x")]
+[node name="UI_cloud3" parent="Prompt_Box/clouds_left" instance=ExtResource("4_0ix5x")]
 position = Vector2(-2, 3)
 
 [node name="Score_Box" parent="." instance=ExtResource("5_d6rco")]
@@ -217,5 +221,5 @@ position = Vector2(-2, 3)
 wait_time = 5.0
 autostart = true
 
-[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="animation_finished" from="Prompt_Box/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

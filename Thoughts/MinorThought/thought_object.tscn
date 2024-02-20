@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://f0l81pxaoux6"]
+[gd_scene load_steps=38 format=3 uid="uid://f0l81pxaoux6"]
 
 [ext_resource type="Script" path="res://Thoughts/MinorThought/thought_object.gd" id="1_dsjn4"]
 [ext_resource type="Texture2D" uid="uid://0ae81j5hhdsk" path="res://assets/sprites/Sprites/Cloud1Anim.png" id="2_sl6pj"]
@@ -92,6 +92,34 @@ region = Rect2(700, 0, 100, 60)
 atlas = ExtResource("5_6otwg")
 region = Rect2(800, 0, 100, 60)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_6htl7"]
+atlas = ExtResource("5_6otwg")
+region = Rect2(800, 0, 100, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4akdr"]
+atlas = ExtResource("5_6otwg")
+region = Rect2(700, 0, 100, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_78pu1"]
+atlas = ExtResource("5_6otwg")
+region = Rect2(600, 0, 100, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5s4hk"]
+atlas = ExtResource("5_6otwg")
+region = Rect2(500, 0, 100, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xf2ve"]
+atlas = ExtResource("5_6otwg")
+region = Rect2(400, 0, 100, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l4eor"]
+atlas = ExtResource("5_6otwg")
+region = Rect2(300, 0, 100, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gjgpm"]
+atlas = ExtResource("5_6otwg")
+region = Rect2(200, 0, 100, 60)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_epfl4"]
 animations = [{
 "frames": [{
@@ -170,6 +198,50 @@ animations = [{
 "loop": false,
 "name": &"pop",
 "speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6htl7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4akdr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_78pu1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5s4hk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xf2ve")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l4eor")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gjgpm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l4eor")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xf2ve")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5s4hk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_78pu1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4akdr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6htl7")
+}],
+"loop": true,
+"name": &"pop_loop",
+"speed": 10.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tm2wa"]
@@ -188,15 +260,16 @@ libraries = {
 texture_filter = 1
 position = Vector2(2, 0)
 sprite_frames = SubResource("SpriteFrames_epfl4")
-animation = &"pop"
-autoplay = "cloud_1"
+animation = &"pop_loop"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(-4.54747e-13, -4.54747e-13)
 rotation = 0.71384
 shape = SubResource("CircleShape2D_tm2wa")
 
 [node name="LightningBottle" type="Node2D" parent="." node_paths=PackedStringArray("children")]
+visible = false
 script = ExtResource("6_nh4x2")
 children = [NodePath("Lightning_AnimatedSprite2D"), NodePath("Lightning_AnimatedSprite2D2"), NodePath("Lightning_AnimatedSprite2D3"), NodePath("Lightning_AnimatedSprite2D4"), NodePath("Lightning_AnimatedSprite2D5"), NodePath("Lightning_AnimatedSprite2D6")]
 
