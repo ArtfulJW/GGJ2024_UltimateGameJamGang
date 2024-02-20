@@ -263,13 +263,11 @@ sprite_frames = SubResource("SpriteFrames_epfl4")
 animation = &"pop_loop"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(-4.54747e-13, -4.54747e-13)
 rotation = 0.71384
 shape = SubResource("CircleShape2D_tm2wa")
 
 [node name="LightningBottle" type="Node2D" parent="." node_paths=PackedStringArray("children")]
-visible = false
 script = ExtResource("6_nh4x2")
 children = [NodePath("Lightning_AnimatedSprite2D"), NodePath("Lightning_AnimatedSprite2D2"), NodePath("Lightning_AnimatedSprite2D3"), NodePath("Lightning_AnimatedSprite2D4"), NodePath("Lightning_AnimatedSprite2D5"), NodePath("Lightning_AnimatedSprite2D6")]
 
