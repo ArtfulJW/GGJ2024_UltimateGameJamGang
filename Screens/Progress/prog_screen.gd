@@ -5,7 +5,6 @@ extends CanvasLayer
 @export var progress : Array[Control]
 @onready var button = $Button
 @onready var bad_label = $Progress_BadResult/TextureRect/Bad_Label
-@onready var animation_player = $AnimationPlayer
 @onready var fader = $Fader
 @onready var recap_screen_element = $RecapScreenElement
 

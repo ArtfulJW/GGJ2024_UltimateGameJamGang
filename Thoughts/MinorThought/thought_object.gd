@@ -72,7 +72,7 @@ func _on_body_entered(body):
 	if (!is_collided and body.name == "Player"):
 		is_collided = true
 		cloud_animation.play("pop")
-		collision_shape_2d.disabled = true
+		collision_shape_2d.set_deferred("disabled",true)
 		if not is_good:
 			body.on_collision()
 			GlobalData.thought_collide_bad.emit()

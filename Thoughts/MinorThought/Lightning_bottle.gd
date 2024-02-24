@@ -6,9 +6,3 @@ extends Node2D
 func _ready():
 	for child in children:
 		child.visible = randi_range(0,3) == 0
-
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass

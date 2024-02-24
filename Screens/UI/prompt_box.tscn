@@ -357,11 +357,14 @@ tracks/2/path = NodePath(".")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.5),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0.5, 2.5),
+"transitions": PackedFloat32Array(1, 1),
 "values": [{
 "args": [],
-"method": &"cycle_text"
+"method": &"update_text_result"
+}, {
+"args": [],
+"method": &"reset_text"
 }]
 }
 tracks/3/type = "value"
@@ -383,7 +386,7 @@ _data = {
 "prompt_box_ui_text_transition": SubResource("Animation_dttd2")
 }
 
-[node name="PromptBox" type="Control"]
+[node name="PromptBox" type="Control" node_paths=PackedStringArray("clouds")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -391,6 +394,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_q02rt")
+clouds = [NodePath("CloudContainer/Cloud_1"), NodePath("CloudContainer/Cloud_2"), NodePath("CloudContainer/Cloud_3"), NodePath("CloudContainer/Cloud_4"), NodePath("CloudContainer/Cloud_5"), NodePath("CloudContainer/Cloud_6"), NodePath("CloudContainer/Cloud_7"), NodePath("CloudContainer/Cloud_8")]
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
@@ -417,13 +421,6 @@ libraries = {
 
 [node name="text_cycle_timer" type="Timer" parent="."]
 wait_time = 2.0
-one_shot = true
-autostart = true
-
-[node name="restart_timer" type="Timer" parent="."]
-wait_time = 6.0
-one_shot = true
-autostart = true
 
 [node name="CloudContainer" type="Node2D" parent="."]
 position = Vector2(162, 40)
@@ -501,4 +498,3 @@ animation = &"pop_loop"
 frame = 12
 
 [connection signal="timeout" from="text_cycle_timer" to="." method="_on_text_cycle_timer_timeout"]
-[connection signal="timeout" from="restart_timer" to="." method="_on_restart_timer_timeout"]

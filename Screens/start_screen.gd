@@ -1,6 +1,5 @@
 extends CanvasLayer
 
-@onready var reset_timer = $ResetTimer
 @onready var intro_beat = $intro_beat
 @onready var credits = $credits
 @onready var instructions = $instructions
