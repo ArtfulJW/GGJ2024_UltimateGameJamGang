@@ -55,7 +55,7 @@ func _process(delta):
 	
 	
 	if(is_on_simulated_floor() and not is_sliding and not is_jumping):
-		animated_sprite_2d.play("running")
+		animated_sprite_2d.play("running_02")
 	
 	var x_pos_diff = x_dest - position.x
 	#Wwise.set_rtpc_value("LoseProximity", position.x, self)
@@ -120,7 +120,7 @@ func handle_jump(delta):
 		jump_timer.start(jump_time / GlobalData.world_speed)
 		#velocity.y = jump_speed * delta * GlobalData.world_speed
 		y_speed = jump_speed # * delta * GlobalData.world_speed
-		animated_sprite_2d.play("jumping")
+		animated_sprite_2d.play("jumping_02")
 		landing_vfx.stop()
 		
 		Wwise.set_2d_position(self, get_global_transform(), 0)
@@ -144,7 +144,7 @@ func handle_slide(delta):
 	if Input.is_action_just_pressed("ui_down") and is_on_simulated_floor() and !is_sliding:
 		is_sliding = true
 		slide_timer.start(slide_time / GlobalData.world_speed)
-		animated_sprite_2d.play("sliding")
+		animated_sprite_2d.play("sliding_02")
 		slide_vfx.play("default")
 		collision_shape_2d_upright.disabled = true
 		collision_shape_2d_slide.disabled = false
