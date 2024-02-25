@@ -16,4 +16,4 @@ func update_progress_textbox():
 
 func _process(delta):
 	if visible == true:
-		text_container.position.y -= scroll_speed * delta
+		text_container.position.y -= float(scroll_speed) * delta
