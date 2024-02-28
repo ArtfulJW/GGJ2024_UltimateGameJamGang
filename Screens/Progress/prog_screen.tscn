@@ -25,7 +25,7 @@ font_size = 8
 [node name="ProgressScreen_CanvasLayer" type="CanvasLayer" node_paths=PackedStringArray("progress")]
 process_mode = 3
 script = ExtResource("1_0on0o")
-progress = [NodePath("Progress_BadResult"), NodePath("Progress_1"), NodePath("Progress_2"), NodePath("Progress_3"), NodePath("Progress_4"), NodePath("Progress_5"), NodePath("Progress_Epilogue_1"), NodePath("Progress_Epilogue_2"), NodePath("Progress_Epilogue_3"), NodePath("Progress_Epilogue_4"), NodePath("Progress_Epilogue_5")]
+progress = [NodePath("Progress_BadResult"), NodePath("Progress_1"), NodePath("Progress_2"), NodePath("Progress_3"), NodePath("Progress_4"), NodePath("Progress_5"), NodePath("Progress_Epilogue_2"), NodePath("Progress_Epilogue_3"), NodePath("Progress_Epilogue_1"), NodePath("Progress_Epilogue_4"), NodePath("Progress_Epilogue_5")]
 
 [node name="Progress_1" type="Control" parent="."]
 visible = false
@@ -431,7 +431,7 @@ offset_left = -72.0
 offset_top = 16.0
 offset_right = 72.0
 offset_bottom = 80.0
-text = "Shirley and you go camping in fall. It’s very cold. Shirley shows you her new invention. She slides a pot full of glowing hot coals under your seats. "
+text = "Shirley and you go camping in Fall. It’s very cold."
 label_settings = SubResource("LabelSettings_tmidv")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -443,20 +443,22 @@ metadata/_edit_use_anchors_ = true
 modulate = Color(0, 0, 0, 1)
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.8
-anchor_right = 0.8
+anchor_left = 0.7875
+anchor_top = -0.0815217
+anchor_right = 0.7875
+anchor_bottom = -0.0815217
 offset_left = -56.0
 offset_top = 72.0
 offset_right = 56.0
 offset_bottom = 152.0
-text = "SHIRLEY: This is my new invention. A pot full of coals you put under your chair when it’s cold camping. What to help me think of names?
-SEYMOUR: this is genius.
-SHIRLEY: oh, steamed ham. 
-SEYMOUR: roasted nuts
-SHIRLEY: hot pocket
-SEYMOUR: coals for your holes 
-SHIRLEY: hot pot cold twats 
-SEYMOUR: hot rocks cold cock."
+text = "SHIRLEY: This is my new invention. A pot full of coals you put under your chair when it’s cold camping. Want to help me think of names?
+SEYMOUR: This is genius. My butt and stuff are so warm!
+SHIRLEY: Oh, steamed ham. 
+SEYMOUR: Roasted nuts
+SHIRLEY: Hot pocket.
+SEYMOUR: Coals for your holes.
+SHIRLEY: Hot pot cold twats.
+SEYMOUR: Hot rocks cold cocks."
 label_settings = SubResource("LabelSettings_tmidv")
 vertical_alignment = 1
 autowrap_mode = 2
@@ -556,7 +558,7 @@ offset_left = -72.0
 offset_top = 16.0
 offset_right = 72.0
 offset_bottom = 80.0
-text = "You and Shirley taking skiing lessons on a mountain. Due to a mix up, you each get a different instructor. Devon, Shirley’s instructor is so attractive, you’re even attracted to him. Birtha, your girthy German instructor, yells for you to follow for commands. You and Shirley part ways."
+text = "You and Shirley are taking skiing lessons on a mountain. Due to a mix up, you each get a different instructor. Devon, Shirley’s instructor is so attractive, you’re even attracted to him. Birtha, your girthy German instructor, yells for you to follow her commands. You and Shirley part ways."
 label_settings = SubResource("LabelSettings_tmidv")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -569,12 +571,14 @@ modulate = Color(0, 0, 0, 1)
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.787
+anchor_top = -0.0380435
 anchor_right = 0.787
+anchor_bottom = -0.0380435
 offset_left = -51.84
 offset_top = 72.0
 offset_right = 52.16
 offset_bottom = 152.0
-text = "SHIRLEY: Don’t break a leg
+text = "SHIRLEY: Don’t break a leg!
 SEYMOUR: (pointing at Devon) Don’t break my heart.
 SHIRLEY: Don’t break my balls.
 
@@ -588,7 +592,6 @@ clip_text = true
 metadata/_edit_use_anchors_ = true
 
 [node name="Progress_Epilogue_4" type="Control" parent="."]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -621,9 +624,7 @@ offset_left = -72.0
 offset_top = 16.0
 offset_right = 72.0
 offset_bottom = 80.0
-text = "You made it Seymour! Everyday, you and Shirley riff on each others jokes and fall deeper in love!
-
-"
+text = "You made it Seymour! Everyday you and Shirley riff on each others jokes and fall deeper in love!"
 label_settings = SubResource("LabelSettings_tmidv")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -643,8 +644,9 @@ offset_right = 52.16
 offset_bottom = 136.0
 text = "But you don’t know how to switch your brain back.
 Oh no…is this forever?
+Try to survive as long as you can!
 
-Try to survive as long as you can!"
+Thanks for playing!"
 label_settings = SubResource("LabelSettings_tmidv")
 horizontal_alignment = 1
 vertical_alignment = 1
