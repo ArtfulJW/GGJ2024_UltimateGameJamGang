@@ -28,7 +28,6 @@ script = ExtResource("1_0on0o")
 progress = [NodePath("Progress_BadResult"), NodePath("Progress_1"), NodePath("Progress_2"), NodePath("Progress_3"), NodePath("Progress_4"), NodePath("Progress_5"), NodePath("Progress_Epilogue_2"), NodePath("Progress_Epilogue_3"), NodePath("Progress_Epilogue_1"), NodePath("Progress_Epilogue_4"), NodePath("Progress_Epilogue_5")]
 
 [node name="Progress_1" type="Control" parent="."]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -592,6 +591,7 @@ clip_text = true
 metadata/_edit_use_anchors_ = true
 
 [node name="Progress_Epilogue_4" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
