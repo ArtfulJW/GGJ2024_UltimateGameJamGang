@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://djxmqj0tg6f6e"]
+[gd_scene load_steps=31 format=3 uid="uid://djxmqj0tg6f6e"]
 
 [ext_resource type="Script" path="res://Screens/start_screen.gd" id="1_b8xt8"]
 [ext_resource type="Texture2D" uid="uid://blxu2lydcalx6" path="res://assets/ui/SplashScreens/title.png" id="2_5s731"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://c7fy40twcykpi" path="res://assets/ui/buttons/titleinstructions.png" id="5_yp6jo"]
 [ext_resource type="StyleBox" uid="uid://btrbpt3cij3fc" path="res://Screens/button_push.tres" id="6_2bs3l"]
 [ext_resource type="Texture2D" uid="uid://kqocnt063ui4" path="res://assets/ui/buttons/play.png" id="7_78cga"]
+[ext_resource type="FontFile" uid="uid://ys3st85dei1t" path="res://assets/fonts/cloak.ttf" id="7_cc6ft"]
 [ext_resource type="Texture2D" uid="uid://br6jvs2fasiv5" path="res://assets/ui/buttons/creditstitle.png" id="7_ojabb"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pgbwv"]
@@ -28,6 +29,32 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qa37a"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cpbdj"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_jnq27"]
+font = ExtResource("7_cc6ft")
+font_size = 8
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_otk8t"]
+resource_name = "scroll_intro_beat"
+length = 30.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("intro_Label:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(3, 30),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(9, 5), Vector2(9, -200)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tvt6e"]
+_data = {
+"scroll_intro_beat": SubResource("Animation_otk8t")
+}
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rnrab"]
 
@@ -136,6 +163,65 @@ offset_bottom = 68.98
 texture = ExtResource("3_xhxov")
 expand_mode = 1
 stretch_mode = 4
+
+[node name="ColorRect" type="ColorRect" parent="intro_beat"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 1.0
+offset_right = 150.0
+offset_bottom = 51.0
+color = Color(0.745098, 0.8, 0.952941, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="intro_beat"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 51.0
+offset_right = 111.0
+offset_bottom = 175.0
+color = Color(0.745098, 0.8, 0.952941, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="intro_beat"]
+layout_mode = 0
+offset_left = 106.0
+offset_top = 112.0
+offset_right = 124.0
+offset_bottom = 174.0
+color = Color(0.745098, 0.8, 0.952941, 1)
+
+[node name="intro_Label" type="Label" parent="intro_beat"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 5.0
+offset_right = 146.0
+offset_bottom = 1560.0
+text = "You are Seymour, a new hire at Greys Incorporated. You overhear that Shirley, your office crush, finds you cute and really hopes you're funny because humor is the main quality she looks for in a partner.
+
+One problem: you don’t know how to be 
+funny. You try a technique from the 
+internet to train your brain to come up 
+with ideas for jokes instantly!
+
+But now you have too many ideas, 
+and not every idea is a good idea…
+
+The ideas manifest into a physical 
+form, clouds that bombard you and 
+cause thoughts to become actions 
+outside your control. 
+
+You try desperately to avoid the 
+bad thoughts and grab the good 
+ones so they don't wreck your 
+reputation, job prospects, and 
+shot at romance."
+label_settings = SubResource("LabelSettings_jnq27")
+autowrap_mode = 2
+
+[node name="intro_beat_animation_scroller" type="AnimationPlayer" parent="intro_beat/intro_Label"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_tvt6e")
+}
 
 [node name="Start_button" type="Button" parent="."]
 offset_left = 246.0
